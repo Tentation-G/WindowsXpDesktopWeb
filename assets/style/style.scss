@@ -1,5 +1,13 @@
 //@import 'resize_handle.scss';
 
+// icon => icone + petit texte | draggable
+// iconF => icone + petit texte | non draggable => dans dossier
+// iconOpen => assignation de la logique d'ouverture de la div enfant associé
+// iconExe => assignation de la logique d'execution de l'effet associé
+// folder-icon => // + changement de l'icone de dossier fermé en icone de dossier ouvert et vice-versa
+
+//icone => image icone
+
 * {
     font-family: sans-serif;
 }
@@ -23,6 +31,7 @@ img {
 html {
     user-select: none;
 }
+
 
 body {
     background-image: url('/assets/img/background-img/XpBackground-1920x1080.jpg');
@@ -99,11 +108,16 @@ footer {
         min-width: fit-content;
         max-width: 100px;
         text-align: center;
+        padding: 0 2px;
         //text-wrap: nowrap;
     }
 
     &:active {
         border: solid 1px #5f5f5fb9;
+
+        span {
+            background-color: #3e8ef780 !important;
+        }
     }
 }
 
@@ -112,6 +126,7 @@ footer {
         color: #000;
         text-shadow: none;
     }
+
     &:active {
         border: none;
     }
@@ -135,14 +150,26 @@ footer {
     }
 }
 
-.txt-text-part {
+.folder-text-part {
     display: flex;
     flex-grow: 1;
 
     overflow-y: scroll;
     max-height: 500px;
     padding: 5px 10px 5px 10px;
-    
+
+    background-color: #fff;
+}
+
+.txt-text-part {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    overflow-y: scroll;
+    max-height: 500px;
+    padding: 5px 10px 5px 10px;
+
     background-color: #fff;
 
     &>*:not(:first-child):not(:last-child) {
@@ -170,25 +197,31 @@ footer {
 .txt-window-body-head-address {
     border-top: solid 1px rgb(214, 211, 209);
     border-bottom: solid 1px rgb(214, 211, 209);
-    & > * {
+
+    &>* {
         height: 100%;
     }
+
     display: flex;
     align-items: center;
+
     span {
         padding: 0 6px 0 6px;
         display: flex;
         align-items: center;
     }
+
     .address-path {
         display: flex;
         align-items: center;
         width: 100%;
         background-color: #fff;
     }
+
     img {
         height: 20px;
     }
+
     height: 31px;
 }
 
@@ -215,5 +248,53 @@ footer {
                 background-color: rgb(0, 94, 255);
             }
         }
+    }
+}
+
+// ## le cat cursor
+body.cat-mode-active, 
+body.cat-mode-active * {
+    cursor: url('/assets/img/icones/cursor/cursorCatMouthClosed32.png'), auto !important;
+}
+
+body.cat-mode-active:active, 
+body.cat-mode-active:active * {
+    cursor: url('/assets/img/icones/cursor/cursorCatMouthOpen32.png'), auto !important;
+}
+// ##
+
+.toothless-gif {
+    display: none;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transform: translateX(-100%);
+}
+
+.toothless-gif-animation {
+
+    //border: solid 10px red;
+    width: fit-content;
+    height: fit-content;
+
+    z-index: -1;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transform: translateX(-100%); // En dehors de l'écran à gauche
+
+    animation-name: toothless;
+    //animation-duration: 10s; //ajouté coté js || appExe.js
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes toothless {
+    100% {
+        transform: translateX(100vw); /* En dehors de l'écran à droite */
     }
 }

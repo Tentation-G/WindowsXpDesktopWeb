@@ -3,11 +3,15 @@
  ******************************************************/
 
 /***************************************************
+ *  Import page.s pour fonction.s
+ ***************************************************/
+import { bringWindowToFront,lowerZIndex, topZIndex } from "./commonZindex.js";
+
+/***************************************************
  * Choix du mode de positionnement :
  *   "cascade" ou "random"
  ***************************************************/
 const POSITION_MODE = "random";
-// Pour tester l'autre, mets "random"
 
 /***************************************************
  * Variables pour le mode Cascade
@@ -62,6 +66,9 @@ document.querySelectorAll('.window [aria-label="Close"]').forEach((btn) => {
     btn.addEventListener("click", () => {
         const currentWindow = btn.closest(".window");
         currentWindow.style.display = "none";
+
+        // Baisser le zIdex pour futur ouverture de fenetre
+        lowerZIndex(); 
 
         // Récupérer l'icône associée
         const windowId = currentWindow.id;

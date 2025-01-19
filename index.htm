@@ -11,11 +11,14 @@
     <link rel="stylesheet" href="assets/style/style.css">
 
     <script type="module" src="assets/script/commonZindex.js" defer></script>
+
     <script type="module" src="assets/script/dragWindows.js" defer></script>
     <script type="module" src="assets/script/wdBtn.js" defer></script>
+    <script type="module" src="assets/script/appOpenClose.js" defer></script>
 
     <script src="assets/script/dragIcons.js" defer></script>
-    <script src="assets/script/appOpenClose.js" defer></script>
+
+    <script type="module" src="assets/script/appExe.js" defer></script>
 
     <title>Document</title>
 </head>
@@ -114,15 +117,16 @@
             </div>
         </div>
 
-        <!-- ##### DOSSIER 2 ##### -->
+        <!-- ##### DOSSIER Trucs perso ##### -->
         <div>
             <!-- (parent) -->
-            <div class="icon iconOpen iconDrag folder-icon" data-target="folder2" style="top: calc(5% + 120px); left: 2%;">
+            <div class="icon iconOpen iconDrag folder-icon" data-target="folderTrucPerso"
+                style="top: calc(5% + 120px); left: 2%;">
                 <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
                 <span>Trucs perso</span>
             </div>
             <!-- (enfant) -->
-            <div class="window" id="folder2">
+            <div class="window" id="folderTrucPerso">
                 <div class="title-bar">
                     <div class="title-bar-text">Trucs perso</div>
                     <div class="title-bar-controls" style="cursor: pointer;">
@@ -147,7 +151,7 @@
                             <span>C:\Desktop\New Folder</span>
                         </div>
                     </div>
-                    <div class="txt-text-part">
+                    <div class="folder-text-part">
                         <div class="iconF iconOpen folder-icon" data-target="" style="position:relative">
                             <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
                             <span>Des choses que j'aime</span>
@@ -164,7 +168,8 @@
         <!-- ##### TXT CV ##### -->
         <div>
             <!-- (parent) -->
-            <div class="icon iconOpen iconDrag" data-target="txtCv" style="max-width: 500px; top: calc(5% + 240px); left: 2%;">
+            <div class="icon iconOpen iconDrag" data-target="txtCv"
+                style="max-width: 500px; top: calc(5% + 240px); left: 2%;">
                 <img src="assets/img/icones/txt.png" alt="" class="icone">
                 <span>Cv.txt</span>
             </div>
@@ -216,11 +221,70 @@
             </div>
         </div>
 
+        <!-- ##### EXE LE CAT ##### -->
+        <div>
+            <!-- (parent) -->
+            <div class="icon iconDrag iconExe" data-exe="exeLeCat" style="top: 5%; right: 2%;">
+                <img src="assets/img/icones/catMouthClosed.png" alt="" class="icone">
+                <span>Le cat.exe</span>
+                <audio id="meow" src="/assets/img/mp3/m-e-o-w.mp3"></audio>
+            </div>
+            <!-- (enfant) -->
+            <!-- Changement du curseur -->
+        </div>
+
+        <!-- ##### EXE LE Dragon Noir ##### -->
+        <div>
+            <!-- (parent) -->
+            <div class="icon iconDrag iconExe" data-exe="exeLeDragonNoir" style="top: calc(5% + 120px); right: 2%;">
+                <img src="assets/img/icones/goofyToothlessNB2.png" alt="" class="icone">
+                <span>Le dragon noir.exe</span>
+            </div>
+            <!-- (enfant) -->
+            <!-- Changement du curseur -->
+        </div>
+
+        <!-- ##### TXT Mot de passe ##### -->
+        <div>
+            <!-- (parent) -->
+            <div class="icon iconOpen iconDrag" data-target="txtMDP" style="top:5%; right: calc(2% + 120px);">
+                <img src="assets/img/icones/txt.png" alt="" class="icone">
+                <span>Mot de passe.txt</span>
+            </div>
+            <!-- (enfant) -->
+            <div class="window txt" style="display: none;" id="txtMDP">
+                <div class="title-bar">
+                    <div class="title-bar-text">Read Me.txt</div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="txt-window-body-head">
+                        <span>File</span>
+                        <span>Edit</span>
+                        <span>Format</span>
+                        <span>View</span>
+                        <span>Help</span>
+                    </div>
+                    <div class="txt-text-part">
+                        <p>Mot de passe tres secret de l'ordinateur :</p>
+                        <p>1234</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toothless-gif" id="toothless">
+            <img src="assets/img/gif/toothlessDanceGif.gif" alt="">
+        </div>
     </main>
 
     <footer>
         <img class="powerBtn" src="assets/img/icones/start.png" alt="startbtn">
-        <div class="minimizedWindows"></div>
+        <div class="taskbar"></div>
         <div class="tools"></div>
     </footer>
 

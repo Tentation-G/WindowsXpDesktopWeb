@@ -1,6 +1,15 @@
-// dragWindows.js
-import { topZIndex, bringWindowToFront } from "./commonZindex.js";
+/******************************************************
+ * // dragWindows.js
+ ******************************************************/
 
+/***************************************************
+ *  Import page.s pour fonction.s
+ ***************************************************/
+import { bringWindowToFront } from "./commonZindex.js";
+
+/***************************************************
+ * DRAG des fenetres
+ ***************************************************/
 const windows = document.querySelectorAll(".window");
 
 windows.forEach((win) => {
@@ -12,6 +21,9 @@ windows.forEach((win) => {
 
     titleBar.addEventListener("mousedown", (e) => {
         e.preventDefault();
+
+        // Met la fenêtre au premier plan au début du drag
+        bringWindowToFront(win);
 
         offsetX = e.clientX - win.offsetLeft;
         offsetY = e.clientY - win.offsetTop;
@@ -32,7 +44,6 @@ windows.forEach((win) => {
             win.style.position = "absolute";
             win.style.left = newLeft + "px";
             win.style.top = newTop + "px";
-            bringWindowToFront(win);
         }
 
         function onMouseUp() {

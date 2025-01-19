@@ -1,6 +1,16 @@
-// wdbtn.js
-import { bringWindowToFront } from "./commonZindex.js";
 
+/******************************************************
+ * wdbtn.js
+ ******************************************************/
+
+/***************************************************
+ *  Import page.s pour fonction.s
+ ***************************************************/
+import { bringWindowToFront, topZIndex } from "./commonZindex.js";
+
+/***************************************************
+ * MISE EN FONCTIONNEMENT des boutons de fenetres
+ ***************************************************/
 (() => {
     const mainContainer = document.getElementById("mainContainer");
     const minimizedArea = document.querySelector(".minimizedWindows");
