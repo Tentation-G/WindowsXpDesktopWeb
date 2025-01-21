@@ -49,14 +49,16 @@ function toggleCatExe() {
 
 function activateCatMode() {
     catModeActive = true;
-    catMeowClick = false; // Remettre en true pour Activer le Meow suave 
+    catMeowClick = true; // Remettre en true pour Activer le Meow suave 
     document.body.classList.add("cat-mode-active");
 
     if (catMeowClick == true) {
         bodyCatModeActive.addEventListener('mousedown', () => {
             //meowAudio.currentTime = 0;
             //meowAudio.play();
-            playMeowSound()
+            if (catMeowClick == true) {
+                playMeowSound()
+            }
         });
     }
 }

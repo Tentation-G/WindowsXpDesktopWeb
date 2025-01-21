@@ -53,23 +53,57 @@
                         <span>Help</span>
                     </div>
                     <div class="txt-text-part">
-                        a
+                        <p>Mettre un read me la dedans pour expliquer les chemins</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ##### DOSSIER 1 ##### -->
+        <!-- ##### DOSSIER Travail ##### -->
         <div>
-            <!-- (parent) -->
-            <div class="icon iconOpen iconDrag folder-icon" data-target="folder1" style="top: 5%; left: 2%;">
+            <!-- (parent) Icone Bureau Dossier Travail -->
+            <div class="icon iconOpen iconDrag folder-icon" data-target="folderTravail" style="top: 5%; left: 2%;">
                 <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
-                <span>dossier 1</span>
+                <span>Travail</span>
             </div>
-            <!-- (enfant) -->
-            <div class="window" id="folder1">
+            <!-- (enfant) Fenetre Bureau Travail -->
+            <div class="window" id="folderTravail">
                 <div class="title-bar">
-                    <div class="title-bar-text">Folder numero 1</div>
+                    <div class="title-bar-text">Travail</div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="txt-window-body-head">
+                        <span>File</span>
+                        <span>View</span>
+                        <span>Favorites</span>
+                        <span>Tools</span>
+                        <span>Help</span>
+                    </div>
+                    <div class="txt-window-body-head-address">
+                        <span>Address</span>
+                        <div class="address-path">
+                            <img src="assets/img/icones/Closed folder.png" alt="">
+                            <span>C:\Desktop\Travail</span>
+                        </div>
+                    </div>
+                    <!-- (parent) Icone Dossier Travail - Jeux -->
+                    <div class="txt-text-part">
+                        <div class="icon iconF iconOpen folder-icon" data-target="folderJeux" style="position:relative">
+                            <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
+                            <span>Jeux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- (enfant) Fenetre Dossier Jeux -->
+            <div class="window" id="folderJeux">
+                <div class="title-bar">
+                    <div class="title-bar-text">Jeux</div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Maximize"></button>
@@ -89,43 +123,33 @@
                         <span>Address</span>
                         <div class="address-path">
                             <img src="assets/img/icones/Closed folder.png" alt="">
-                            <span>C:\Desktop\New Folder</span>
+                            <span>C:\Desktop\Travail\Jeux</span>
                         </div>
                     </div>
-                    <div class="txt-text-part">
-                        <div class="iconF iconOpen" data-target="txtTruc" style="position:relative">
-                            <img src="assets/img/icones/txt.png" alt="" class="icone">
-                            <span>Truc.txt</span>
+                    <div class="folder-text-part">
+                        <div class="icon iconF folder-icon" data-target="jeuFrog" style="position:relative">
+                            <img src="assets/img/icones/Knight.png" alt="" class="icone">
+                            <span>Jeu.jeu</span>
+                        </div>
+                        <div class="icon iconF folder-icon" data-target="jeuFrog" style="position:relative">
+                            <img src="assets/img/icones/blackFrog.png" alt="" class="icone">
+                            <span>FROG.jeu</span>
+                        </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- (enfant) 1-1 -->
-            <div class="window" id="txtTruc">
-                <div class="title-bar">
-                    <div class="title-bar-text">Folder numero 1</div>
-                    <div class="title-bar-controls" style="cursor: pointer;">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
-                </div>
-                <!-- (parent) 1-1 -->
-                <div class="window-body">
-                    <p>MOT</p>
                 </div>
             </div>
         </div>
 
         <!-- ##### DOSSIER Trucs perso ##### -->
         <div>
-            <!-- (parent) -->
+            <!-- (parent) Icone Bureau True Perso -->
             <div class="icon iconOpen iconDrag folder-icon" data-target="folderTrucPerso"
                 style="top: calc(5% + 120px); left: 2%;">
                 <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
                 <span>Trucs perso</span>
             </div>
-            <!-- (enfant) -->
+            <!-- (enfant) Fenetre Truc Perso -->
             <div class="window" id="folderTrucPerso">
                 <div class="title-bar">
                     <div class="title-bar-text">Trucs perso</div>
@@ -135,7 +159,6 @@
                         <button aria-label="Close"></button>
                     </div>
                 </div>
-                <!-- (parent) 1-1 -->
                 <div class="window-body">
                     <div class="txt-window-body-head">
                         <span>File</span>
@@ -158,7 +181,7 @@
                         </div>
                         <div class="iconF iconOpen folder-icon" data-target="" style="position:relative">
                             <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
-                            <span>Travail</span>
+                            <span>Photos de familles</span>
                         </div>
                     </div>
                 </div>
