@@ -252,4 +252,52 @@ body.cat-mode-active:active * {
   100% {
     transform: translateX(100vw); /* En dehors de l'écran à droite */
   }
+}
+.party-exe {
+  overflow: hidden;
+  pointer-events: none;
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 999;
+}
+.party-exe > * {
+  position: absolute;
+}
+.party-exe .background-color-changement {
+  background-color: rgba(240, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+}
+.party-exe .party-gif {
+  display: none;
+  z-index: 1000;
+}
+.party-exe .confettiesGif {
+  width: 100%;
+  height: 100%;
+}
+.party-exe .catDancingGif {
+  display: block;
+}
+.party-exe .catDancing1 {
+  transform: rotate(135deg);
+  top: 0;
+  left: 0;
+}
+.party-exe .catDancing2 {
+  transform: rotate(-135deg);
+  top: 0;
+  right: 0;
+}
+.party-exe .catDancing3 {
+  transform: rotate(45deg);
+  bottom: 0;
+  left: 0;
+}
+.party-exe .catDancing4 {
+  transform: rotate(-45deg);
+  bottom: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */

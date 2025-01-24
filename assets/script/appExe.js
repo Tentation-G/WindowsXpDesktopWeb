@@ -11,6 +11,7 @@
 const exeLogic = {
     exeLeCat: toggleCatExe,
     exeLeDragonNoir: toogleToothLessExe,
+    exeDanceParty: startDanceParty,
 };
 
 /*********************************************************
@@ -96,4 +97,43 @@ function toogleToothLessExe() {
         toothlessDivDance.classList.remove("toothless-gif-animation");
         toothlessSongSound.currentTime = 0;
     }, toothlessDanceDuration);
+}
+
+/*********************************************************
+ * Logic danceParty.exe
+ *********************************************************/
+
+let dancePartyLaunched = false;
+
+function startDanceParty() {
+    if (dancePartyLaunched) return;
+    dancePartyLaunched = true;
+
+    const partyExeDiv = document.getElementById("partyExe");
+    if (!partyExeDiv) return;
+
+    partyExeDiv.style.display = "block";
+    partyExeDiv.querySelector(".confettiesGif")?.style.setProperty("display", "block");
+    partyExeDiv.querySelector(".catDancingGif")?.style.setProperty("display", "block");
+
+    const colorInterval = setInterval(changePartyColor, 300);
+
+    setTimeout(() => {
+        partyExeDiv.style.display = "none";
+        partyExeDiv.querySelector(".confettiesGif")?.style.setProperty("display", "none");
+        partyExeDiv.querySelector(".catDancingGif")?.style.setProperty("display", "none");
+        clearInterval(colorInterval);
+        dancePartyLaunched = false;
+    }, 10000);
+}
+
+function changePartyColor() {
+    const partyExeDiv = document.getElementById("partyExe");
+    if (!partyExeDiv) return;
+    const bgDiv = partyExeDiv.querySelector(".background-color-changement");
+    if (!bgDiv) return;
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    bgDiv.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.5)`;
 }
