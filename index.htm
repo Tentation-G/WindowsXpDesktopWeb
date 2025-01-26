@@ -74,7 +74,7 @@
                 <span>Travail</span>
             </div>
             <!-- (enfant) Fenetre Bureau Travail -->
-            <div class="window" id="folderTravail">
+            <div class="window" id="folderTravail" style="display: block; z-index: 9999999999;">
                 <div class="title-bar">
                     <div class="title-bar-text">Travail</div>
                     <div class="title-bar-controls" style="cursor: pointer;">
@@ -92,16 +92,32 @@
                         <span>Help</span>
                     </div>
                     <div class="folder-btn-body-head">
-                        <div>
-                            <img src="/assets/img/icones/blackFrog.png" alt="">
-                            <span></span>
+                        <div class="pack pack-1">
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/arrow.png" alt="">
+                                <span>Back</span>
+                            </div>
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/arrow.png" alt="" style="transform: scaleX(-1);">
+                            </div>
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/NetworkDocuments.png" alt="">
+                            </div>
                         </div>
-                        <div>
-                            <img src="" alt="">
-                        </div>
-                        <div>
+                        <div class="pack pack-2">
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/loupe.png" alt="">
+                                <span>Search</span>
+                            </div>
 
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/MyDocuments.png" alt="">
+                                <span>Folders</span>
+                            </div>
                         </div>
+                        <!-- <div>
+                            <img src="/assets/img/icones" alt="">
+                        </div> -->
                     </div>
                     <div class="txt-window-body-head-address">
                         <span>Address</span>
@@ -110,11 +126,27 @@
                             <span>C:\Desktop\Travail</span>
                         </div>
                     </div>
-                    <!-- (parent) Icone Dossier Travail - Jeux -->
-                    <div class="txt-text-part">
-                        <div class="icon iconF iconOpen folder-icon" data-target="folderJeux" style="position:relative">
-                            <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
-                            <span>Jeux</span>
+                    <div class="folder-body-wrapper">
+                        <div class="folder-system-files-part">
+                            <div class="folder-system-files-items">
+                                <span>Sytem Tasks</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                            <div class="folder-system-files-items">
+                                <span>Other Places</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                            <div class="folder-system-files-items">
+                                <span>File and Folder Tasks</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                        </div>
+                        <!-- (parent) Icone Dossier Travail - Jeux -->
+                        <div class="folder-text-part">
+                            <div class="icon iconF iconOpen folder-icon" data-target="folderJeux" style="position:relative">
+                                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
+                                <span>Jeux</span>
+                            </div>
                         </div>
                     </div>
                 </div>
