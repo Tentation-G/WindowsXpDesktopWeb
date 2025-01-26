@@ -1,0 +1,59 @@
+// ============================================
+// Fichier : _icons.scss
+// ============================================
+
+@import 'variables';
+
+.icon,
+.iconF {
+    position: absolute;
+    width: $icon-size;
+    min-height: $icon-size;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    user-select: none;
+
+    color: $color-white;
+    text-shadow: $color-shadow;
+
+    img {
+        height: $icon-img-size;
+        width: $icon-img-size;
+    }
+
+    span {
+        min-width: fit-content;
+        max-width: 100px;
+        text-align: center;
+        padding: 0 2px;
+    }
+
+    &:active {
+        border: solid 1px $color-icon-active-border;
+
+        span {
+            background-color: $color-icon-active-bg !important;
+        }
+    }
+}
+
+.iconF {
+    span {
+        color: $color-black;
+        text-shadow: none;
+    }
+
+    &:active {
+        border: none;
+    }
+}
+
+.folder-icon:active {
+    cursor: grabbing;
+}

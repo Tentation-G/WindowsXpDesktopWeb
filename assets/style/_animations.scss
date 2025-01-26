@@ -1,0 +1,109 @@
+// ============================================
+// Fichier : _animations.scss
+// ============================================
+
+@import 'variables';
+
+// -- Cat cursor --
+body.cat-mode-active,
+body.cat-mode-active * {
+    cursor: url('/assets/img/icones/cursor/cursorCatMouthClosed32.png'), auto !important;
+}
+
+body.cat-mode-active:active,
+body.cat-mode-active:active * {
+    cursor: url('/assets/img/icones/cursor/cursorCatMouthOpen32.png'), auto !important;
+}
+
+// -- Toothless animation --
+.toothless-gif {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.toothless-gif-animation {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(-100%); // En dehors de l'écran à gauche
+
+    animation-name: toothless;
+    // animation-duration: 10s; // géré côté JS
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes toothless {
+    100% {
+        transform: translateX(100vw); // En dehors de l'écran à droite
+    }
+}
+
+// -- Party effect --
+.party-exe {
+    overflow: hidden;
+    pointer-events: none;
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+
+    &>* {
+        position: absolute;
+    }
+
+    .background-color-changement {
+        background-color: rgba($color-toothless-bg, 0.4);
+        height: 100%;
+        width: 100%;
+    }
+
+    .party-gif {
+        display: none;
+        z-index: 1000;
+    }
+
+    .confettiesGif {
+        width: 100%;
+        height: 100%;
+    }
+
+    .catDancingGif {
+        display: block;
+    }
+
+    // haut gauche
+    .catDancing1 {
+        transform: rotate(135deg);
+        top: 0;
+        left: 0;
+    }
+
+    // haut droit
+    .catDancing2 {
+        transform: rotate(-135deg);
+        top: 0;
+        right: 0;
+    }
+
+    // bas gauche
+    .catDancing3 {
+        transform: rotate(45deg);
+        bottom: 0;
+        left: 0;
+    }
+
+    // bas droit
+    .catDancing4 {
+        transform: rotate(-45deg);
+        bottom: 0;
+        right: 0;
+    }
+}

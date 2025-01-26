@@ -1,0 +1,13 @@
+// main.scss
+
+@import 'variables';   // doit être importé en premier pour que TOUTES les variables soient dispos
+@import 'base';
+@import 'icons';
+@import 'titlebar';
+@import 'windows';
+@import 'animations';
+
+// Import additionnel si nécessaire
+//@import 'resize_handle';
+
+// Si tu as besoin de styles SASS additionnels spécifiquement pour le main, tu peux les ajouter ici.

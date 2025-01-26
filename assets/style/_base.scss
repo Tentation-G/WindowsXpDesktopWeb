@@ -1,0 +1,48 @@
+// ============================================
+// Fichier : _base.scss
+// ============================================
+
+@import 'variables'; // Important : avoir accès aux variables
+
+* {
+    font-family: $font-default;
+}
+
+html {
+    user-select: none;
+}
+
+body {
+    background-image: $main-bg;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $color-body-bg;
+    overflow: hidden;
+}
+
+span {
+    font-family: $font-tahoma;
+    font-size: $font-size-span;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+main {
+    position: relative;
+    height: calc(100vh - #{$main-height-offset});
+}
+
+footer {
+    width: 100%;
+    height: $footer-height;
+    background: $footer-gradient;
+}
+
+.powerBtn {
+    cursor: pointer;
+}

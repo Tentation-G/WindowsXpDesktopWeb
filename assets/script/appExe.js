@@ -65,8 +65,18 @@ function activateCatMode() {
 }
 
 function playMeowSound() {
-    const meowSound = new Audio('/assets/img/mp3/m-e-o-w.mp3');
-    meowSound.play();
+    const meowSound = new Audio("/assets/img/mp3/japan-oppai-sound.mp3");
+
+    meowSound.addEventListener("loadedmetadata", () => {
+        const totalDuration = meowSound.duration;
+        const halfDuration = totalDuration / 2;
+        meowSound.play();
+
+        setTimeout(() => {
+            meowSound.pause();
+            meowSound.currentTime = 0;
+        }, halfDuration * 1000);
+    });
 }
 
 function deactivateCatMode() {

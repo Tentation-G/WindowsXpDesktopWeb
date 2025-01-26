@@ -1,0 +1,19 @@
+// ============================================
+// Fichier : _titlebar.scss
+// ============================================
+
+@import 'variables';
+
+.title-bar {
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+
+    .title-bar-controls {
+        button {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+// ============================================
+// Fichier : _variables.scss
+// ============================================
+
+// -------------------
+// Couleurs principales
+// -------------------
+$color-white: #ffffff;
+$color-black: #000000;
+
+// Couleurs récurrentes dans le projet
+$color-icon-active-border: #5f5f5fb9; // pour la bordure quand on active une icône
+$color-icon-active-bg: #3e8ef780; // fond de .icon span quand on clique
+$color-shadow: #000000 1.5px 1px; // text-shadow pour les icônes
+$color-border-light: rgb(214, 211, 209); // pour les bordures légères
+$color-txtwindow-hover-bg: rgb(0, 94, 255); // Hover d’un span dans txt-window-body-head
+
+// Couleurs pour les “folders”
+$color-folder-system-file-bg: #0057d7; // couleur de fond des items dans folder
+$color-folder-system-file-items-text: #ffffff;
+
+// Couleur de fond par défaut
+$color-body-bg: #ffffff;
+
+// -------------------
+// Dégradés / backgrounds
+// -------------------
+$footer-gradient: linear-gradient(180deg,
+    #0997ff,
+    #0053ee 8%,
+    #0050ee 40%,
+    #06f 88%,
+    #06f 93%,
+    #005bff 95%,
+    #003dd7 96%,
+    #003dd7);
+
+$folder-system-file-gradient: linear-gradient(to bottom,
+    #6d8cdf 0%,
+    #a8befb 100%);
+
+// Image de fond du body
+$main-bg: url('/assets/img/background-img/XpBackground-1920x1080.jpg');
+
+// -------------------
+// Polices et tailles de texte
+// -------------------
+$font-default: sans-serif;
+$font-tahoma: 'Tahoma';
+@font-face {
+  font-family: Tahoma;
+  src: url(tahoma.ttf);
+}
+
+// Tailles de police
+$font-size-span: 20px; // pour les spans généraux
+$font-size-h1: 24px;
+$font-size-h2: 20px;
+$font-size-h3: 18px;
+$font-size-p: 16px;
+
+// -------------------
+// Dimensions
+// -------------------
+$footer-height: 34px;
+$main-height-offset: 34px; // correspond au footer-height pour le calcul
+$window-min-width: 600px;
+$window-min-height: 400px;
+
+// Icones
+$icon-size: 80px; // Dimension du conteneur icon
+$icon-img-size: 60px; // Dimension de l'image d'icone
+
+// Marges / paddings
+$window-body-padding: 3px;
+$txt-margin-top: 6px;
+$txt-margin-y: 20px;
+
+// -------------------
+// Autres
+// -------------------
+$border-radius-default: 5px; // si besoin pour un style cohérent
+
+// Pour la couleur d’arrière-plan party
+$color-toothless-bg: #f00000;

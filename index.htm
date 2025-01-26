@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://unpkg.com/xp.css" />
 
     <link rel="stylesheet" href="assets/style/reset.css">
-    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/crt.css">
+
 
     <script type="module" src="assets/script/commonZindex.js" defer></script>
 
@@ -21,6 +23,7 @@
     <script type="module" src="assets/script/appExe.js" defer></script>
 
     <title>Document</title>
+    <div class="crt"></div>
 </head>
 
 <body>
@@ -74,7 +77,7 @@
                 <span>Travail</span>
             </div>
             <!-- (enfant) Fenetre Bureau Travail -->
-            <div class="window" id="folderTravail" style="display: block; z-index: 9999999999;">
+            <div class="window" id="folderTravail">
                 <div class="title-bar">
                     <div class="title-bar-text">Travail</div>
                     <div class="title-bar-controls" style="cursor: pointer;">
@@ -218,21 +221,66 @@
                         <span>Tools</span>
                         <span>Help</span>
                     </div>
+                    <div class="folder-btn-body-head">
+                        <div class="pack pack-1">
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/arrow.png" alt="">
+                                <span>Back</span>
+                            </div>
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/arrow.png" alt="" style="transform: scaleX(-1);">
+                            </div>
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/NetworkDocuments.png" alt="">
+                            </div>
+                        </div>
+                        <div class="pack pack-2">
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/loupe.png" alt="">
+                                <span>Search</span>
+                            </div>
+
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/MyDocuments.png" alt="">
+                                <span>Folders</span>
+                            </div>
+                        </div>
+                        <!-- <div>
+                            <img src="/assets/img/icones" alt="">
+                        </div> -->
+                    </div>
                     <div class="txt-window-body-head-address">
                         <span>Address</span>
                         <div class="address-path">
                             <img src="assets/img/icones/Closed folder.png" alt="">
-                            <span>C:\Desktop\New Folder</span>
+                            <span>C:\Desktop\Truc perso</span>
                         </div>
                     </div>
-                    <div class="folder-text-part">
-                        <div class="iconF iconOpen folder-icon" data-target="" style="position:relative">
-                            <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
-                            <span>Des choses que j'aime</span>
+                    <div class="folder-body-wrapper">
+                        <div class="folder-system-files-part">
+                            <div class="folder-system-files-items">
+                                <span>Sytem Tasks</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                            <div class="folder-system-files-items">
+                                <span>Other Places</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                            <div class="folder-system-files-items">
+                                <span>File and Folder Tasks</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
                         </div>
-                        <div class="iconF iconOpen folder-icon" data-target="" style="position:relative">
-                            <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
-                            <span>Photos de familles</span>
+                        <!-- (parent) Icone Dossier Travail - Jeux -->
+                        <div class="folder-text-part">
+                            <div class="iconF iconOpen folder-icon" data-target="" style="position:relative">
+                                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
+                                <span>Des choses que j'aime</span>
+                            </div>
+                            <div class="iconF iconOpen folder-icon" data-target="" style="position:relative">
+                                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
+                                <span>Photos de familles</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -311,7 +359,7 @@
         <div>
             <!-- (parent) -->
             <div class="icon iconDrag iconExe" data-exe="exeLeDragonNoir" style="top: calc(5% + 120px); right: 2%;">
-                <img src="assets/img/icones/goofyToothlessNB2.png" alt="" class="icone">
+                <img src="assets/img/icones/goofyToothless2NB.png" alt="" class="icone">
                 <span>Le dragon noir.exe</span>
             </div>
             <!-- (enfant) -->
