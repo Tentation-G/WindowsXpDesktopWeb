@@ -16,7 +16,7 @@ html {
           user-select: none;
 }
 
-body {
+.desktop-body {
   background-image: url("/assets/img/background-img/XpBackground-1920x1080.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -139,7 +139,7 @@ footer {
   box-sizing: border-box;
 }
 .txt .txt-text-part {
-  margin-top: 6px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -363,4 +363,12 @@ body.cat-mode-active:active * {
   transform: rotate(-45deg);
   bottom: 0;
   right: 0;
+}
+
+@font-face {
+  font-family: Tahoma;
+  src: url(tahoma.ttf);
+}
+.acc-body {
+  background-color: wheat !important;
 }/*# sourceMappingURL=main.css.map */

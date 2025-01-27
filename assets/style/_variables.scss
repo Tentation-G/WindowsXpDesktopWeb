@@ -41,6 +41,7 @@ $folder-system-file-gradient: linear-gradient(to bottom,
 
 // Image de fond du body
 $main-bg: url('/assets/img/background-img/XpBackground-1920x1080.jpg');
+$acc-bg: url('/assets/img/background-img/dbglp3q-fa7b96f2-36e8-497d-905f-e48aa72a0f21.jpg');
 
 // -------------------
 // Polices et tailles de texte
@@ -73,7 +74,7 @@ $icon-img-size: 60px; // Dimension de l'image d'icone
 
 // Marges / paddings
 $window-body-padding: 3px;
-$txt-margin-top: 6px;
+$txt-margin-top: 0px;
 $txt-margin-y: 20px;
 
 // -------------------
@@ -82,4 +83,4 @@ $txt-margin-y: 20px;
 $border-radius-default: 5px; // si besoin pour un style cohérent
 
 // Pour la couleur d’arrière-plan party
-$color-toothless-bg: #f00000;
+$color-party-bg: #f00000;
