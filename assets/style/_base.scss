@@ -10,6 +10,8 @@
 
 html {
     user-select: none;
+    transition: scale 2s linear;
+    //transform: scaleX(-1);
 }
 
 //body
@@ -47,3 +49,4 @@ footer {
 .powerBtn {
     cursor: pointer;
 }
+

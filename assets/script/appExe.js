@@ -12,6 +12,7 @@ const exeLogic = {
     exeLeCat: toggleCatExe,
     exeLeDragonNoir: toogleToothLessExe,
     exeDanceParty: startDanceParty,
+    exeMiroir: toogleMiroitionExe,
 };
 
 /*********************************************************
@@ -24,7 +25,7 @@ document.querySelectorAll(".iconExe").forEach((exeIcon) => {
         if (typeof fn === "function") {
             fn();
         } else {
-            console.log("Pas de logique définie pour :", exeId);
+            //console.log("Pas de logique définie pour :", exeId);
         }
     });
 });
@@ -98,7 +99,7 @@ toothlessSongSound.volume = 0.3;
 
 function toogleToothLessExe() {
     toothlessDivDance.style.display = 'block';
-    toothlessDivDance.style.animationDuration = "10s";
+    toothlessDivDance.style.animationDuration = "11s";
     toothlessDivDance.classList.add("toothless-gif-animation");
 
     toothlessSongSound.play();
@@ -147,3 +148,23 @@ function changePartyColor() {
     const b = Math.floor(Math.random() * 256);
     bgDiv.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.5)`;
 }
+
+/*********************************************************
+ * Logic Miroi.exe
+ *********************************************************/
+
+let miroired = false;
+
+function toogleMiroitionExe() {
+    if (miroired == false) {
+        document.body.style.transform = "scaleX(-1)";
+        miroired = true;
+    }
+    else {
+        document.body.style.transform = "scaleX(1)";
+        miroired = false;
+    }
+
+}
+
+
