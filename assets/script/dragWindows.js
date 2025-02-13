@@ -1,5 +1,5 @@
 /******************************************************
- * // dragWindows.js
+ * dragWindows.js
  ******************************************************/
 
 /***************************************************
@@ -10,7 +10,10 @@ import { bringWindowToFront } from "./commonZindex.js";
 /***************************************************
  * DRAG des fenetres
  ***************************************************/
+// Sélection de toutes les fenêtres
 const windows = document.querySelectorAll(".window");
+
+const mainContainer = document.getElementById("mainContainer");
 
 windows.forEach((win) => {
     const titleBar = win.querySelector(".title-bar");
@@ -22,17 +25,19 @@ windows.forEach((win) => {
     titleBar.addEventListener("mousedown", (e) => {
         e.preventDefault();
 
-        // Met la fenêtre au premier plan au début du drag
         bringWindowToFront(win);
 
         offsetX = e.clientX - win.offsetLeft;
         offsetY = e.clientY - win.offsetTop;
 
         function onMouseMove(e) {
+            if (!mainContainer) return;
+
             const rect = mainContainer.getBoundingClientRect();
             let newLeft = e.clientX - rect.left - offsetX;
             let newTop = e.clientY - rect.top - offsetY;
 
+            // Empêcher de sortir du conteneur
             const maxLeft = rect.width - win.offsetWidth;
             const maxTop = rect.height - win.offsetHeight;
 

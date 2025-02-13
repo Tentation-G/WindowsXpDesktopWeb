@@ -35,6 +35,20 @@ $footer-gradient: linear-gradient(180deg,
     #003dd7 96%,
     #003dd7);
 
+$footer-gradient2: linear-gradient(180deg,
+      #66b3ff,
+      #4f9eef 8%,
+      #3a8ce9 40%,
+      #0E8EE9 88%,
+      #0E8EE9 93%,
+      #2980ea 95%,
+      #003dd7 96%,
+      #003dd7);
+
+$footer-border-color: #003dd7;
+$footer2-border-color: #17B6FD;
+//$footer2-border-color: linear-gradient(180deg, #17B6FD, #003dd7 4%);
+
 $folder-system-file-gradient: linear-gradient(to bottom,
     #6d8cdf 0%,
     #a8befb 100%);
@@ -63,10 +77,11 @@ $font-size-p: 16px;
 // -------------------
 // Dimensions
 // -------------------
-$footer-height: 34px;
-$main-height-offset: 34px; // correspond au footer-height pour le calcul
+$footer-height: 33px;
+$main-height-offset: 33px; // correspond au footer-height pour le calcul
 $window-min-width: 600px;
-$window-min-height: 400px;
+$window-min-height: 350px;
+$window-height: 400px;
 
 // Icones
 $icon-size: 80px; // Dimension du conteneur icon

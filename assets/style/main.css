@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Tahoma;
   src: url(tahoma.ttf);
@@ -41,13 +42,53 @@ img {
 
 main {
   position: relative;
-  height: calc(100vh - 34px);
+  height: calc(100vh - 33px);
 }
 
 footer {
   width: 100%;
-  height: 34px;
+  height: 33px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-main-part {
+  display: flex;
   background: linear-gradient(180deg, #0997ff, #0053ee 8%, #0050ee 40%, #06f 88%, #06f 93%, #005bff 95%, #003dd7 96%, #003dd7);
+  width: 100%;
+  border-right: 1px solid #003dd7;
+}
+footer .footer-main-part .taskbar {
+  display: flex;
+  align-items: end;
+  padding: 0 5px;
+}
+footer .footer-main-part .taskbar .taskbar-item {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  height: 85%;
+  width: 160px;
+  color: #ffffff;
+  font-family: "Tahoma";
+  background: #1E52B7;
+  border: solid 1px #173E8B;
+  border-left: solid 1px #091938;
+  border-radius: 2px;
+}
+footer .footer-main-part .taskbar .taskbar-item:hover {
+  cursor: pointer;
+}
+footer .footer-main-part .taskbar .taskbar-item img {
+  height: 16px;
+}
+footer .tools {
+  display: flex;
+  background: linear-gradient(180deg, #66b3ff, #4f9eef 8%, #3a8ce9 40%, #0E8EE9 88%, #0E8EE9 93%, #2980ea 95%, #003dd7 96%, #003dd7);
+  align-items: center;
+  color: #ffffff;
+  border-left: 1px solid #17B6FD;
+  padding: 0 20px;
 }
 
 .powerBtn {
@@ -98,6 +139,9 @@ footer {
   background-color: rgba(62, 142, 247, 0.5019607843) !important;
 }
 
+.iconF {
+  margin: 0 15px;
+}
 .iconF span {
   color: #000000;
   text-shadow: none;
@@ -133,7 +177,39 @@ footer {
   position: absolute;
   flex-direction: column;
   min-width: 600px;
+  width: 600px;
+  min-height: 350px;
   height: 400px;
+  resize: both;
+  overflow: hidden;
+}
+
+.title-bar-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.title-bar-text img {
+  height: 20px;
+}
+.title-bar-text span {
+  font-family: sans-serif;
+}
+
+.unselected {
+  position: relative;
+}
+
+.unselected::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Blanc semi-transparent */
+  border-radius: 4px; /* Suivre la forme du dossier */
+  pointer-events: none; /* Empêche le pseudo-élément d'interagir */
 }
 
 .txt {
@@ -145,12 +221,27 @@ footer {
   flex-direction: column;
   flex-grow: 1;
   overflow-y: scroll;
-  max-height: 500px;
   padding: 5px 10px;
   background-color: #ffffff;
 }
-.txt .txt-text-part > *:not(:first-child):not(:last-child) {
-  margin: 20px 0;
+.txt .txt-text-part .liste-de-mot-wrap {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.txt .txt-text-part .liste-de-mot-wrap div {
+  padding-right: 10px;
+}
+.txt .txt-text-part .liste-de-mot-wrap div h1 {
+  margin-top: 15px;
+}
+.txt .txt-text-part ol {
+  margin: 10px 0 0 40px;
+}
+.txt .txt-text-part ol li {
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 .txt .txt-text-part h1 {
   font-size: 24px;
@@ -167,9 +258,10 @@ footer {
 
 .folder-text-part {
   display: flex;
+  justify-content: start;
   flex-grow: 1;
   overflow-y: scroll;
-  max-height: 500px;
+  flex-wrap: wrap;
   padding: 5px 10px;
   background-color: #ffffff;
 }
@@ -249,7 +341,7 @@ footer {
 }
 .window-body .folder-body-wrapper .folder-system-files-part {
   background: linear-gradient(to bottom, #6d8cdf 0%, #a8befb 100%);
-  width: 35%;
+  min-width: 35%;
   height: 100%;
 }
 .window-body .folder-body-wrapper .folder-system-files-part .folder-system-files-items {
@@ -273,6 +365,44 @@ footer {
   border: solid 1px #ffffff;
   border-radius: 50px;
   padding: 2px;
+}
+
+.photo-body-wrapper {
+  background-color: #ffffff;
+  height: calc(100% - 5px);
+  margin-top: 5px;
+}
+.photo-body-wrapper > * {
+  margin: 0 10% 0 10%;
+}
+.photo-body-wrapper .photo-part {
+  margin-top: 5px;
+  height: 85%;
+}
+.photo-body-wrapper .photo-part img {
+  width: 100%;
+  height: 100%;
+}
+.photo-body-wrapper .photo-btn {
+  height: calc(15% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.photo-body-wrapper .photo-btn svg {
+  fill: rgb(0, 59, 218);
+}
+.photo-body-wrapper .photo-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.photo-body-wrapper .photo-btn .arrow svg {
+  margin-top: -10px;
 }
 
 @font-face {
@@ -305,7 +435,7 @@ body.cat-mode-active:active * {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1000000000000000000000000000000000000000000000000000000;
   transform: translateX(-100%);
   animation-name: toothless;
   animation-timing-function: linear;

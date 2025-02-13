@@ -43,7 +43,59 @@ main {
 footer {
     width: 100%;
     height: $footer-height;
-    background: $footer-gradient;
+    //background: $footer-gradient;
+
+    display: flex;
+    justify-content: space-between;
+    .footer-main-part {
+        display: flex;
+
+        background: $footer-gradient;
+        width: 100%;
+
+        border-right: 1px solid $footer-border-color;
+        .taskbar {
+            display: flex;
+            align-items: end;
+            padding: 0 5px;
+            .taskbar-item {
+                //display: flex;
+                display: none;
+                align-items: center;
+                gap: 5px;
+
+                padding: 0 10px;
+
+                height: 85%;
+                width: 160px;
+
+                color: $color-white;
+                font-family: $font-tahoma;
+
+                background: #1E52B7;
+
+                border: solid 1px #173E8B;
+                border-left: solid 1px #091938;
+                border-radius: 2px;
+
+                //border: solid 1px red;
+                &:hover {
+                    cursor: pointer;
+                }
+                img {
+                    height: 16px;
+                }
+            }
+        }
+    }
+    .tools {
+        display: flex;
+        background: $footer-gradient2;
+        align-items: center;
+        color: $color-white;
+        border-left: 1px solid $footer2-border-color;
+        padding: 0 20px;
+    }
 }
 
 .powerBtn {

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/crt.css">
 
+    <script type="module" src="assets/script/clock.js" defer></script>
 
     <script type="module" src="assets/script/commonZindex.js" defer></script>
 
@@ -25,7 +26,7 @@
 
     <link rel="icon" href="assets/img/icones/Windows XP Classic.ico" type="image/x-icon">
     <title>Flavien CAMPEAUX</title>
-    <div class="crt"></div>
+    <!-- <div class="crt"></div> -->
 </head>
 
 <body class="desktop-body">
@@ -37,9 +38,12 @@
                 <img src="assets/img/icones/XpDesktop.png" alt="" class="icone">
                 <span>Le dinateur</span>
             </div>
-            <div class="window" id="folderDesktop">
+            <div class="window" data-target-group="folderDesktop">
                 <div class="title-bar">
-                    <div class="title-bar-text">Le dinateur</div>
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/XpDesktop.png" alt="">
+                        Le dinateur
+                    </div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Maximize"></button>
@@ -61,7 +65,7 @@
                                 <span>Back</span>
                             </div>
                             <div class="lil-pack">
-                                <img src="/assets/img/icones/arrow.png" alt="" style="transform: scaleX(-1);">
+                                <img src="/assets/img/icones/arrow2.png" alt="">
                             </div>
                             <div class="lil-pack">
                                 <img src="/assets/img/icones/NetworkDocuments.png" alt="">
@@ -118,9 +122,12 @@
                 <span>Read Me.txt</span>
             </div>
             <!-- (enfant) -->
-            <div class="window txt" style="display: none;" id="txtRM">
+            <div class="window txt" data-target-group="txtRM">
                 <div class="title-bar">
-                    <div class="title-bar-text">Read Me.txt</div>
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/txt.png" alt="">
+                        Read Me
+                    </div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Maximize"></button>
@@ -140,19 +147,61 @@
                     </div>
                 </div>
             </div>
+
+        </div>
+
+        <!-- ##### TXT Mot de passe ##### -->
+        <div>
+            <!-- (parent) -->
+            <div class="icon iconOpen iconDrag" data-target="txtMDP"
+                style="top:calc(5% + 120px); left: calc(2% + 120px);">
+                <img src="assets/img/icones/txt.png" alt="" class="icone">
+                <span>Mot de passe.txt</span>
+            </div>
+            <!-- (enfant) -->
+            <div class="window txt" style="display: none;" data-target-group="txtMDP">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/txt.png" alt="">
+                        Read Me.txt
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="txt-window-body-head">
+                        <span>File</span>
+                        <span>Edit</span>
+                        <span>Format</span>
+                        <span>View</span>
+                        <span>Help</span>
+                    </div>
+                    <div class="txt-text-part">
+                        <p>Mot de passe tres secret de l'ordinateur :</p>
+                        <p>1234</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- ##### DOSSIER Travail ##### -->
         <div>
             <!-- (parent) Icone Bureau Dossier Travail -->
-            <div class="icon iconOpen iconDrag folder-icon" data-target="folderTravail" style="top: calc(5% + 120px); left: 2%;">
+            <div class="icon iconOpen iconDrag folder-icon" data-target="folderTravail"
+                style="top: calc(5% + 120px); left: 2%;">
                 <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
                 <span>Travail</span>
             </div>
             <!-- (enfant) Fenetre Bureau Travail -->
-            <div class="window" id="folderTravail">
-                <div class="title-bar">
-                    <div class="title-bar-text">Travail</div>
+            <div class="window" data-target-group="folderTravail">
+                <div class="title-bar ">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/Closed folder.png" alt="">
+                        Travail
+                    </div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Maximize"></button>
@@ -174,7 +223,7 @@
                                 <span>Back</span>
                             </div>
                             <div class="lil-pack">
-                                <img src="/assets/img/icones/arrow.png" alt="" style="transform: scaleX(-1);">
+                                <img src="/assets/img/icones/arrow2.png" alt="">
                             </div>
                             <div class="lil-pack">
                                 <img src="/assets/img/icones/NetworkDocuments.png" alt="">
@@ -216,18 +265,31 @@
                         </div>
                         <!-- (parent) Icone Dossier Travail - Jeux -->
                         <div class="folder-text-part">
-                            <div class="icon iconF iconOpen folder-icon" data-target="folderJeux" style="position:relative">
-                                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
-                                <span>Jeux</span>
+                            <div class="icon iconF iconOpen" data-target="pdfCv" style="position:relative">
+                                <img src="assets/img/icones/pdfAdobe.png" alt="" class="icone">
+                                <span>Cv.pdf</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- (enfant) Fenetre Dossier Jeux -->
-            <div class="window" id="folderJeux">
+        </div>
+
+        <!-- ##### DOSSIER Trucs perso ##### -->
+        <div>
+            <!-- (parent) Icone Bureau Dossier Truc perso -->
+            <div class="icon iconOpen iconDrag folder-icon" data-target="folderTrucPerso"
+                style="top: calc(5% + 240px); left: 2%;">
+                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
+                <span>Truc Perso</span>
+            </div>
+            <!-- (enfant) (parent) Fenetre Bureau Truc perso -->
+            <div class="window" data-target-group="folderTrucPerso">
                 <div class="title-bar">
-                    <div class="title-bar-text">Jeux</div>
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/Closed folder.png" alt="">
+                        Truc Perso
+                    </div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Maximize"></button>
@@ -249,7 +311,187 @@
                                 <span>Back</span>
                             </div>
                             <div class="lil-pack">
-                                <img src="/assets/img/icones/arrow.png" alt="" style="transform: scaleX(-1);">
+                                <img src="/assets/img/icones/arrow2.png" alt="">
+                            </div>
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/NetworkDocuments.png" alt="">
+                            </div>
+                        </div>
+                        <div class="pack pack-2">
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/loupe.png" alt="">
+                                <span>Search</span>
+                            </div>
+
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/MyDocuments.png" alt="">
+                                <span>Folders</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="txt-window-body-head-address">
+                        <span>Address</span>
+                        <div class="address-path">
+                            <img src="assets/img/icones/Closed folder.png" alt="">
+                            <span>C:\Desktop\Truc Perso</span>
+                        </div>
+                    </div>
+                    <div class="folder-body-wrapper">
+                        <div class="folder-system-files-part">
+                            <div class="folder-system-files-items">
+                                <span>Sytem Tasks</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                            <div class="folder-system-files-items">
+                                <span>Other Places</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                            <div class="folder-system-files-items">
+                                <span>File and Folder Tasks</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="folder-text-part">
+                            <!-- (parent) Icone Dossier Truc Perso - Chose que j'aime -->
+                            <div class="icon iconF iconOpen folder-icon" data-target="folderChosesQueJaime"
+                                style="position:relative">
+                                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
+                                <span>Des choses que j'aime</span>
+                            </div>
+                            <!-- (parent) Icone Dossier Truc Peros - Photo de famille -->
+                            <div class="icon iconF iconOpen folder-icon" data-target="folderPhotoDeFamille"
+                                style="position:relative">
+                                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
+                                <span>Photos de famille</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- (enfant) Truc perso - Fenetre Dossier Choses que j'aime -->
+            <div class="window" data-target-group="folderChosesQueJaime">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/Closed folder.png" alt="">
+                        Des choses que j'aime
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="txt-window-body-head">
+                        <span>File</span>
+                        <span>View</span>
+                        <span>Favorites</span>
+                        <span>Tools</span>
+                        <span>Help</span>
+                    </div>
+                    <div class="folder-btn-body-head">
+                        <div class="pack pack-1">
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/arrow.png" alt="">
+                                <span>Back</span>
+                            </div>
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/arrow2.png" alt="">
+                            </div>
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/NetworkDocuments.png" alt="">
+                            </div>
+                        </div>
+                        <div class="pack pack-2">
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/loupe.png" alt="">
+                                <span>Search</span>
+                            </div>
+
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/MyDocuments.png" alt="">
+                                <span>Folders</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="txt-window-body-head-address">
+                        <span>Address</span>
+                        <div class="address-path">
+                            <img src="assets/img/icones/Closed folder.png" alt="">
+                            <span>C:\Desktop\Trucs perso\choses que j'aime</span>
+                        </div>
+                    </div>
+                    <div class="folder-body-wrapper">
+                        <div class="folder-system-files-part">
+                            <div class="folder-system-files-items">
+                                <span>Sytem Tasks</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                            <div class="folder-system-files-items">
+                                <span>Other Places</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                            <div class="folder-system-files-items">
+                                <span>File and Folder Tasks</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                        </div>
+                        <!-- (parent) Icone Dossier Truc perso - Dossier Choses que jaime -->
+                        <div class="folder-text-part">
+                            <div class="icon iconF" data-target="photoChaChauve" style="position:relative">
+                                <img src="assets/img/icones/pics folder.png" alt="" class="icone">
+                                <span>ChaChauve</span>
+                            </div>
+                            <div class="icon iconF" data-target="photoDominique" style="position:relative">
+                                <img src="assets/img/icones/pics folder.png" alt="" class="icone">
+                                <span>Dominique</span>
+                            </div>
+                            <div class="icon iconF" data-target="photogentilCat" style="position:relative">
+                                <img src="assets/img/icones/pics folder.png" alt="" class="icone">
+                                <span>gentilCat</span>
+                            </div>
+                            <div class="icon iconF" data-target="photoJoseph" style="position:relative">
+                                <img src="assets/img/icones/pics folder.png" alt="" class="icone">
+                                <span>Joseph</span>
+                            </div>
+
+                            <div class="icon iconF" data-target="txtListeDeMots" style="position:relative">
+                                <img src="assets/img/icones/txt.png" alt="" class="icone">
+                                <span>Liste de mots</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- (enfant) Truc perso - Fenetre Dossier Photo de famille -->
+            <div class="window" data-target-group="folderPhotoDeFamille">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/Closed folder.png" alt="">
+                        Photos de Famille
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="txt-window-body-head">
+                        <span>File</span>
+                        <span>View</span>
+                        <span>Favorites</span>
+                        <span>Tools</span>
+                        <span>Help</span>
+                    </div>
+                    <div class="folder-btn-body-head">
+                        <div class="pack pack-1">
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/arrow.png" alt="">
+                                <span>Back</span>
+                            </div>
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/arrow2.png" alt="">
                             </div>
                             <div class="lil-pack">
                                 <img src="/assets/img/icones/NetworkDocuments.png" alt="">
@@ -291,120 +533,221 @@
                         </div>
                         <!-- (parent) Icone Dossier Travail - Jeux -->
                         <div class="folder-text-part">
-                            <div class="icon iconF folder-icon" data-target="jeuFrog" style="position:relative">
-                                <img src="assets/img/icones/blackFrog.png" alt="" class="icone">
-                                <span>FROG.jeu</span>
+                            <div class="icon iconF" data-target="" style="position:relative">
+                                <img src="assets/img/icones/pics folder.png" alt="" class="icone">
+                                <span>photo2</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- ##### DOSSIER Trucs perso ##### -->
-        <div>
-            <!-- (parent) Icone Bureau True Perso -->
-            <div class="icon iconOpen iconDrag folder-icon" data-target="folderTrucPerso"
-                style="top: calc(5% + 240px); left: 2%;">
-                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
-                <span>Trucs perso</span>
+            <!-- Div fenetres photo dossier des truc que j'aime - Uniquement a but de les wrap pour la lisibilité du code -->
+            <div>
+                <!-- chachauve -->
+                <div class="window" data-target-group="photoChaChauve">
+                    <div class="title-bar">
+                        <div class="title-bar-text">ChaChauve.png</div>
+                        <div class="title-bar-controls" style="cursor: pointer;">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <div class="photo-body-wrapper">
+                            <div class="photo-part">
+                                <img src="/assets/img/baldCat.png" alt="">
+                            </div>
+                            <div class="photo-btn">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="mdi-magnify-plus" width="32" height="32" viewBox="0 0 32 32">
+                                        <path
+                                            d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z" />
+                                    </svg>
+                                </i>
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="mdi-magnify-minus" width="32" height="32" viewBox="0 0 32 32">
+                                        <path
+                                            d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M5,8V10H13V8H5Z" />
+                                    </svg>
+                                </i>
+                                <i class="arrow">
+                                    <svg id="Flat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                        height="24">
+                                        <path
+                                            d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                    </svg>
+                                </i>
+                                <i class="arrow" style="transform: scaleX(-1);">
+                                    <svg id="Flat2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                        height="24">
+                                        <path
+                                            d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                    </svg>
+                                </i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dominique -->
+                <div class="window" data-target-group="photoDominique">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Dominique.jpg</div>
+                        <div class="title-bar-controls" style="cursor: pointer;">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <div class="photo-body-wrapper">
+                            <div class="photo-part">
+                                <img src="/assets/img/Dominique.jpg" alt="">
+                            </div>
+                            <div class="photo-btn">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="mdi-magnify-plus" width="32" height="32" viewBox="0 0 32 32">
+                                        <path
+                                            d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z" />
+                                    </svg>
+                                </i>
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="mdi-magnify-minus" width="32" height="32" viewBox="0 0 32 32">
+                                        <path
+                                            d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M5,8V10H13V8H5Z" />
+                                    </svg>
+                                </i>
+                                <i class="arrow">
+                                    <svg id="Flat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                        height="24">
+                                        <path
+                                            d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                    </svg>
+                                </i>
+                                <i class="arrow" style="transform: scaleX(-1);">
+                                    <svg id="Flat2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                        height="24">
+                                        <path
+                                            d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                    </svg>
+                                </i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- gentilCat -->
+                <div class="window" data-target-group="photogentilCat">
+                    <div class="title-bar">
+                        <div class="title-bar-text">gentilCat.jpg</div>
+                        <div class="title-bar-controls" style="cursor: pointer;">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <div class="photo-body-wrapper">
+                            <div class="photo-part">
+                                <img src="/assets/img/gentilCat.jpg" alt="">
+                            </div>
+                            <div class="photo-btn">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="mdi-magnify-plus" width="32" height="32" viewBox="0 0 32 32">
+                                        <path
+                                            d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z" />
+                                    </svg>
+                                </i>
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="mdi-magnify-minus" width="32" height="32" viewBox="0 0 32 32">
+                                        <path
+                                            d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M5,8V10H13V8H5Z" />
+                                    </svg>
+                                </i>
+                                <i class="arrow">
+                                    <svg id="Flat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                        height="24">
+                                        <path
+                                            d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                    </svg>
+                                </i>
+                                <i class="arrow" style="transform: scaleX(-1);">
+                                    <svg id="Flat2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                        height="24">
+                                        <path
+                                            d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                    </svg>
+                                </i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- photoJoseph -->
+                <div class="window" data-target-group="photoJoseph">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Joseph.jpg</div>
+                        <div class="title-bar-controls" style="cursor: pointer;">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <div class="photo-body-wrapper">
+                            <div class="photo-part">
+                                <img src="/assets/img/Joseph.jpg" alt="">
+                            </div>
+                            <div class="photo-btn">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="mdi-magnify-plus" width="32" height="32" viewBox="0 0 32 32">
+                                        <path
+                                            d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z" />
+                                    </svg>
+                                </i>
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="mdi-magnify-minus" width="32" height="32" viewBox="0 0 32 32">
+                                        <path
+                                            d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M5,8V10H13V8H5Z" />
+                                    </svg>
+                                </i>
+                                <i class="arrow">
+                                    <svg id="Flat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                        height="24">
+                                        <path
+                                            d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                    </svg>
+                                </i>
+                                <i class="arrow" style="transform: scaleX(-1);">
+                                    <svg id="Flat2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                        height="24">
+                                        <path
+                                            d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                    </svg>
+                                </i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- (enfant) Fenetre Truc Perso -->
-            <div class="window" id="folderTrucPerso">
+            <!-- Div text de "liste de mots" -->
+            <div class="window txt" data-target-group="txtListeDeMots">
                 <div class="title-bar">
-                    <div class="title-bar-text">Trucs perso</div>
-                    <div class="title-bar-controls" style="cursor: pointer;">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/txt.png" alt="">
+                        Liste de mots.txt
                     </div>
-                </div>
-                <div class="window-body">
-                    <div class="txt-window-body-head">
-                        <span>File</span>
-                        <span>View</span>
-                        <span>Favorites</span>
-                        <span>Tools</span>
-                        <span>Help</span>
-                    </div>
-                    <div class="folder-btn-body-head">
-                        <div class="pack pack-1">
-                            <div class="lil-pack">
-                                <img src="/assets/img/icones/arrow.png" alt="">
-                                <span>Back</span>
-                            </div>
-                            <div class="lil-pack">
-                                <img src="/assets/img/icones/arrow.png" alt="" style="transform: scaleX(-1);">
-                            </div>
-                            <div class="lil-pack">
-                                <img src="/assets/img/icones/NetworkDocuments.png" alt="">
-                            </div>
-                        </div>
-                        <div class="pack pack-2">
-                            <div class="lil-pack">
-                                <img src="/assets/img/icones/loupe.png" alt="">
-                                <span>Search</span>
-                            </div>
-
-                            <div class="lil-pack">
-                                <img src="/assets/img/icones/MyDocuments.png" alt="">
-                                <span>Folders</span>
-                            </div>
-                        </div>
-                        <!-- <div>
-                            <img src="/assets/img/icones" alt="">
-                        </div> -->
-                    </div>
-                    <div class="txt-window-body-head-address">
-                        <span>Address</span>
-                        <div class="address-path">
-                            <img src="assets/img/icones/Closed folder.png" alt="">
-                            <span>C:\Desktop\Truc perso</span>
-                        </div>
-                    </div>
-                    <div class="folder-body-wrapper">
-                        <div class="folder-system-files-part">
-                            <div class="folder-system-files-items">
-                                <span>Sytem Tasks</span>
-                                <img src="/assets/img/icones/down-arrow.png" alt="">
-                            </div>
-                            <div class="folder-system-files-items">
-                                <span>Other Places</span>
-                                <img src="/assets/img/icones/down-arrow.png" alt="">
-                            </div>
-                            <div class="folder-system-files-items">
-                                <span>File and Folder Tasks</span>
-                                <img src="/assets/img/icones/down-arrow.png" alt="">
-                            </div>
-                        </div>
-                        <!-- (parent) Icone Dossier Travail - Jeux -->
-                        <div class="folder-text-part">
-                            <div class="iconF iconOpen folder-icon" data-target="" style="position:relative">
-                                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
-                                <span>Des choses que j'aime</span>
-                            </div>
-                            <div class="iconF iconOpen folder-icon" data-target="" style="position:relative">
-                                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
-                                <span>Photos de familles</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ##### TXT CV ##### -->
-        <div>
-            <!-- (parent) -->
-            <div class="icon iconOpen iconDrag" data-target="txtCv"
-                style="max-width: 500px; top: calc(5% + 360px); left: 2%;">
-                <img src="assets/img/icones/txt.png" alt="" class="icone">
-                <span>Cv.txt</span>
-            </div>
-            <!-- (enfant) -->
-            <div class="window txt" style="display: none; max-width: 500px;" id="txtCv">
-                <div class="title-bar">
-                    <div class="title-bar-text">Cv.txt</div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Maximize"></button>
@@ -420,112 +763,193 @@
                         <span>Help</span>
                     </div>
                     <div class="txt-text-part">
-                        <h1>Flavien Campeaux</h1>
-                        <h2>Alternant Développeur - jeux vidéo</h2>
-                        <p>En recherche d'une alternance dans le développement de jeux vidéos à partir de septembre
-                            2025.</p>
+                        <div class="liste-de-mot-wrap">
+                            <div>
+                                <h2>🏆 Mots très longs 🏆</h2>
+                                <ol>
+                                    <li>Paralipomène</li>
+                                    <li>Dodecaphonisme</li>
+                                    <li>Oligodendrocyte</li>
+                                    <li>Triskaïdékaphobie</li>
+                                    <li>Électroencéphalographie</li>
+                                    <li>Floccinaucinihilipilification</li>
+                                    <li>Hippopotomonstrosesquippedaliophobie</li>
+                                    <li>Pneumonoultramicroscopicsilicovolcanoconiose</li>
+                                </ol>
+                            </div>
 
-                        <h2>Diplômes et Formations</h2>
-                        <h3>BTS SIO option SLAM (Solutions Logicielles et Applications Métiers)</h3>
-                        <p>De septembre 2023 à octobre 2025 IEF2I Vincennes</p>
+                            <div>
+                                <h2>🌿 Champ lexical de la nature (jolis mots) 🌿</h2>
+                                <ol>
+                                    <li>Zéphyr</li>
+                                    <li>Bucolique</li>
+                                    <li>Sylvestre</li>
+                                    <li>Florilège</li>
+                                    <li>Auroral</li>
+                                    <li>Alizé</li>
+                                    <li>Nacré</li>
+                                    <li>Églantine</li>
+                                </ol>
+                            </div>
 
-                        <h3>Baccalauréat Général Spécialité Mathématiques et Numérique et Sciences Informatiques</h3>
-                        <p>De septembre 2020 à juillet 2023</p>
-                        <p>Lycée Pierre Teilhard de Chardin Saint-Maur-des-Fossés</p>
+                            <div>
+                                <h2>✨ Mots commençant par C ✨</h2>
+                                <ol>
+                                    <li>Chimérique</li>
+                                    <li>Cacophonie</li>
+                                    <li>Charivari</li>
+                                    <li>Consonance</li>
+                                    <li>Cortège</li>
+                                    <li>Crépuscule</li>
+                                    <li>Caracoler</li>
+                                    <li>Cataracte</li>
+                                </ol>
+                            </div>
 
-                        <h3>Diplôme national du brevet</h3>
-                        <p>De septembre 2015 à juillet 2020</p>
-                        <p>Institut Saint-Thomas de Villeneuve Bry-sur-Marne</p>
+                            <div>
+                                <h2>🌟 Mots commençant par S 🌟</h2>
+                                <ol>
+                                    <li>Sérendipité</li>
+                                    <li>Sibyllin</li>
+                                    <li>Solennel</li>
+                                    <li>Sinueux</li>
+                                    <li>Sylphide</li>
+                                    <li>Somptueux</li>
+                                    <li>Surréaliste</li>
+                                    <li>Scintiller</li>
+                                </ol>
+                            </div>
 
-                        <h3>Baccalauréat Général Spécialité Mathématiques et Numérique et Sciences Informatiques</h3>
-                        <p>De septembre 2020 à juillet 2023</p>
-                        <p>Lycée Pierre Teilhard de Chardin Saint-Maur-des-Fossés</p>
+                            <div>
+                                <h2>⚡ Mots commençant par T ⚡</h2>
+                                <ol>
+                                    <li>Tintinnabuler</li>
+                                    <li>Truculent</li>
+                                    <li>Tergiverser</li>
+                                    <li>Ténu</li>
+                                    <li>Turpitude</li>
+                                    <li>Translucide</li>
+                                    <li>Téméraire</li>
+                                    <li>Tourbillon</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <h2>🔎 Mots très courts</h2>
+                                <ol>
+                                    <li>Où</li>
+                                    <li>Eu</li>
+                                    <li>Un</li>
+                                    <li>Oh</li>
+                                    <li>Ah</li>
+                                    <li>Vu</li>
+                                    <li>Lu</li>
+                                    <li>Ai</li>
+                                </ol>
+                            </div>
 
-                        <h3>Diplôme national du brevet</h3>
-                        <p>De septembre 2015 à juillet 2020</p>
-                        <p>Institut Saint-Thomas de Villeneuve Bry-sur-Marne</p>
+                            <div>
+                                <h2>🌈 Mots de couleurs insolites 🌈</h2>
+                                <ol>
+                                    <li>Incarnat</li>
+                                    <li>Céladon</li>
+                                    <li>Amarante</li>
+                                    <li>Bis</li>
+                                    <li>Auburn</li>
+                                    <li>Puce</li>
+                                    <li>Isabelle</li>
+                                    <li>Champagne</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h2>📣 Onomatopées 📣</h2>
+                                <ol>
+                                    <li>Paf</li>
+                                    <li>Toc</li>
+                                    <li>Bing</li>
+                                    <li>Crac</li>
+                                    <li>Plouf</li>
+                                    <li>Pouf</li>
+                                    <li>Ding</li>
+                                    <li>Plop</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h2>🔮 Mots archaïques 🔮</h2>
+                                <ol>
+                                    <li>Naguère</li>
+                                    <li>Damoiseau</li>
+                                    <li>Belître</li>
+                                    <li>Pourpoint</li>
+                                    <li>Soubrette</li>
+                                    <li>Fût-ce</li>
+                                    <li>D’ores</li>
+                                    <li>Aloyau</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h2>🎶 Mots musicaux 🎶</h2>
+                                <ol>
+                                    <li>Contrepoint</li>
+                                    <li>Arpège</li>
+                                    <li>Diapason</li>
+                                    <li>Crescendo</li>
+                                    <li>Fortissimo</li>
+                                    <li>Legato</li>
+                                    <li>Rubato</li>
+                                    <li>Cantabile</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h2>🏰 Mots médiévaux 🏰</h2>
+                                <ol>
+                                    <li>Serf</li>
+                                    <li>Fief</li>
+                                    <li>Châtelain</li>
+                                    <li>Trouvère</li>
+                                    <li>Bannière</li>
+                                    <li>Donjon</li>
+                                    <li>Sénéchal</li>
+                                    <li>Lices</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h2>🌍 Mots empruntés d'ailleurs 🌍</h2>
+                                <ol>
+                                    <li>Tsunami (japonais)</li>
+                                    <li>Safari (swahili)</li>
+                                    <li>Kangourou (aborigène)</li>
+                                    <li>Anorak (inuit)</li>
+                                    <li>Bungalow (bengali)</li>
+                                    <li>Karaoké (japonais)</li>
+                                    <li>Pizza (italien)</li>
+                                    <li>Piano (italien)</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h2>🔥 Mots passionnels 🔥</h2>
+                                <ol>
+                                    <li>Ardeur</li>
+                                    <li>Élan</li>
+                                    <li>Enthousiasme</li>
+                                    <li>Ferveur</li>
+                                    <li>Passion</li>
+                                    <li>Transports</li>
+                                    <li>Emportement</li>
+                                    <li>Ivresse</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- ##### EXE LE CAT ##### -->
-        <div>
-            <!-- (parent) -->
-            <div class="icon iconDrag iconExe" data-exe="exeLeCat" style="top: 5%; right: 2%;">
-                <img src="assets/img/icones/catMouthClosed.png" alt="" class="icone">
-                <span>Le cat.exe</span>
-                <audio id="meow" src="/assets/img/mp3/m-e-o-w.mp3"></audio>
-            </div>
-            <!-- (enfant) -->
-            <!-- Changement du curseur -->
-        </div>
 
-        <!-- ##### EXE LE Dragon Noir ##### -->
-        <div>
-            <!-- (parent) -->
-            <div class="icon iconDrag iconExe" data-exe="exeLeDragonNoir" style="top: calc(5% + 120px); right: 2%;">
-                <img src="assets/img/icones/goofyToothless2NB.png" alt="" class="icone">
-                <span>Le dragon noir.exe</span>
-            </div>
-            <!-- (enfant) -->
-            <!-- Le dragon qui dance ihih -->
-        </div>
-
-        <!-- ##### EXE Party Dance ##### -->
-        <div>
-            <!-- (parent) -->
-            <div class="icon iconDrag iconExe" data-exe="exeDanceParty" style="top: calc(5% + 240px); right: 2%;">
-                <img src="assets/img/icones/danceParty.png" alt="" class="icone">
-                <span>danceParty.exe</span>
-            </div>
-            <!-- (enfant) -->
-            <!-- La fete de la dance wouhouu -->
-        </div>
-
-        <!-- ##### SpookyScaryGhost.exe ##### -->
-        <div class="icon iconDrag iconExe" data-exe="exeSpookyScaryGhost" id="SpookyScaryGhost" style="top: calc(5% + 360px); right: 2%;">
-            <img src="/assets/img/icones/ghostyGhost.png" alt="" class="icone">
-            <span>SpookyScaryGhost (Sylvain).exe</span>
-        </div>
-
-        <!-- ##### Miroir.exe ##### -->
-        <div class="icon iconDrag iconExe" data-exe="exeMiroir" style="top: calc(5% + 120px); right: calc(2% + 120px);">
-            <img src="/assets/img/icones/miroir.png" alt="" class="icone">
-            <span>TrucQuiReflete.exe</span>
-        </div>
-
-        <!-- ##### TXT Mot de passe ##### -->
-        <div>
-            <!-- (parent) -->
-            <div class="icon iconOpen iconDrag" data-target="txtMDP" style="top:5%; right: calc(2% + 120px);">
-                <img src="assets/img/icones/txt.png" alt="" class="icone">
-                <span>Mot de passe.txt</span>
-            </div>
-            <!-- (enfant) -->
-            <div class="window txt" style="display: none;" id="txtMDP">
-                <div class="title-bar">
-                    <div class="title-bar-text">Read Me.txt</div>
-                    <div class="title-bar-controls" style="cursor: pointer;">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="window-body">
-                    <div class="txt-window-body-head">
-                        <span>File</span>
-                        <span>Edit</span>
-                        <span>Format</span>
-                        <span>View</span>
-                        <span>Help</span>
-                    </div>
-                    <div class="txt-text-part">
-                        <p>Mot de passe tres secret de l'ordinateur :</p>
-                        <p>1234</p>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- ##### Poubelle ##### -->
@@ -536,6 +960,57 @@
             </div>
         </div>
 
+        <!-- ##### EXE ##### -->
+        <div>
+            <!-- ##### EXE LE CAT ##### -->
+            <div>
+                <!-- (parent) -->
+                <div class="icon iconDrag iconExe" data-exe="exeLeCat" style="top: 5%; right: 2%;">
+                    <img src="assets/img/icones/catMouthClosed.png" alt="" class="icone">
+                    <span>Le cat.exe</span>
+                    <audio id="meow" src="/assets/img/mp3/m-e-o-w.mp3"></audio>
+                </div>
+                <!-- (enfant) -->
+                <!-- Changement du curseur -->
+            </div>
+
+            <!-- ##### EXE LE Dragon Noir ##### -->
+            <div>
+                <!-- (parent) -->
+                <div class="icon iconDrag iconExe" data-exe="exeLeDragonNoir" style="top: calc(5% + 120px); right: 2%;">
+                    <img src="assets/img/icones/goofyToothless2NB.png" alt="" class="icone">
+                    <span>Le dragon noir.exe</span>
+                </div>
+                <!-- (enfant) -->
+                <!-- Le dragon qui dance ihih -->
+            </div>
+
+            <!-- ##### EXE Party Dance ##### -->
+            <div>
+                <!-- (parent) -->
+                <div class="icon iconDrag iconExe" data-exe="exeDanceParty" style="top: calc(5% + 240px); right: 2%;">
+                    <img src="assets/img/icones/danceParty.png" alt="" class="icone">
+                    <span>danceParty.exe</span>
+                </div>
+                <!-- (enfant) -->
+                <!-- La fete de la dance wouhouu -->
+            </div>
+
+            <!-- ##### SpookyScaryGhost.exe ##### -->
+            <div class="icon iconDrag iconExe" data-exe="exeSpookyScaryGhost" id="SpookyScaryGhost"
+                style="top: calc(5% + 360px); right: 2%;">
+                <img src="/assets/img/icones/ghostyGhost.png" alt="" class="icone">
+                <span>SpookyScaryGhost (Sylvain).exe</span>
+            </div>
+
+            <!-- ##### Miroir.exe ##### -->
+            <div class="icon iconDrag iconExe" data-exe="exeMiroir"
+                style="top: calc(5% + 120px); right: calc(2% + 120px);">
+                <img src="/assets/img/icones/miroir.png" alt="" class="icone">
+                <span>TrucQuiReflete.exe</span>
+            </div>
+        </div>
+
         <!-- ##### Effets des EXE ##### -->
         <div class="toothless-exe toothless-gif" id="toothless">
             <img src="assets/img/gif/toothlessDanceGif.gif" alt="">
@@ -543,20 +1018,53 @@
         <div class="party-exe" id="partyExe">
             <img class="party-gif confettiesGif" src="/assets/img/gif/confettiesGif.gif" alt="confetties">
 
-            <img class="party-gif catDancingGif catDancing1" src="/assets/img/gif/catDancingGif.gif" alt="catDancingGif">
-            <img class="party-gif catDancingGif catDancing2" src="/assets/img/gif/catDancingGif.gif" alt="catDancingGif">
-            <img class="party-gif catDancingGif catDancing3" src="/assets/img/gif/catDancingGif.gif" alt="catDancingGif">
-            <img class="party-gif catDancingGif catDancing4" src="/assets/img/gif/catDancingGif.gif" alt="catDancingGif">
+            <img class="party-gif catDancingGif catDancing1" src="/assets/img/gif/catDancingGif.gif"
+                alt="catDancingGif">
+            <img class="party-gif catDancingGif catDancing2" src="/assets/img/gif/catDancingGif.gif"
+                alt="catDancingGif">
+            <img class="party-gif catDancingGif catDancing3" src="/assets/img/gif/catDancingGif.gif"
+                alt="catDancingGif">
+            <img class="party-gif catDancingGif catDancing4" src="/assets/img/gif/catDancingGif.gif"
+                alt="catDancingGif">
 
             <div class="background-color-changement"></div>
         </div>
-
     </main>
 
     <footer>
-        <img class="powerBtn" src="assets/img/icones/start.png" alt="startbtn">
-        <div class="taskbar"></div>
-        <div class="tools"></div>
+        <div class="footer-main-part">
+            <img class="powerBtn" src="assets/img/icones/start.png" alt="startbtn">
+            <div class="taskbar">
+
+                <div class="taskbar-item unselected" data-target="txtRM" data-target-group="txtRM">
+                    <img src="assets/img/icones/txt.png" alt="">
+                    <p>Read Me.txt</p>
+                </div>
+                <div class="taskbar-item" data-target="txtMDP" data-target-group="txtMDP">
+                    <img src="assets/img/icones/txt.png" alt="">
+                    <p>Mot de pass.txt</p>
+                </div>
+
+                <div class="taskbar-item" data-target="folderTravail" data-target-group="folderTravail">
+                    <img src="assets/img/icones/Closed folder.png" alt="">
+                    <p>Travail</p>
+                </div>
+                <div class="taskbar-item" data-target="folderTrucPerso" data-target-group="folderTrucPerso">
+                    <img src="assets/img/icones/Closed folder.png" alt="">
+                    <p>Trucs perso</p>
+                </div>
+                <div class="taskbar-item" data-target="folderChosesQueJaime" data-target-group="folderChosesQueJaime">
+                    <img src="assets/img/icones/Closed folder.png" alt="">
+                    <p>Des choses que j'aime</p>
+                </div>
+                <div class="taskbar-item" data-target="folderPhotoDeFamille" data-target-group="folderPhotoDeFamille">
+                    <img src="assets/img/icones/Closed folder.png" alt="">
+                    <p>Photos de famille</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="tools"><span id="clock"></span></div>
     </footer>
 
 </body>

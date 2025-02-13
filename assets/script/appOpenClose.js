@@ -3,15 +3,15 @@
  ******************************************************/
 
 /***************************************************
- *  Import page.s pour fonction.s
+ *  Import pages pour fonctions
  ***************************************************/
-import { bringWindowToFront,lowerZIndex, topZIndex } from "./commonZindex.js";
+import { bringWindowToFront, lowerZIndex, topZIndex } from "./commonZindex.js";
 
 /***************************************************
  * Choix du mode de positionnement :
- *   "cascade" ou "random"
+ *   "cascade" ou "random" ou "center"
  ***************************************************/
-const POSITION_MODE = "cascade";
+const POSITION_MODE = "center";
 
 /***************************************************
  * Variables pour le mode Cascade
@@ -23,33 +23,59 @@ let cascadeCount = 0;
  ***************************************************/
 document.querySelectorAll(".icon").forEach((icon) => {
     icon.addEventListener("dblclick", () => {
-        const targetId = icon.getAttribute("data-target");
-        const relatedWindow = document.getElementById(targetId);
-        if (!relatedWindow) return;
+        const targetGroup = icon.getAttribute("data-target");
+        if (!targetGroup) return;
 
-        // Si déjà ouvert
-        if (relatedWindow.style.display === "flex") {
-            return;
+        const relatedWindows = document.querySelectorAll(
+            `.window[data-target-group="${targetGroup}"]`
+        );
+
+        if (relatedWindows.length === 0) return;
+
+        const footerItem = document.querySelector(
+            `.taskbar [data-target-group="${targetGroup}"]`
+        );
+
+
+        relatedWindows.forEach((win) => {
+            // Si la fenêtre est déjà ouverte
+            if (win.style.display === "flex") {
+                // On la ramène éventuellement au 1er plan
+                if (typeof bringWindowToFront === "function") {
+                    bringWindowToFront(win);
+                }
+                return;
+            }
+
+            // Sinon, on l'affiche
+            win.style.display = "flex";
+
+            // On applique la logique de positionnement
+            switch (POSITION_MODE) {
+                case "cascade":
+                    positionWindowCascade(win);
+                    break;
+                case "random":
+                    positionWindowRandom(win);
+                    break;
+                case "center":
+                default:
+                    positionWindowCenter(win);
+                    break;
+            }
+
+            // On met la fenêtre au premier plan
+            if (typeof bringWindowToFront === "function") {
+                bringWindowToFront(win);
+            }
+        });
+
+        // 3) Affiche l'élément du footer (s’il existe)
+        if (footerItem) {
+            footerItem.style.display = "flex";
         }
 
-        // On affiche la fenêtre
-        relatedWindow.style.display = "flex";
-
-        // On positionne selon le mode choisi
-        if (POSITION_MODE === "cascade") {
-            positionWindowCascade(relatedWindow);
-        } else if (POSITION_MODE === "random") {
-            positionWindowRandom(relatedWindow);
-        } else {
-            positionWindowCenter(relatedWindow);
-        }
-
-        // On la met au premier plan (nécessite bringWindowToFront(win) global)
-        if (typeof bringWindowToFront === "function") {
-            bringWindowToFront(relatedWindow);
-        }
-
-        // Si c’est un dossier (folder-icon), on passe en "Open folder"
+        // 4) Si c’est un dossier (folder-icon), on passe en "Open folder"
         if (icon.classList.contains("folder-icon")) {
             const iconImg = icon.querySelector("img");
             if (iconImg) {
@@ -64,18 +90,43 @@ document.querySelectorAll(".icon").forEach((icon) => {
  ***************************************************/
 document.querySelectorAll('.window [aria-label="Close"]').forEach((btn) => {
     btn.addEventListener("click", () => {
+        // Trouve la fenêtre parente du bouton
         const currentWindow = btn.closest(".window");
+        if (!currentWindow) return;
+
+        // Ferme la fenêtre
         currentWindow.style.display = "none";
 
-        // Baisser le zIdex pour futur ouverture de fenetre
-        lowerZIndex(); 
+        // Baisse le zIndex global pour les prochaines ouvertures
+        lowerZIndex();
 
-        // Récupérer l'icône associée
-        const windowId = currentWindow.id;
-        const relatedIcon = document.querySelector(`.icon[data-target="${windowId}"]`);
+        // Récupère le groupe cible (ex: "txtRM")
+        const targetGroup = currentWindow.getAttribute("data-target-group");
+        if (!targetGroup) return;
+
+        // Vérifie si c'est la dernière fenêtre ouverte avec ce groupe
+        // Si oui, on peut aussi masquer le footerItem
+        // => on va voir combien de fenêtres du même groupe sont encore affichées
+        const otherOpenedWindows = document.querySelectorAll(
+            `.window[data-target-group="${targetGroup}"]`
+        );
+        const stillOpen = [...otherOpenedWindows].some(win => win.style.display === "flex");
+
+        // Si plus AUCUNE fenêtre de ce groupe n'est affichée, on masque le footer
+        if (!stillOpen) {
+            const footerItem = document.querySelector(
+                `.taskbar [data-target-group="${targetGroup}"]`
+            );
+            if (footerItem) {
+                footerItem.style.display = "none";
+            }
+        }
+
+        // Récupère l'icône qui a data-target="txtRM"
+        const relatedIcon = document.querySelector(`.icon[data-target="${targetGroup}"]`);
         if (!relatedIcon) return;
 
-        // Si c’est un folder-icon, remettre en "Closed folder"
+        // Si c’est un folder-icon, on repasse en "Closed folder"
         if (relatedIcon.classList.contains("folder-icon")) {
             const iconImg = relatedIcon.querySelector("img");
             if (iconImg) {
@@ -115,7 +166,7 @@ function positionWindowCascade(win) {
     let newLeft = baseLeft + offset;
     let newTop = baseTop + offset;
 
-    // S'assurer de ne pas dépasser l'écran (optionnel)
+    // Empêche de dépasser l'écran (optionnel)
     if (newLeft + w > winWidth) {
         newLeft = winWidth - w;
     }
