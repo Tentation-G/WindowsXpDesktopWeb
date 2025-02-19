@@ -6,7 +6,7 @@
 
 .window {
     display: none;
-    position: absolute;
+    position: absolute !important;
     flex-direction: column;
     min-width: $window-min-width;
     width: $window-min-width;
@@ -94,6 +94,9 @@
 
         p {
             font-size: $font-size-p;
+            i {
+                font-style: italic;
+            }
         }
     }
 }

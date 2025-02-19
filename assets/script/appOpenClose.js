@@ -11,7 +11,7 @@ import { bringWindowToFront, lowerZIndex, topZIndex } from "./commonZindex.js";
  * Choix du mode de positionnement :
  *   "cascade" ou "random" ou "center"
  ***************************************************/
-const POSITION_MODE = "center";
+const POSITION_MODE = "random";
 
 /***************************************************
  * Variables pour le mode Cascade
