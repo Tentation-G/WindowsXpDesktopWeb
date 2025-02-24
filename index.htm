@@ -26,7 +26,7 @@
 
     <link rel="icon" href="assets/img/icones/Windows XP Classic.ico" type="image/x-icon">
     <title>Flavien CAMPEAUX</title>
-    <div class="crt"></div>
+    <!-- <div class="crt"></div> -->
 </head>
 
 <body class="desktop-body">
@@ -263,9 +263,9 @@
                                 <img src="/assets/img/icones/down-arrow.png" alt="">
                             </div>
                         </div>
-                        <!-- (parent) Icone Dossier Travail - Jeux -->
+                        <!-- (parent) Icone Dossier Travail - Dossier Travail -->
                         <div class="folder-text-part">
-                            <div class="icon iconF iconOpen" data-target="pdfCv" style="position:relative">
+                            <div class="icon iconF iconOpen" data-target="pdfCV" style="position:relative">
                                 <img src="assets/img/icones/pdfAdobe.png" alt="" class="icone">
                                 <span>Cv.pdf</span>
                             </div>
@@ -273,16 +273,37 @@
                                 <img src="assets/img/icones/txt.png" alt="" class="icone">
                                 <span>Mention Honorable.txt</span>
                             </div>
+                            <div class="icon iconF iconOpen" data-target="pptPresVeille" style="position:relative">
+                                <img src="assets/img/icones/ppLogo2005.png" alt="" class="icone">
+                                <span>Presentation veille.ppt</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- (enfant) Dossier Travail - pdf CV -->
+            <div class="window" data-target-group="pdfCV">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/pdfAdobe.png" alt="">
+                        Cv
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
 
+                </div>
+            </div>
+            <!-- (enfant) Dossier Travail - Txt Mention Honorable -->
             <div class="window txt" data-target-group="txtMH">
                 <div class="title-bar">
                     <div class="title-bar-text">
                         <img src="assets/img/icones/txt.png" alt="">
-                        Read Me
+                        Mention Honorable
                     </div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
@@ -301,11 +322,52 @@
                     <div class="txt-text-part">
                         <br>
                         <h3>Mention honorable à ceux qui m'ont aidé à developper ce site</h3><br>
-                        <p>- La<a href="https://devdocs.io/javascript/" target="_blank"> Documentation JavaScript</a> 👍</p><br>
+                        <p>- La<a href="https://devdocs.io/javascript/" target="_blank"> Documentation JavaScript</a> 👍
+                        </p><br>
                         <p>- La <a href="https://web.archive.org/">Wayback Machine</a> 💻</p><br>
                         <p>- L'eau du robinet (pour rester hydrater en toute situation) 🚰</p><br>
                         <p>- La force de mes reves et de mes espoirs 🫠</p><br>
-                        <p><i>- Les <a href="https://fr.wikipedia.org/wiki/Pluie">larmes du ciel</a> tapotant doucement la vitre assoupie 🌧️</i></p>
+                        <p><i>- Les <a href="https://fr.wikipedia.org/wiki/Pluie">larmes du ciel</a> tapotant doucement
+                                la vitre assoupie 🌧️</i></p>
+                    </div>
+                </div>
+            </div>
+            <!-- (enfant) Dossier Travail - ppt Presentation Veille -->
+            <div class="window ppt" data-target-group="pptPresVeille" 
+                style="height: 700px; width: 1200px; display: flex;">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/ppLogo2005.png" alt="">
+                        Presentation Veille
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="ppt-window-body-head">
+                        <span>Home</span>
+                        <span>Insert</span>
+                        <span>Design</span>
+                        <span>Animations</span>
+                        <span>Slide Show</span>
+                        <span>Review</span>
+                        <span>View</span>
+                    </div>
+                    <div class="ppt-body-wrapper">
+                        <div class="ppt-overview-part">
+                            <div class="ppt-item">
+                            </div>
+                        </div>
+                        <div class="ppt-text-part">
+                            <div class="ppt-item">
+                            </div>
+                            <div class="ppt-item">
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -996,6 +1058,112 @@
             </div>
         </div>
 
+        <!-- ##### DOSSIER EXE ##### -->
+        <div>
+            <!-- (parent) Icone Bureau Dossier Travail -->
+            <div class="icon iconOpen iconDrag folder-icon" data-target="folderEXE"
+                style="top: 5%; right: calc(2% + 120px);">
+                <img src="assets/img/icones/Closed folder.png" alt="" class="icone">
+                <span>Pas tres utile</span>
+            </div>
+            <!-- (enfant) Fenetre Bureau Travail -->
+            <div class="window" data-target-group="folderEXE">
+                <div class="title-bar ">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/Closed folder.png" alt="">
+                        Pas tres utile
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="txt-window-body-head">
+                        <span>File</span>
+                        <span>View</span>
+                        <span>Favorites</span>
+                        <span>Tools</span>
+                        <span>Help</span>
+                    </div>
+                    <div class="folder-btn-body-head">
+                        <div class="pack pack-1">
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/arrow.png" alt="">
+                                <span>Back</span>
+                            </div>
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/arrow2.png" alt="">
+                            </div>
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/NetworkDocuments.png" alt="">
+                            </div>
+                        </div>
+                        <div class="pack pack-2">
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/loupe.png" alt="">
+                                <span>Search</span>
+                            </div>
+
+                            <div class="lil-pack">
+                                <img src="/assets/img/icones/MyDocuments.png" alt="">
+                                <span>Folders</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="txt-window-body-head-address">
+                        <span>Address</span>
+                        <div class="address-path">
+                            <img src="assets/img/icones/Closed folder.png" alt="">
+                            <span>C:\Desktop\Pas tres utile</span>
+                        </div>
+                    </div>
+                    <div class="folder-body-wrapper">
+                        <div class="folder-system-files-part">
+                            <div class="folder-system-files-items">
+                                <span>Sytem Tasks</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                            <div class="folder-system-files-items">
+                                <span>Other Places</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                            <div class="folder-system-files-items">
+                                <span>File and Folder Tasks</span>
+                                <img src="/assets/img/icones/down-arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="folder-text-part">
+
+                            <!-- ##### EXE Party Dance ##### -->
+                            <div>
+                                <!-- (parent) -->
+                                <div class="icon iconF iconExe" data-exe="exeDanceParty" style="position:relative">
+                                    <img src="assets/img/icones/danceParty.png" alt="" class="icone">
+                                    <span>danceParty.exe</span>
+                                </div>
+                                <!-- (enfant) -->
+                                <!-- La fete de la dance wouhouu -->
+                            </div>
+
+                            <!-- ##### SpookyScaryGhost.exe ##### -->
+                            <div class="icon iconF iconExe" data-exe="exeSpookyScaryGhost" id="SpookyScaryGhost" style="position:relative">
+                                <img src="/assets/img/icones/ghostyGhost.png" alt="" class="icone">
+                                <span>SpookyScaryGhost (Sylvain).exe</span>
+                            </div>
+
+                            <!-- ##### Miroir.exe ##### -->
+                            <div class="icon iconF iconExe" data-exe="exeMiroir" style="position:relative">
+                                <img src="/assets/img/icones/miroir.png" alt="" class="icone">
+                                <span>TrucQuiReflete.exe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- ##### EXE ##### -->
         <div>
             <!-- ##### EXE LE CAT ##### -->
@@ -1021,30 +1189,9 @@
                 <!-- Le dragon qui dance ihih -->
             </div>
 
-            <!-- ##### EXE Party Dance ##### -->
-            <div>
-                <!-- (parent) -->
-                <div class="icon iconDrag iconExe" data-exe="exeDanceParty" style="top: calc(5% + 240px); right: 2%;">
-                    <img src="assets/img/icones/danceParty.png" alt="" class="icone">
-                    <span>danceParty.exe</span>
-                </div>
-                <!-- (enfant) -->
-                <!-- La fete de la dance wouhouu -->
-            </div>
 
-            <!-- ##### SpookyScaryGhost.exe ##### -->
-            <div class="icon iconDrag iconExe" data-exe="exeSpookyScaryGhost" id="SpookyScaryGhost"
-                style="top: calc(5% + 360px); right: 2%;">
-                <img src="/assets/img/icones/ghostyGhost.png" alt="" class="icone">
-                <span>SpookyScaryGhost (Sylvain).exe</span>
-            </div>
 
-            <!-- ##### Miroir.exe ##### -->
-            <div class="icon iconDrag iconExe" data-exe="exeMiroir"
-                style="top: calc(5% + 120px); right: calc(2% + 120px);">
-                <img src="/assets/img/icones/miroir.png" alt="" class="icone">
-                <span>TrucQuiReflete.exe</span>
-            </div>
+
         </div>
 
         <!-- ##### Effets des EXE ##### -->
@@ -1072,13 +1219,17 @@
             <img class="powerBtn" src="assets/img/icones/start.png" alt="startbtn">
             <div class="taskbar">
 
-                <div class="taskbar-item unselected" data-target="txtRM" data-target-group="txtRM">
+                <div class="taskbar-item" data-target="txtRM" data-target-group="txtRM">
                     <img src="assets/img/icones/txt.png" alt="">
                     <p>Read Me.txt</p>
                 </div>
                 <div class="taskbar-item" data-target="txtMDP" data-target-group="txtMDP">
                     <img src="assets/img/icones/txt.png" alt="">
                     <p>Mot de pass.txt</p>
+                </div>
+                <div class="taskbar-item" data-target="txtMH" data-target-group="txtMH">
+                    <img src="assets/img/icones/txt.png" alt="">
+                    <p>Mention Honorable.txt</p>
                 </div>
 
                 <div class="taskbar-item" data-target="folderTravail" data-target-group="folderTravail">
@@ -1097,7 +1248,21 @@
                     <img src="assets/img/icones/Closed folder.png" alt="">
                     <p>Photos de famille</p>
                 </div>
-                
+                <div class="taskbar-item" data-target="folderTravail" data-target-group="folderEXE">
+                    <img src="assets/img/icones/Closed folder.png" alt="">
+                    <p>Pas tres utile</p>
+                </div>
+
+                <div class="taskbar-item" data-target="pdfCV" data-target-group="pdfCV">
+                    <img src="assets/img/icones/pdfAdobe.png" alt="">
+                    <p>Cv.pdf</p>
+                </div>
+                <div class="taskbar-item" data-target="pptPresVeille" data-target-group="pptPresVeille">
+                    <img src="assets/img/icones/ppLogo2005.png" alt="">
+                    <p>Presentation Veille.ppt</p>
+                </div>
+
+
             </div>
         </div>
         <div class="tools"><span id="clock"></span></div>

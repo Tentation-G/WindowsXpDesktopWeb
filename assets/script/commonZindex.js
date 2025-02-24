@@ -14,6 +14,7 @@ export function bringWindowToFront(win) {
     topZIndex++;
     win.style.zIndex = topZIndex;
     setActiveWindow(win)
+    //setActiveTaskITem(win)
 }
 
 export function lowerZIndex() {
@@ -25,6 +26,15 @@ export function lowerZIndex() {
 function setActiveWindow(win) {
     const allWins = document.querySelectorAll(".window");
     allWins.forEach((other) => {
+        other.classList.add("unselected");
+    });
+    win.classList.remove("unselected");
+    //console.log("setActiveWindow");
+}
+
+function setActiveTaskITem(win) {
+    const allTaskItem = document.querySelectorAll(".taskbar-item");
+    allTaskItem.forEach((other) => {
         other.classList.add("unselected");
     });
     win.classList.remove("unselected");
