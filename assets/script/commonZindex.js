@@ -40,3 +40,16 @@ function setActiveTaskITem(win) {
     win.classList.remove("unselected");
     //console.log("setActiveWindow");
 }
+
+const imagesToPreload = [
+    "assets/img/icones/Open_folder.png",
+    "assets/img/icones/Open_folder.png"
+];
+
+const preloadedImages = [];
+
+imagesToPreload.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+    preloadedImages.push(img);
+});
