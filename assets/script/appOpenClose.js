@@ -75,11 +75,11 @@ document.querySelectorAll(".icon").forEach((icon) => {
             footerItem.style.display = "flex";
         }
 
-        // 4) Si c’est un dossier (folder-icon), on passe en "Open folder"
+        // 4) Si c’est un dossier (folder-icon), on passe en "Open_folder"
         if (icon.classList.contains("folder-icon")) {
             const iconImg = icon.querySelector("img");
             if (iconImg) {
-                iconImg.src = "assets/img/icones/Open folder.png";
+                iconImg.src = "assets/img/icones/Open_folder.png";
             }
         }
     });
@@ -126,11 +126,11 @@ document.querySelectorAll('.window [aria-label="Close"]').forEach((btn) => {
         const relatedIcon = document.querySelector(`.icon[data-target="${targetGroup}"]`);
         if (!relatedIcon) return;
 
-        // Si c’est un folder-icon, on repasse en "Closed folder"
+        // Si c’est un folder-icon, on repasse en "Closed_folder"
         if (relatedIcon.classList.contains("folder-icon")) {
             const iconImg = relatedIcon.querySelector("img");
             if (iconImg) {
-                iconImg.src = "assets/img/icones/Closed folder.png";
+                iconImg.src = "assets/img/icones/Closed_folder.png";
             }
         }
     });
