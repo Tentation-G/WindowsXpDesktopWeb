@@ -5,16 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    <!-- Titre et description -->
+    <title>Flavien CAMPEAUX</title>
+    <meta name="description" content="Site personnel, interface Windows XP réalisée avec des outils web vanilla.">
 
+    <!-- Auteur, copyright -->
+    <meta name="author" content="Flavien Campeaux">
+    <meta name="copyright" content="© 2024 Flavien. Tous droits réservés.">
+    <meta name="publisher" content="Flavien Campeaux">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://www.flavien-campeaux.ovh/">
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Flavien Campeaux - Portfolio Windows XP">
+    <meta property="og:description" content="Découvrez mon portfolio interactif inspiré de Windows XP.">
+    <meta property="og:image" content="https://www.flavien-campeaux.ovh/assets/img/icones/preview.jpg">
+    <meta property="og:url" content="https://www.flavien-campeaux.ovh/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Portfolio Flavien Campeaux">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/icones/Windows_XP_Classic.ico" type="image/x-icon">
+
+    <!-- Css (Scss => Css) -->
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/crt.css">
 
+    <!-- Prechargement d'images "importantes" -->
+    <link rel="preload" as="image" href="http://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png">
+    <link rel="preload" as="image" href="http://www.flavien-campeaux.ovh/assets/img/icones/Open_folder.png">
+
+    <!-- js -->
     <script type="module" src="assets/script/clock.js" defer></script>
 
     <script type="module" src="assets/script/commonZindex.js" defer></script>
-
     <script type="module" src="assets/script/dragWindows.js" defer></script>
     <script type="module" src="assets/script/wdBtn.js" defer></script>
     <script type="module" src="assets/script/appOpenClose.js" defer></script>
@@ -24,12 +51,21 @@
     <script type="module" src="assets/script/appExe.js" defer></script>
     <script type="module" src="assets/script/appSylvainExe.js" defer></script>
 
-    <link rel="preload" as="image" href="http://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png">
-    <link rel="preload" as="image" href="http://www.flavien-campeaux.ovh/assets/img/icones/Open_folder.png">
-
-
-    <link rel="icon" href="assets/img/icones/Windows XP Classic.ico" type="image/x-icon">
-    <title>Flavien CAMPEAUX</title>
+    <!-- Données structurées (JSON-LD) pour le référencement -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Flavien Campeaux",
+        "url": "http://www.flavien-campeaux.ovh/",
+        "image": "http://www.flavien-campeaux.ovh/assets/img/icones/Windows_XP_Classic.ico",
+        "jobTitle": "Développeur / Rechercher Alternance en Data Engineering",
+        "description": "Développeur apparement.",
+        "sameAs": [
+        "https://www.linkedin.com/in/ton-profil/"
+        ]
+    }
+    </script>
     <div class="crt"></div>
 </head>
 
@@ -199,7 +235,7 @@
                 <img src="http://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt="" class="icone">
                 <span>Travail</span>
             </div>
-            <!-- (enfant) Fenetre Bureau Travail -->
+            <!-- (enfant) (parent) Fenetre Bureau Travail -->
             <div class="window" data-target-group="folderTravail">
                 <div class="title-bar ">
                     <div class="title-bar-text">
@@ -285,7 +321,7 @@
                     </div>
                 </div>
             </div>
-            <!-- (enfant) Dossier Travail - pdf CV -->
+            <!-- (enfant) (enfant) Dossier Travail - pdf CV -->
             <div class="window" data-target-group="pdfCV">
                 <div class="title-bar">
                     <div class="title-bar-text">
@@ -302,7 +338,7 @@
 
                 </div>
             </div>
-            <!-- (enfant) Dossier Travail - Txt Mention Honorable -->
+            <!-- (enfant) (enfant) Dossier Travail - Txt Mention Honorable -->
             <div class="window txt" data-target-group="txtMH">
                 <div class="title-bar">
                     <div class="title-bar-text">
@@ -328,17 +364,17 @@
                         <h3>Mention honorable à ceux qui m'ont aidé à developper ce site</h3><br>
                         <p>- La<a href="https://devdocs.io/javascript/" target="_blank"> Documentation JavaScript</a> 👍
                         </p><br>
-                        <p>- La <a href="https://web.archive.org/">Wayback Machine</a> 💻</p><br>
+                        <p>- La <a href="https://web.archive.org/" target="_blank">Wayback Machine</a> 💻</p><br>
                         <p>- L'eau du robinet (pour rester hydrater en toute situation) 🚰</p><br>
                         <p>- La force de mes reves et de mes espoirs 🫠</p><br>
-                        <p><i>- Les <a href="https://fr.wikipedia.org/wiki/Pluie">larmes du ciel</a> tapotant doucement
+                        <p><i>- Les <a href="https://fr.wikipedia.org/wiki/Pluie" target="_blank">larmes du ciel</a>
+                                tapotant doucement
                                 la vitre assoupie 🌧️</i></p>
                     </div>
                 </div>
             </div>
-            <!-- (enfant) Dossier Travail - ppt Presentation Veille -->
-            <div class="window ppt" data-target-group="pptPresVeille" 
-                style="height: 700px; width: 1200px;">
+            <!-- (enfant) (enfant) Dossier Travail - ppt Presentation Veille -->
+            <div class="window ppt" data-target-group="pptPresVeille" style="height: 700px; width: 1200px;">
                 <div class="title-bar">
                     <div class="title-bar-text">
                         <img src="assets/img/icones/ppLogo2005.png" alt="">
@@ -370,7 +406,7 @@
                             </div>
                             <div class="ppt-item">
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -382,7 +418,7 @@
             <!-- (parent) Icone Bureau Dossier Truc perso -->
             <div class="icon iconOpen iconDrag folder-icon" data-target="folderTrucPerso"
                 style="top: calc(5% + 240px); left: 2%;">
-                <img src="http://www.flavien-campeaux.ovh/assets/img/icones/Open_folder.png" alt="" class="icone">
+                <img src="http://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt="" class="icone">
                 <span>Truc Perso</span>
             </div>
             <!-- (enfant) (parent) Fenetre Bureau Truc perso -->
@@ -457,13 +493,15 @@
                             <!-- (parent) Icone Dossier Truc Perso - Chose que j'aime -->
                             <div class="icon iconF iconOpen_folder-icon" data-target="folderChosesQueJaime"
                                 style="position:relative">
-                                <img src="http://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt="" class="icone">
+                                <img src="http://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt=""
+                                    class="icone">
                                 <span>Des choses que j'aime</span>
                             </div>
                             <!-- (parent) Icone Dossier Truc Peros - Photo de famille -->
                             <div class="icon iconF iconOpen_folder-icon" data-target="folderPhotoDeFamille"
                                 style="position:relative">
-                                <img src="http://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt="" class="icone">
+                                <img src="http://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt=""
+                                    class="icone">
                                 <span>Photos de famille</span>
                             </div>
                         </div>
@@ -1056,9 +1094,145 @@
 
         <!-- ##### Poubelle ##### -->
         <div>
-            <div class="icon iconOpen iconDrag" data-target="" style="bottom: 5%; right: 2%;">
+            <div class="icon iconOpen iconDrag" data-target="folderPoubelle" style="bottom: 5%; right: 2%;">
                 <img src="assets/img/icones/WdXpBin.png" alt="" class="icone">
-                <span>l'poubelle</span>
+                <span>Le Trashbin</span>
+            </div>
+        </div>
+        <!-- (enfant) (parent) Fenetre Bureau Poubelle -->
+        <div class="window" data-target-group="folderPoubelle">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="assets/img/icones/XpDesktop.png" alt="">
+                    Le Trashbin 🍁
+                </div>
+                <div class="title-bar-controls" style="cursor: pointer;">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="txt-window-body-head">
+                    <span>File</span>
+                    <span>View</span>
+                    <span>Favorites</span>
+                    <span>Tools</span>
+                    <span>Help</span>
+                </div>
+                <div class="folder-btn-body-head">
+                    <div class="pack pack-1">
+                        <div class="lil-pack">
+                            <img src="/assets/img/icones/arrow.png" alt="">
+                            <span>Back</span>
+                        </div>
+                        <div class="lil-pack">
+                            <img src="/assets/img/icones/arrow2.png" alt="">
+                        </div>
+                        <div class="lil-pack">
+                            <img src="/assets/img/icones/NetworkDocuments.png" alt="">
+                        </div>
+                    </div>
+                    <div class="pack pack-2">
+                        <div class="lil-pack">
+                            <img src="/assets/img/icones/loupe.png" alt="">
+                            <span>Search</span>
+                        </div>
+
+                        <div class="lil-pack">
+                            <img src="/assets/img/icones/MyDocuments.png" alt="">
+                            <span>Folders</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="txt-window-body-head-address">
+                    <span>Address</span>
+                    <div class="address-path">
+                        <img src="assets/img/icones/XpDesktop.png" alt="">
+                        <span>Boite a rangement (poubelle)</span>
+                    </div>
+                </div>
+                <div class="folder-body-wrapper">
+                    <div class="folder-system-files-part">
+                        <div class="folder-system-files-items">
+                            <span>Sytem Tasks</span>
+                            <img src="/assets/img/icones/down-arrow.png" alt="">
+                        </div>
+                        <div class="folder-system-files-items">
+                            <span>Other Places</span>
+                            <img src="/assets/img/icones/down-arrow.png" alt="">
+                        </div>
+                        <div class="folder-system-files-items">
+                            <span>File and Folder Tasks</span>
+                            <img src="/assets/img/icones/down-arrow.png" alt="">
+                        </div>
+                    </div>
+                    <!-- (parent) Icone Dossier Travail - Jeux -->
+                    <div class="folder-text-part">
+                        <div class="icon iconF iconOpen" data-target="txtReves" style="position:relative">
+                            <img src="assets/img/icones/txt.png" alt="" class="icone">
+                            <span>Rêves.txt</span>
+                        </div>
+                        <div class="icon iconF iconOpen" data-target="txtEspoirs" style="position:relative">
+                            <img src="assets/img/icones/txt.png" alt="" class="icone">
+                            <span>Espoirs.txt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- (enfant) (enfant) Dossier Poubelle - Txt Reves -->
+        <div class="window txt" data-target-group="txtReves">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="assets/img/icones/txt.png" alt="">
+                    Rêves
+                </div>
+                <div class="title-bar-controls" style="cursor: pointer;">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="txt-window-body-head">
+                    <span>File</span>
+                    <span>Edit</span>
+                    <span>Format</span>
+                    <span>View</span>
+                    <span>Help</span>
+                </div>
+                <div class="txt-text-part">
+                    <br>
+                    <p>┬┴┬┴┤(･_├┬┴┬┴</p>
+                </div>
+            </div>
+        </div>
+        <!-- (enfant) (enfant) Dossier Poubelle - Txt Espoirs -->
+        <div class="window txt" data-target-group="txtEspoirs">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="assets/img/icones/txt.png" alt="">
+                    Mention Honorable
+                </div>
+                <div class="title-bar-controls" style="cursor: pointer;">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="txt-window-body-head">
+                    <span>File</span>
+                    <span>Edit</span>
+                    <span>Format</span>
+                    <span>View</span>
+                    <span>Help</span>
+                </div>
+                <div class="txt-text-part">
+                    <br>
+                    <p>┬┴┬┴┤_･)├┬┴┬┴</p>
+                </div>
             </div>
         </div>
 
@@ -1152,7 +1326,8 @@
                             </div>
 
                             <!-- ##### SpookyScaryGhost.exe ##### -->
-                            <div class="icon iconF iconExe" data-exe="exeSpookyScaryGhost" id="SpookyScaryGhost" style="position:relative">
+                            <div class="icon iconF iconExe" data-exe="exeSpookyScaryGhost" id="SpookyScaryGhost"
+                                style="position:relative">
                                 <img src="/assets/img/icones/ghostyGhost.png" alt="" class="icone">
                                 <span>SpookyScaryGhost (Sylvain).exe</span>
                             </div>
@@ -1263,6 +1438,19 @@
                 </div>
                 <div class="taskbar-item" data-target="pptPresVeille" data-target-group="pptPresVeille">
                     <img src="assets/img/icones/ppLogo2005.png" alt="">
+                    <p>Presentation Veille.ppt</p>
+                </div>
+
+                <div class="taskbar-item" data-target="folderPoubelle" data-target-group="folderPoubelle">
+                    <img src="assets/img/icones/WdXpBin.png" alt="">
+                    <p>Le trashbin</p>
+                </div>
+                <div class="taskbar-item" data-target="txtReves" data-target-group="txtReves">
+                    <img src="assets/img/icones/txt.png" alt="">
+                    <p>Presentation Veille.ppt</p>
+                </div>
+                <div class="taskbar-item" data-target="txtEspoirs" data-target-group="txtEspoirs">
+                    <img src="assets/img/icones/txt.png" alt="">
                     <p>Presentation Veille.ppt</p>
                 </div>
 
