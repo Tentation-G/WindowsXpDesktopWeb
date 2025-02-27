@@ -42,8 +42,8 @@ function setActiveTaskITem(win) {
 }
 
 const imagesToPreload = [
-    "assets/img/icones/Open_folder.png",
-    "assets/img/icones/Open_folder.png"
+    "http://www.flavien-campeaux.ovh/assets/img/icones/Open_folder.png",
+    "http://www.flavien-campeaux.ovh/assets/img/icones/Open_folder.png"
 ];
 
 const preloadedImages = [];
