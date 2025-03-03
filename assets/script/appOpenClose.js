@@ -79,7 +79,7 @@ document.querySelectorAll(".icon").forEach((icon) => {
         if (icon.classList.contains("folder-icon")) {
             const iconImg = icon.querySelector("img");
             if (iconImg) {
-                iconImg.src = "http://www.flavien-campeaux.ovh/assets/img/icones/Open_folder.png";
+                iconImg.src = "https://www.flavien-campeaux.ovh/assets/img/icones/Open_folder.png";
             }
         }
     });
@@ -130,7 +130,7 @@ document.querySelectorAll('.window [aria-label="Close"]').forEach((btn) => {
         if (relatedIcon.classList.contains("folder-icon")) {
             const iconImg = relatedIcon.querySelector("img");
             if (iconImg) {
-                iconImg.src = "http://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png";
+                iconImg.src = "https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png";
             }
         }
     });
