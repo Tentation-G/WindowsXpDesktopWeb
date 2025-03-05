@@ -40,6 +40,38 @@ main {
     height: calc(100vh - #{$main-height-offset});
 }
 
+.intro-page {
+    position: absolute;
+    background-color: $color-black;
+    color: $color-white;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999999999;
+
+    transition: opacity 1s ease;
+    pre {
+        font-size: 25px;
+
+        span {
+            font-size: 25px;
+            font: inherit;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    overflow-y: scroll;
+
+    .intro-text {
+        display: none;
+    }
+
+    .choice-base {
+        display: block;
+    }
+}
+
 footer {
     width: 100%;
     max-width: 100vw;
@@ -48,6 +80,7 @@ footer {
 
     display: flex;
     justify-content: space-between;
+
     .footer-main-part {
         display: flex;
 
@@ -55,11 +88,13 @@ footer {
         width: 100%;
 
         border-right: 1px solid $footer-border-color;
+
         .taskbar {
 
             display: flex;
             align-items: end;
             padding: 0 5px;
+
             .taskbar-item {
                 //display: flex;
                 display: none;
@@ -85,12 +120,14 @@ footer {
                 &:hover {
                     cursor: pointer;
                 }
+
                 img {
                     height: 16px;
                 }
             }
         }
     }
+
     .tools {
         display: flex;
         width: 71px;
@@ -107,4 +144,3 @@ footer {
     width: 106px;
     cursor: pointer;
 }
-

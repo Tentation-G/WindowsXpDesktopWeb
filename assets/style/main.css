@@ -45,6 +45,33 @@ main {
   height: calc(100vh - 33px);
 }
 
+.intro-page {
+  position: absolute;
+  background-color: #000000;
+  color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999999999;
+  transition: opacity 1s ease;
+  overflow-y: scroll;
+}
+.intro-page pre {
+  font-size: 25px;
+}
+.intro-page pre span {
+  font-size: 25px;
+  font: inherit;
+}
+.intro-page pre span:hover {
+  cursor: pointer;
+}
+.intro-page .intro-text {
+  display: none;
+}
+.intro-page .choice-base {
+  display: block;
+}
+
 footer {
   width: 100%;
   max-width: 100vw;
