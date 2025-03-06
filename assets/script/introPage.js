@@ -4,8 +4,9 @@
 
 /* Variables globales pour la vitesse d'animation */
 const DEFAULT_DELAY = 50; // Vitesse pour tous les blocs
-const BLOCK6_DELAY = 200; // Vitesse pour le bloc6 (plus lente)
+const BLOCK_DELAY = 200; // Vitesse pour les blocs avec la classe "delay"
 
+/* Son de lancement */
 const lauchingSound = new Audio("assets/img/mp3/Windows xp startup.mp3");
 
 /**
@@ -19,7 +20,9 @@ const lauchingSound = new Audio("assets/img/mp3/Windows xp startup.mp3");
  * - block3: yes → block5, no → block4
  * - block4: (deux clics sur yes) → block5
  * - block5: (deux clics sur yes) → block6
- * - block6: yes → déclenche une fonction (aucun nouveau bloc)
+ * - block6: yes → block8, no → block7
+ * - block7: yes → function
+ * - block8: yes → function
  */
 const transitions = {
     'block1': { yes: 'block6', no: 'block2' },
@@ -27,12 +30,16 @@ const transitions = {
     'block3': { yes: 'block5', no: 'block4' },
     'block4': { yes: 'block5' },
     'block5': { yes: 'block6' },
-    'block6': { yes: 'function' }
+    'block6': { yes: 'block8', no: 'block7' },
+    'block7': { yes: 'function' },
+    'block8': { yes: 'function' }
 };
 
 /**
  * Affiche un bloc (blockX) sans masquer les autres.
  * Si le bloc est un <pre>, son contenu sera animé ligne par ligne.
+ *
+ * Pour définir un délai personnalisé (ici BLOCK6_DELAY), ajoutez la classe "delay" au bloc.
  *
  * @param {string} blockClass - La classe du bloc à afficher.
  */
@@ -41,9 +48,9 @@ function showBlock(blockClass) {
     if (block) {
         block.style.display = 'block'; // On cumule l'affichage
         scrollToBot();
-        // Si le bloc est un <pre>, lancer l'animation ligne par ligne avec la vitesse appropriée
+        // Si le bloc est un <pre>, lancer l'animation ligne par ligne avec le délai approprié
         if (block.tagName.toLowerCase() === 'pre') {
-            const delay = (blockClass === 'block6') ? BLOCK6_DELAY : DEFAULT_DELAY;
+            const delay = block.classList.contains('delay') ? BLOCK_DELAY : DEFAULT_DELAY;
             animatePreLines(block, delay);
         }
     } else {

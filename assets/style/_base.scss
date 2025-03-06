@@ -51,7 +51,9 @@ main {
     transition: opacity 1s ease;
     pre {
         font-size: 25px;
-
+        .ligne-terminal-timide {
+            filter: opacity(0.3);
+        }
         span {
             font-size: 25px;
             font: inherit;

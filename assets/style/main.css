@@ -58,6 +58,9 @@ main {
 .intro-page pre {
   font-size: 25px;
 }
+.intro-page pre .ligne-terminal-timide {
+  filter: opacity(0.3);
+}
 .intro-page pre span {
   font-size: 25px;
   font: inherit;
