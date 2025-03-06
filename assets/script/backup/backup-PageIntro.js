@@ -3,7 +3,7 @@
  ******************************************************/
 
 /* Variables globales pour la vitesse d'animation */
-const DEFAULT_DELAY = 50; // Vitesse pour tous les blocs
+const DEFAULT_DELAY = 100; // Vitesse pour tous les blocs
 const BLOCK6_DELAY = 200; // Vitesse pour le bloc6 (plus lente)
 
 /**
@@ -57,10 +57,47 @@ function scrollToBot() {
 }
 
 /**
+ * Gestionnaire des clics sur tous les éléments avec la classe .choice.
+ */
+document.querySelectorAll('.choice').forEach(span => {
+    span.addEventListener('click', (event) => {
+        const answer = event.target.dataset.answer;  // "yes" ou "no"
+        const parentPre = event.target.closest('pre');
+        if (!parentPre) return;
+
+        // Récupérer la classe (ex: "block1", "block2", etc.) présente sur le <pre>
+        const blockClass = Array.from(parentPre.classList).find(c => c.startsWith('block'));
+        if (!blockClass) return;
+
+        // Désactiver les clics dans ce bloc pour éviter les doubles déclenchements
+        parentPre.style.pointerEvents = 'none';
+
+        // Déterminer la transition correspondante
+        const next = transitions[blockClass]?.[answer];
+        if (!next) {
+            console.log(`Pas de transition pour ${blockClass} avec réponse: ${answer}`);
+            return;
+        }
+
+        // Si la transition est "function", exécuter le code final
+        if (next === 'function') {
+            const introPage = document.querySelector('.intro-page');
+            if (introPage) {
+                introPage.style.opacity = '0';
+                setTimeout(() => {
+                    introPage.style.display = 'none';
+                }, 1000);
+            }
+            return;
+        }
+
+        // Afficher le bloc suivant
+        showBlock(next);
+    });
+});
+
+/**
  * Affiche le contenu d'un élément <pre> ligne par ligne.
- *
- * Attention : cette fonction remplace le contenu original du <pre> et
- * donc les écouteurs d’événements qui auraient été attachés aux éléments internes.
  *
  * @param {HTMLElement|string} target - L'élément ou le sélecteur de l'élément <pre>.
  * @param {number} [delay=DEFAULT_DELAY] - Délai en millisecondes entre chaque ligne.
@@ -89,45 +126,3 @@ function animatePreLines(target, delay = DEFAULT_DELAY) {
 
     showNextLine();
 }
-
-/**
- * Gestion de l'interaction sur les choix via délégation d'événements.
- * On écoute sur le document et on traite les clics sur les éléments ayant la classe "choice".
- */
-document.addEventListener('click', (event) => {
-    const choiceElem = event.target.closest('.choice');
-    if (!choiceElem) return;
-    
-    const answer = choiceElem.dataset.answer;  // "yes" ou "no"
-    const parentPre = choiceElem.closest('pre');
-    if (!parentPre) return;
-
-    // Récupérer la classe (ex: "block1", "block2", etc.) présente sur le <pre>
-    const blockClass = Array.from(parentPre.classList).find(c => c.startsWith('block'));
-    if (!blockClass) return;
-
-    // Désactiver les clics dans ce bloc pour éviter les doubles déclenchements
-    parentPre.style.pointerEvents = 'none';
-
-    // Déterminer la transition correspondante
-    const next = transitions[blockClass]?.[answer];
-    if (!next) {
-        console.log(`Pas de transition pour ${blockClass} avec réponse: ${answer}`);
-        return;
-    }
-
-    // Si la transition est "function", exécuter le code final
-    if (next === 'function') {
-        const introPage = document.querySelector('.intro-page');
-        if (introPage) {
-            introPage.style.opacity = '0';
-            setTimeout(() => {
-                introPage.style.display = 'none';
-            }, 1000);
-        }
-        return;
-    }
-
-    // Afficher le bloc suivant
-    showBlock(next);
-});
