@@ -57,7 +57,7 @@ main {
         span {
             font-size: 25px;
             font: inherit;
-            &:hover {
+            &:hover:not(.ligne-terminal-timide) {
                 cursor: pointer;
             }
         }
