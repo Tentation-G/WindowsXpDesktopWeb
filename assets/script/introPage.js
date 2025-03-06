@@ -6,6 +6,8 @@
 const DEFAULT_DELAY = 50; // Vitesse pour tous les blocs
 const BLOCK6_DELAY = 200; // Vitesse pour le bloc6 (plus lente)
 
+const lauchingSound = new Audio("assets/img/mp3/Windows xp startup.mp3");
+
 /**
  * Transitions entre les blocs.
  *
@@ -121,6 +123,7 @@ document.addEventListener('click', (event) => {
         const introPage = document.querySelector('.intro-page');
         if (introPage) {
             introPage.style.opacity = '0';
+            lauchingSound.play();
             setTimeout(() => {
                 introPage.style.display = 'none';
             }, 1000);
