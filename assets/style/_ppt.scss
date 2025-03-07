@@ -44,17 +44,26 @@
         height: 100%;
         gap: 10px;
         .ppt-overview-part {
+            overflow-y: scroll;
             background-color: #9DBCE5;
             height: 100%;
             width: 20%;
-            //display: flex;
-            //align-items: center;
+            display: flex;
+            align-items: center;
             //justify-content: center;
+            flex-direction: column;
             .ppt-item {
                 background-color: $color-white;
                 width: 80%;
                 aspect-ratio: 1 / 1;
                 box-shadow: 2px 2px 10px #000;
+                margin-top: 20px;
+                &:first-child {
+                    margin-top: 40px;
+                }
+                &:last-child {
+                    margin-bottom: 40px;
+                }
             }
         }
         .ppt-text-part {
@@ -66,6 +75,9 @@
             align-items: center;
             //justify-content: center;
             .ppt-item {
+                display: flex;
+                flex-direction: column;
+
                 background-color: $color-white;
                 min-height: 80%;
                 min-width: 90%;
@@ -75,6 +87,40 @@
                 margin-top: 40px;
                 &:last-child {
                     margin-bottom: 40px;
+                }
+
+                .ppt-line {
+                    width: 100%;
+                    h1 {font-size: 40px;}
+                    h3 {font-size: 20px;}
+                }
+                .img-line {
+                    height: 15%;
+                    text-align: end;
+                    img {
+                        height: 100%;
+                        border-radius: 0 0 0 10px;
+                    }
+                }
+                .title-line {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: start;
+                }
+                .centered-line {
+                    flex-grow: 1;
+                    margin-top: -15%;
+                }
+                .ppt-sommaire {
+                    h1 { margin-left: 100px;}
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    ul {li{ font-size: 30px;}}
                 }
             }
         }

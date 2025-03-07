@@ -445,6 +445,46 @@ footer .tools {
   margin-top: -10px;
 }
 
+#lockForm {
+  min-width: 400px;
+  width: 400px;
+  min-height: 160px;
+  height: 160px;
+  resize: none;
+}
+#lockForm .window-body {
+  padding: 10px;
+  display: flex;
+}
+#lockForm .window-body form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#lockForm .window-body form > * {
+  width: 100%;
+}
+#lockForm .window-body form .formInput {
+  text-align: start;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#lockForm .window-body form .formInput div {
+  height: 23px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#lockForm .window-body form .formInput input {
+  width: 75%;
+}
+#lockForm .window-body form .formBtn {
+  text-align: end;
+}
+
 @font-face {
   font-family: Tahoma;
   src: url(tahoma.ttf);
@@ -576,15 +616,26 @@ body.cat-mode-active:active * {
   gap: 10px;
 }
 .window-body .ppt-body-wrapper .ppt-overview-part {
+  overflow-y: scroll;
   background-color: #9DBCE5;
   height: 100%;
   width: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .window-body .ppt-body-wrapper .ppt-overview-part .ppt-item {
   background-color: #ffffff;
   width: 80%;
   aspect-ratio: 1/1;
   box-shadow: 2px 2px 10px #000;
+  margin-top: 20px;
+}
+.window-body .ppt-body-wrapper .ppt-overview-part .ppt-item:first-child {
+  margin-top: 40px;
+}
+.window-body .ppt-body-wrapper .ppt-overview-part .ppt-item:last-child {
+  margin-bottom: 40px;
 }
 .window-body .ppt-body-wrapper .ppt-text-part {
   overflow-y: scroll;
@@ -595,6 +646,8 @@ body.cat-mode-active:active * {
   align-items: center;
 }
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   min-height: 80%;
   min-width: 90%;
@@ -605,6 +658,45 @@ body.cat-mode-active:active * {
 }
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item:last-child {
   margin-bottom: 40px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-line {
+  width: 100%;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-line h1 {
+  font-size: 40px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-line h3 {
+  font-size: 20px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .img-line {
+  height: 15%;
+  text-align: end;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .img-line img {
+  height: 100%;
+  border-radius: 0 0 0 10px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .title-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .centered-line {
+  flex-grow: 1;
+  margin-top: -15%;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-sommaire h1 {
+  margin-left: 100px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-sommaire div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-sommaire ul li {
+  font-size: 30px;
 }
 
 .ppt-btn-body-head {
