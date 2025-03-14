@@ -655,18 +655,30 @@ body.cat-mode-active:active * {
   max-width: 90%;
   box-shadow: 2px 2px 10px #000;
   margin-top: 40px;
+  font-size: 30px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item h1 {
+  font-size: 50px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item h2 {
+  font-size: 40px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item h3 {
+  font-size: 35px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item h4 {
+  font-size: 30px;
 }
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item:last-child {
   margin-bottom: 40px;
 }
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-line {
   width: 100%;
-}
-.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-line h1 {
-  font-size: 40px;
-}
-.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-line h3 {
-  font-size: 20px;
+  height: 70%;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item .img-line {
   height: 15%;
@@ -676,27 +688,32 @@ body.cat-mode-active:active * {
   height: 100%;
   border-radius: 0 0 0 10px;
 }
-.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .title-line {
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .img-line-text {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: start;
+  text-align: center;
 }
-.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .centered-line {
-  flex-grow: 1;
-  margin-top: -15%;
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .img-line-text h1 {
+  padding-left: 10px;
 }
-.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-sommaire h1 {
-  margin-left: 100px;
-}
-.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-sommaire div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-sommaire ul {
+  padding-left: 50px;
 }
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item .ppt-sommaire ul li {
-  font-size: 30px;
+  margin: 10px 0;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .plip-ploup {
+  height: 85%;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .plip-ploup h2 {
+  margin-top: 20px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .plip-ploup h3 {
+  padding-left: 50px;
+}
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .plip-ploup h4 {
+  padding-left: 100px;
 }
 
 .ppt-btn-body-head {
