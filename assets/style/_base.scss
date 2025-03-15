@@ -50,12 +50,13 @@ main {
 
     transition: opacity 1s ease;
     pre {
-        font-size: 25px;
+        font-family: 'Tahoma' !important;
+        font-size: 30px;
         .ligne-terminal-timide {
             filter: opacity(0.3);
         }
         span {
-            font-size: 25px;
+            font-size: 30px;
             font: inherit;
             &:hover:not(.ligne-terminal-timide) {
                 cursor: pointer;

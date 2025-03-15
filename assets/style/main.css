@@ -56,13 +56,14 @@ main {
   overflow-y: scroll;
 }
 .intro-page pre {
-  font-size: 25px;
+  font-family: "Tahoma" !important;
+  font-size: 30px;
 }
 .intro-page pre .ligne-terminal-timide {
   filter: opacity(0.3);
 }
 .intro-page pre span {
-  font-size: 25px;
+  font-size: 30px;
   font: inherit;
 }
 .intro-page pre span:hover:not(.ligne-terminal-timide) {
