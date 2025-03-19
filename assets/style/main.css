@@ -583,6 +583,7 @@ body.cat-mode-active:active * {
 }
 .ppt {
   background-color: #BFDBFF !important;
+  resize: none;
 }
 
 .ppt-text-part {
@@ -659,16 +660,16 @@ body.cat-mode-active:active * {
   font-size: 30px;
 }
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item h1 {
-  font-size: 50px;
-}
-.window-body .ppt-body-wrapper .ppt-text-part .ppt-item h2 {
   font-size: 40px;
 }
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item h2 {
+  font-size: 30px;
+}
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item h3 {
-  font-size: 35px;
+  font-size: 25px;
 }
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item h4 {
-  font-size: 30px;
+  font-size: 20px;
 }
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item:last-child {
   margin-bottom: 40px;
@@ -716,6 +717,10 @@ body.cat-mode-active:active * {
 .window-body .ppt-body-wrapper .ppt-text-part .ppt-item .plip-ploup h4 {
   padding-left: 100px;
 }
+.window-body .ppt-body-wrapper .ppt-text-part .ppt-item .plip-img img {
+  height: 80%;
+  width: 80%;
+}
 
 .ppt-btn-body-head {
   display: flex;
@@ -742,4 +747,10 @@ body.cat-mode-active:active * {
   background-color: rgb(248, 245, 227);
 }
 
-@impor @import "acc.scss";/*# sourceMappingURL=main.css.map */
+@font-face {
+  font-family: Tahoma;
+  src: url(tahoma.ttf);
+}
+.acc-body {
+  background-color: wheat !important;
+}/*# sourceMappingURL=main.css.map */

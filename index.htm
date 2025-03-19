@@ -29,7 +29,7 @@
     <link rel="icon" href="assets/img/icones/Windows_XP_Classic.ico" type="image/x-icon">
 
     <!-- Css (Scss => Css) -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/xp.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/crt.css">
@@ -61,7 +61,7 @@
         "name": "Flavien Campeaux",
         "url": "https://www.flavien-campeaux.ovh/",
         "image": "https://www.flavien-campeaux.ovh/assets/img/icones/Windows_XP_Classic.ico",
-        "jobTitle": "Développeur / Rechercher Alternance en Data Engineering",
+        "jobTitle": "Développeur / Rechercher Alternance en Data Engineering / Sciences",
         "description": "Développeur apparement.",
         "sameAs": [
         "https://www.linkedin.com/in/ton-profil/"
@@ -76,7 +76,7 @@
 
     <main id="mainContainer">
         <!-- ##### Intro Page ##### -->
-        <div class="intro-page" id="intro-scroll">
+        <div class="intro-page" id="intro-scroll" style="display: block;">
             <pre class="intro-text choice-base block1">
 [System] Initialiser la session ? <span class="ligne-terminal-timide">Cliquez pour choisir</span>
 > <span class="choice" data-answer="yes">yes</span> / <span class="choice" data-answer="no">no</span>
@@ -326,9 +326,58 @@
                                 <img src="/assets/img/icones/down-arrow.png" alt="">
                             </div>
                         </div>
-                        <!-- (parent) Icone Dossier Travail - Jeux -->
+                        
                         <div class="folder-text-part">
-
+                            <div class="icon iconF" data-target="photoChaformaticien" style="position:relative">
+                                <img src="assets/img/icones/pics folder.png" alt="" class="icone">
+                                <span>SAV Informatique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- (parent)(enfant) Icone Desktop - Photo chaformaticien -->
+            <div class="window" data-target-group="photoChaformaticien">
+                <div class="title-bar">
+                    <div class="title-bar-text">Chaformaticien.png</div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="photo-body-wrapper">
+                        <div class="photo-part">
+                            <img src="/assets/img/chaformaticien.jpg" alt="Il sait ce qu'il fait">
+                        </div>
+                        <div class="photo-btn">
+                            <i>
+                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1"
+                                    id="mdi-magnify-plus" width="32" height="32" viewBox="0 0 32 32">
+                                    <path
+                                        d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z" />
+                                </svg>
+                            </i>
+                            <i>
+                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1"
+                                    id="mdi-magnify-minus" width="32" height="32" viewBox="0 0 32 32">
+                                    <path
+                                        d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M5,8V10H13V8H5Z" />
+                                </svg>
+                            </i>
+                            <i class="arrow">
+                                <svg id="Flat" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                                    <path
+                                        d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                </svg>
+                            </i>
+                            <i class="arrow" style="transform: scaleX(-1);">
+                                <svg id="Flat2" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                                    <path
+                                        d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                </svg>
+                            </i>
                         </div>
                     </div>
                 </div>
@@ -490,6 +539,10 @@
                                 <img src="assets/img/icones/pdfAdobe.png" alt="" class="icone">
                                 <span>Cv.pdf</span>
                             </div>
+                            <div class="icon iconF iconOpen" data-target="pdftds" style="position:relative">
+                                <img src="assets/img/icones/pdfAdobe.png" alt="" class="icone">
+                                <span>Tableau de synthese.pdf</span>
+                            </div>
                             <div class="icon iconF iconOpen" data-target="txtMH" style="position:relative">
                                 <img src="assets/img/icones/txt.png" alt="" class="icone">
                                 <span>Mention Honorable.txt</span>
@@ -499,7 +552,7 @@
                                 style="position:relative">
                                 <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt=""
                                     class="icone">
-                                <span>E5 🔐</span>
+                                <span>Presentation 🔐</span>
                             </div>
 
                         </div>
@@ -559,12 +612,30 @@
                 </div>
             </div>
 
-            <!-- (enfant) (enfant) Dossier Travail - Dossier E5 -->
+            <!-- (enfant) (enfant) Dossier Travail - pdf Tableau de synthese -->
+            <div class="window" data-target-group="pdftds">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/pdfAdobe.png" alt="">
+                        Tableau de synthese
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+
+                </div>
+            </div>
+
+            <!-- (enfant) (enfant) Dossier Travail - Dossier Presentation -->
             <div class="window" data-target-group="folderPres">
                 <div class="title-bar ">
                     <div class="title-bar-text">
                         <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt="">
-                        E5 🔐
+                        Presentation 🔐
                     </div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
@@ -609,7 +680,7 @@
                         <span>Address</span>
                         <div class="address-path">
                             <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt="">
-                            <span>C:\Desktop\Travail</span>
+                            <span>C:\Desktop\Travail\Presentation</span>
                         </div>
                     </div>
                     <div class="folder-body-wrapper">
@@ -631,17 +702,29 @@
                         <div class="folder-text-part">
                             <div class="icon iconF iconOpen" data-target="pptEntreprise" style="position:relative">
                                 <img src="assets/img/icones/ppLogo2005.png" alt="" class="icone">
-                                <span>Presentation veille.ppt</span>
+                                <span>Presentation Entreprise.ppt</span>
+                            </div>
+                            <div class="icon iconF iconOpen" data-target="pptVeille" style="position:relative">
+                                <img src="assets/img/icones/ppLogo2005.png" alt="" class="icone">
+                                <span>Presentation Veille.ppt</span>
+                            </div>
+
+                            <div class="icon iconF iconOpen_folder-icon" data-target="folderE6"
+                                style="position:relative">
+                                <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt=""
+                                    class="icone">
+                                <span>Projet E6</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - ppt Presentation Veille -->
+            <!-- (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - ppt Presentation Entreprise -->
             <div class="window ppt" data-target-group="pptEntreprise" style="
                     height: 80%; 
-                    width: 70%;">
+                    width: 70%;
+                    display: none">
                 <div class="title-bar">
                     <div class="title-bar-text">
                         <img src="assets/img/icones/ppLogo2005.png" alt="">
@@ -723,7 +806,7 @@
                             <!-- Slide 3 | Presentation de l'entreprise -->
                             <div class="ppt-item">
                                 <div class="img-line img-line-text">
-                                    <h1>Présentation</h1>
+                                    <h1>Présentation 1/2</h1>
                                     <img src="assets/img/prodwarelogo.jpg" alt="">
                                 </div>
                                 <div class="ppt-line plip-ploup">
@@ -735,7 +818,15 @@
 
                                     <h2>Type de société :</h2>
                                         <h3>=> Société anonyme à conseil d'administration</h3>
-
+                                </div>
+                            </div>
+                            <!-- Slide 3 | Presentation de l'entreprise -->
+                            <div class="ppt-item">
+                                <div class="img-line img-line-text">
+                                    <h1>Présentation 2/2</h1>
+                                    <img src="assets/img/prodwarelogo.jpg" alt="">
+                                </div>
+                                <div class="ppt-line plip-ploup">
                                     <h2>Secteur :</h2>
                                         <h3>=> Solutions de gestion pour entreprises</h3>
 
@@ -820,14 +911,15 @@
                                     <h1>Chat méritant</h1>
                                     <img src="assets/img/prodwarelogo.jpg" alt="">
                                 </div>
-                                <div class="ppt-line plip-ploup">
-                                    <img src="" alt="Chat">
+                                <div class="ppt-line plip-ploup plip-img">
+                                    <img src="assets/img/chat_meritant.jpg" alt="Chat">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
 
 
         </div>
@@ -1085,7 +1177,7 @@
                                 <img src="/assets/img/icones/down-arrow.png" alt="">
                             </div>
                         </div>
-                        <!-- (parent) Icone Dossier Travail - Jeux -->
+                        <!-- (parent) Icone Dossier -->
                         <div class="folder-text-part">
                             <div class="icon iconF" data-target="" style="position:relative">
                                 <img src="assets/img/icones/pics folder.png" alt="" class="icone">
@@ -1383,6 +1475,10 @@
                                 <img src="assets/img/icones/txt.png" alt="" class="icone">
                                 <span>Espoirs.txt</span>
                             </div>
+                            <div class="icon iconF" data-target="photoFillip" style="position:relative">
+                                <img src="assets/img/icones/pics folder.png" alt="" class="icone">
+                                <span>Fillip</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1438,6 +1534,52 @@
                     <div class="txt-text-part">
                         <br>
                         <p>┬┴┬┴┤_･)├┬┴┬┴</p>
+                    </div>
+                </div>
+            </div>
+            <!-- (enfant) (enfant) Dossier Poubelle - Img Filip -->
+            <div class="window" data-target-group="photoFillip" style="width: 80%; height:300px;">
+                <div class="title-bar">
+                    <div class="title-bar-text">Fillip.png</div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="photo-body-wrapper">
+                        <div class="photo-part">
+                            <img src="/assets/img/ChatBin.jpg" alt="Fillip">
+                        </div>
+                        <div class="photo-btn">
+                            <i>
+                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1"
+                                    id="mdi-magnify-plus" width="32" height="32" viewBox="0 0 32 32">
+                                    <path
+                                        d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z" />
+                                </svg>
+                            </i>
+                            <i>
+                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1"
+                                    id="mdi-magnify-minus" width="32" height="32" viewBox="0 0 32 32">
+                                    <path
+                                        d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M5,8V10H13V8H5Z" />
+                                </svg>
+                            </i>
+                            <i class="arrow">
+                                <svg id="Flat" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                                    <path
+                                        d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                </svg>
+                            </i>
+                            <i class="arrow" style="transform: scaleX(-1);">
+                                <svg id="Flat2" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                                    <path
+                                        d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
+                                </svg>
+                            </i>
+                        </div>
                     </div>
                 </div>
             </div>

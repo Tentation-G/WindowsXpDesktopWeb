@@ -3,7 +3,8 @@
  ******************************************************/
 import { bringWindowToFront, lowerZIndex, topZIndex } from "./commonZindex.js"
 
-const POSITION_MODE = "random";
+// Windows display mode : random | cascade | center
+const POSITION_MODE = "cascade";
 let cascadeCount = 0;
 let currentLockedIcon = null; // Pour mémoriser l'icône verrouillée en attente
 
