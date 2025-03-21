@@ -203,3 +203,44 @@ function positionWindowRandom(win) {
     win.style.left = randomLeft + "px";
     win.style.top = randomTop + "px";
 }
+
+/***************************************************
+ * Ouverture du menu demarré
+ ***************************************************/
+
+const md = document.getElementById("launch-menu");
+const powerBtn = document.getElementById("powerBtn");
+
+powerBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    openLaunchMenu();
+});
+
+document.addEventListener("click", (event) => {
+    const isClickInsideMenu = md.contains(event.target);
+    
+    if (!isClickInsideMenu && window.getComputedStyle(md).display === "flex") {
+        md.style.display = "none";
+    }
+});
+
+function openLaunchMenu() {
+    md.style.display = (window.getComputedStyle(md).display === "none") ? "flex" : "none";
+}
+
+/***************************************************
+ * Eteignage de la machine
+ ***************************************************/
+
+const turnoffbtn = document.getElementById("turnOffBtn");
+const turningOffSound = new Audio("assets/img/mp3/Windows xp shutting down.mp3");
+
+turnoffbtn.addEventListener("click", turnOffCommuter);
+
+function turnOffCommuter() {
+    turningOffSound.play()
+    setTimeout(function() {
+        location.reload(true);
+    }, 3000);
+    
+}

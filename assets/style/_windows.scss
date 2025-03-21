@@ -67,6 +67,12 @@
         //     margin: $txt-margin-y 0;
         // }
     }
+    .bin-text-part {
+        pre {
+            background-color: $color-white;
+            color: $color-black;
+        }
+    }
 
     .liste-de-mot-wrap {
         div {
@@ -335,3 +341,4 @@
         }
     }
 }
+

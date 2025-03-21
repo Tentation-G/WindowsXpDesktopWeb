@@ -8,6 +8,16 @@
 $color-white: #ffffff;
 $color-black: #000000;
 
+// -------------------
+// z-index
+// -------------------
+$z-index-icon:1;              //couche 1
+$z-index-windows-default:10;  //couche 2
+$z-index-exe-effect:500;      //couche 3
+$z-index-intro-page:9000;     //couche 4
+$z-index-crt-effect:9000000;  //couche 5
+
+
 // Couleurs récurrentes dans le projet
 $color-icon-active-border: #5f5f5fb9; // pour la bordure quand on active une icône
 $color-icon-active-bg: #3e8ef780; // fond de .icon span quand on clique
@@ -35,6 +45,16 @@ $footer-gradient: linear-gradient(180deg,
     #003dd7 96%,
     #003dd7);
 
+$footer-gradientIvrt: linear-gradient(0deg,
+    #0997ff,
+    #0053ee 8%,
+    #0050ee 40%,
+    #06f 88%,
+    #06f 93%,
+    #005bff 95%,
+    #003dd7 96%,
+    #003dd7);
+
 $footer-gradient2: linear-gradient(180deg,
       #66b3ff,
       #4f9eef 8%,
@@ -52,6 +72,8 @@ $footer2-border-color: #17B6FD;
 $folder-system-file-gradient: linear-gradient(to bottom,
     #6d8cdf 0%,
     #a8befb 100%);
+
+$color-bg-sd-part-lm-menu: #D3E5FA;
 
 // Image de fond du body
 $main-bg: url('/assets/img/background-img/XpBackground-1920x1080.jpg');
