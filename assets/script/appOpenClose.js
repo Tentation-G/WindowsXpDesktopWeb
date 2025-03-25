@@ -22,6 +22,20 @@ document.querySelectorAll(".icon").forEach((icon) => {
     });
 });
 
+/***************************************************
+ * OUVERTURE (click simple sur l'icône .iconlm => ouverture des app du launch menu)
+ ***************************************************/
+document.querySelectorAll(".iconlm").forEach((icon) => {
+    icon.addEventListener("click", () => {
+        // Vérifie si l'icône est verrouillée
+        if (icon.classList.contains("lockedFolder") || icon.classList.contains("lockerFolder")) {
+            openLockForm(icon);
+        } else {
+            openFolder(icon);
+        }
+    });
+});
+
 /**
  * Fonction d'ouverture normale du dossier.
  */

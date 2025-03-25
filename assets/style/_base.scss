@@ -159,6 +159,7 @@ footer {
 }
 
 #launch-menu {
+    z-index: $z-index-launch-menu;
     display: none;
     //display: flex;
     flex-direction: column;
@@ -168,7 +169,9 @@ footer {
 
     border: solid 2px blue;
     background: white;
+    max-width: 350px;
     width: 350px;
+    max-height: 500px;
     height: 500px;
 
     // & > * {
@@ -206,10 +209,15 @@ footer {
         .lm-main-item {
             display: flex;
             align-items: center;
-            margin: 10px 5px;
+            //margin: 10px 5px;
+            padding: 5px;
             gap: 5px;
             img {
                 height: 42px;
+            }
+            &:hover {
+                background: $footer-gradient;
+                color: $color-white;
             }
         }
 

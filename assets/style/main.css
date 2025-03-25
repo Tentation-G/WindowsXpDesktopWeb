@@ -139,13 +139,16 @@ footer .tools {
 }
 
 #launch-menu {
+  z-index: 500;
   display: none;
   flex-direction: column;
   position: absolute;
   bottom: 0;
   border: solid 2px blue;
   background: white;
+  max-width: 350px;
   width: 350px;
+  max-height: 500px;
   height: 500px;
 }
 #launch-menu .lm-head {
@@ -177,11 +180,15 @@ footer .tools {
 #launch-menu .lm-main .lm-main-item {
   display: flex;
   align-items: center;
-  margin: 10px 5px;
+  padding: 5px;
   gap: 5px;
 }
 #launch-menu .lm-main .lm-main-item img {
   height: 42px;
+}
+#launch-menu .lm-main .lm-main-item:hover {
+  background: linear-gradient(180deg, #0997ff, #0053ee 8%, #0050ee 40%, #06f 88%, #06f 93%, #005bff 95%, #003dd7 96%, #003dd7);
+  color: #ffffff;
 }
 #launch-menu .lm-main .lm-main-left-part {
   background: #ffffff;
@@ -625,7 +632,7 @@ body.cat-mode-active:active * {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 500;
+  z-index: 900;
   transform: translateX(-100%);
   animation-name: toothless;
   animation-timing-function: linear;
@@ -644,7 +651,7 @@ body.cat-mode-active:active * {
   height: 100%;
   width: 100%;
   position: relative;
-  z-index: 500;
+  z-index: 900;
 }
 .party-exe > * {
   position: absolute;
@@ -656,7 +663,7 @@ body.cat-mode-active:active * {
 }
 .party-exe .party-gif {
   display: none;
-  z-index: 500;
+  z-index: 900;
 }
 .party-exe .confettiesGif {
   width: 100%;
