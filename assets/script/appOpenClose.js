@@ -4,7 +4,7 @@
 import { bringWindowToFront, lowerZIndex, topZIndex } from "./commonZindex.js"
 
 // Windows display mode : random | cascade | center
-const POSITION_MODE = "cascade";
+const POSITION_MODE = "random";
 let cascadeCount = 0;
 let currentLockedIcon = null; // Pour mémoriser l'icône verrouillée en attente
 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const lockDiv = document.getElementById("lockForm");
             const codeInput = lockDiv.querySelector("#codeInput");
             const errorMsg = lockDiv.querySelector("#errorMsg");
-            const correctCode = "1234"; // Code correct à adapter
+            const correctCode = "ExamE6mdp*"; // Code correct
             if (codeInput.value === correctCode) {
                 lockDiv.style.display = "none";
                 if (currentLockedIcon) {
