@@ -93,6 +93,7 @@ function animatePreLines(target, delay = DEFAULT_DELAY) {
             preElement.innerHTML += lines[index] + "\n";
             index++;
             setTimeout(showNextLine, delay);
+            scrollToBot(); // regles les probleme de scroll
         }
     }
 
