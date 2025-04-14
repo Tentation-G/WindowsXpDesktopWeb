@@ -3,8 +3,8 @@
  ******************************************************/
 
 /* Variables globales pour la vitesse d'animation */
-const DEFAULT_DELAY = 50; // Vitesse pour tous les blocs
-const BLOCK_DELAY = 200; // Vitesse pour les blocs avec la classe "delay"
+const DEFAULT_DELAY = 20; //50 Vitesse pour tous les blocs
+const BLOCK_DELAY = 100; //200 Vitesse pour les blocs avec la classe "delay"
 
 /* Son de lancement */
 const lauchingSound = new Audio("assets/img/mp3/Windows xp startup.mp3");
@@ -13,26 +13,32 @@ const lauchingSound = new Audio("assets/img/mp3/Windows xp startup.mp3");
  * Transitions entre les blocs.
  *
  * Clé = "blockX" (la classe du bloc).
- * Valeur = un objet { yes: "blockY", no: "blockZ" }, ou "function" pour lancer du code.
- *
- * - block1: yes → block6, no → block2
- * - block2: yes → block5, no → block3
- * - block3: yes → block5, no → block4
- * - block4: (deux clics sur yes) → block5
- * - block5: (deux clics sur yes) → block6
- * - block6: yes → block8, no → block7
- * - block7: yes → function
- * - block8: yes → function
+ * 
+ * - blockByPass : ByPasse All → function
+ * 
+ * - block1: Demande D'init     | yes → block6, no → block2
+ * - block2: PA Megaman         | yes → block5, no → block3
+ * - block3: PA Chat            | yes → block5, no → block4
+ * - block4: Init de force      | (deux clics sur yes) → block5
+ * - block5: PA Carlos mew      | (deux clics sur yes) → block6
+ * - block6: Init => doc        | yes → block8, no → block7b
+ * - block7b: Consulter FAQ ?  | yes → block9, no → block7
+ * - block7: Conf Demarrage     | yes → function
+ * - block8: Doc utilisateur    | yes → block9, no → block 7
+ * - block9: FAQ                | yes → function
  */
 const transitions = {
-    'block1': { yes: 'block6', no: 'block2' },
-    'block2': { yes: 'block5', no: 'block3' },
-    'block3': { yes: 'block5', no: 'block4' },
-    'block4': { yes: 'block5' },
-    'block5': { yes: 'block6' },
-    'block6': { yes: 'block8', no: 'block7' },
-    'block7': { yes: 'function' },
-    'block8': { yes: 'function' }
+    'blockByPass' :         { yes: 'function'},
+    'block1' : { yes: 'block6', no: 'block2' },
+    'block2' : { yes: 'block5', no: 'block3' },
+    'block3' : { yes: 'block5', no: 'block4' },
+    'block4' : { yes: 'block5'  },
+    'block5' : { yes: 'block6'  },
+    'block6' : { yes: 'block8', no: 'block7b'},
+    'block7b': { yes: 'block9', no: 'block7' },
+    'block7' : { yes: 'function'},
+    'block8' : { yes: 'block9', no: 'block7' },
+    'block9' : { yes: 'function'}
 };
 
 /**

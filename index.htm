@@ -67,7 +67,12 @@
         ]
     }
     </script>
-    <div class="crt"></div>
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+    </script>
+    <!-- <div class="crt"></div> -->
 </head>
 
 <body class="desktop-body">
@@ -76,6 +81,9 @@
     <main id="mainContainer">
         <!-- ##### Intro Page ##### -->
         <div class="intro-page" id="intro-scroll" style="display: none;">
+            <pre class="blockByPass hidden">
+                <span class="choice" data-answer="yes">Rapide</span>
+            </pre>
             <pre class="intro-text choice-base block1">
 [System] Initialiser la session ? <span class="ligne-terminal-timide">Cliquez pour choisir</span>
 > <span class="choice" data-answer="yes">yes</span> / <span class="choice" data-answer="no">no</span>
@@ -185,6 +193,11 @@
 > <span class="choice" data-answer="yes">yes</span> / <span class="choice" data-answer="no">no</span>
             </pre>
 
+            <pre class="intro-text block7b">
+[system] Consulter la FAQ ?
+> <span class="choice" data-answer="yes">yes</span> / <span class="choice" data-answer="no">no</span>
+            </pre>
+
             <pre class="intro-text block7">
 [system] Confirmer le demarrage ?
 > <span class="choice" data-answer="yes">yes</span>
@@ -192,7 +205,7 @@
 
             <pre class="intro-text block8 delay">
 [System] Ouverture de la documentation officielle...
-[OK] Documentation trouvee : "Doc_Sous_assistance_respiratoir.final(72).txt"
+[OK] Documentation trouvee : "Doc_Sous_assistance_respiratoir(72).txt"
 [System] Chargement en cours...
 
 ###############################
@@ -243,10 +256,39 @@
 
 [System] Bonne exploration ! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 
-[system] Confirmer le demarrage ?
-> <span class="choice" data-answer="yes">yes</span>
+[system] Consulter la FAQ ?
+> <span class="choice" data-answer="yes">yes</span> / <span class="choice" data-answer="no">no</span>
             </pre>
 
+            <pre class="intro-text block9">
+[System] Ouverture de la Foire Aux Questions quasi officielle...
+[OK] Documentation trouvee : "FAQ_Apparement_ca_devrait_etre_celle_la.txt"
+[System] Chargement en cours...
+
+###################
+##                                                ##
+##    Foire a la question(s)    ##
+##                                                ##
+###################
+
+Q : Il y a t il des reponses utiles a des questions pertinantes dans cette FAQ ?
+R : Ya pas encore de questions
+> <span class="choice" data-answer="yes">yes</span>
+            </pre>
+        </div>
+
+        <!-- ##### Param RC ##### -->
+        <div>
+            <div class="param-rc">
+                <p>Rafraichir</p> <!-- Degainer un verre d'eau (drole) -->
+                <div class="line"></div>
+                <p class="locked">Copier</p>
+                <p class="locked">Coller</p>
+                <div class="line"></div>
+                <p>Nouveau</p>
+                <div class="line"></div>
+                <p>propriétés</p>
+            </div>    
         </div>
 
         <!-- ##### Mdp form ##### -->
@@ -1297,7 +1339,7 @@
                         <div class="folder-text-part">
                             <div class="icon iconF" data-target="" style="position:relative">
                                 <img src="assets/img/icones/pics folder.png" alt="" class="icone">
-                                <span>photo2</span>
+                                <span>fonctionnePas</span>
                             </div>
                         </div>
                     </div>

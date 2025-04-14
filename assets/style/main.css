@@ -45,6 +45,25 @@ main {
   height: calc(100vh - 33px);
 }
 
+.param-rc {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  background-color: #ffffff;
+  border: solid 2px #E2E8F0;
+  font-family: "Tahoma";
+}
+.param-rc p {
+  padding: 5px 80px 5px 25px;
+}
+.param-rc .line {
+  width: 100%;
+  border: solid 1px #E2E8F0;
+}
+.param-rc .locked {
+  color: rgba(95, 95, 95, 0.7254901961);
+}
+
 .intro-page {
   position: absolute;
   background-color: #000000;
@@ -68,6 +87,14 @@ main {
 }
 .intro-page pre span:hover:not(.ligne-terminal-timide) {
   cursor: pointer;
+}
+.intro-page .hidden {
+  position: absolute;
+  right: 0;
+  color: transparent;
+}
+.intro-page .hidden span:hover {
+  cursor: default !important;
 }
 .intro-page .intro-text {
   display: none;
