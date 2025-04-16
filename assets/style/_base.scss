@@ -41,6 +41,8 @@ main {
 }
 
 .param-rc {
+    display: none;
+    //display: block;
     position: absolute;
     top: 20%;
     left: 50%;
@@ -50,6 +52,10 @@ main {
 
     p {
         padding: 5px 80px 5px 25px;
+        &:not(.locked):hover {
+            color: $color-white;
+            background-color: $color-txtwindow-hover-bg;
+        }
     }
 
     .line {

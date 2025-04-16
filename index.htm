@@ -72,7 +72,7 @@
             e.preventDefault();
         });
     </script>
-    <!-- <div class="crt"></div> -->
+    <div class="crt"></div>
 </head>
 
 <body class="desktop-body">
@@ -279,7 +279,7 @@ R : Ya pas encore de questions
 
         <!-- ##### Param RC ##### -->
         <div>
-            <div class="param-rc">
+            <div class="param-rc" id="rightClickMenuId">
                 <p>Rafraichir</p> <!-- Degainer un verre d'eau (drole) -->
                 <div class="line"></div>
                 <p class="locked">Copier</p>
@@ -697,7 +697,7 @@ R : Ya pas encore de questions
                                 <img src="assets/img/icones/txt.png" alt="" class="icone">
                                 <span>Mention Honorable.txt</span>
                             </div>
-                            <!-- Faire un system de code pour verrouiller l'ouverture du fichier -->
+                            <!-- verrouilé par un code -->
                             <div class="icon iconF iconOpen_folder-icon lockerFolder" data-target="folderPres"
                                 style="position:relative">
                                 <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt=""
@@ -705,12 +705,17 @@ R : Ya pas encore de questions
                                 <span>Presentation 🔐</span>
                             </div>
 
+                            <div class="icon iconF iconOpen" data-target="txtProjets" style="position:relative">
+                                <img src="assets/img/icones/txt.png" alt="" class="icone">
+                                <span>Projets.txt</span>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
             <!-- (enfant) (enfant) Dossier Travail - pdf CV -->
-            <div class="window" data-target-group="pdfCV">
+            <div class="window" data-target-group="pdfCV" style="height: 80%; width: 60%;"">
                 <div class="title-bar">
                     <div class="title-bar-text">
                         <img src="assets/img/icones/pdfAdobe.png" alt="">
@@ -723,7 +728,7 @@ R : Ya pas encore de questions
                     </div>
                 </div>
                 <div class="window-body">
-
+                    <iframe src="assets/img/CV_2025_FLavien.pdf#navpanes=0" width="100%" height="100%"></iframe>
                 </div>
             </div>
             <!-- (enfant) (enfant) Dossier Travail - Txt Mention Honorable -->
@@ -763,7 +768,7 @@ R : Ya pas encore de questions
             </div>
 
             <!-- (enfant) (enfant) Dossier Travail - pdf Tableau de synthese -->
-            <div class="window" data-target-group="pdftds">
+            <div class="window" data-target-group="pdftds" style="height: 80%; width: 60%;">
                 <div class="title-bar">
                     <div class="title-bar-text">
                         <img src="assets/img/icones/pdfAdobe.png" alt="">
@@ -776,7 +781,142 @@ R : Ya pas encore de questions
                     </div>
                 </div>
                 <div class="window-body">
+                    <iframe src="assets/img/BTS_SIO_2025_Flavien_E5_Tableau_de_synthese.pdf#navpanes=0" width="100%" height="100%"></iframe>
+                </div>
+            </div>
 
+            <!-- (enfant) (enfant) Dossier Travail - Txt Mention Honorable -->
+            <div class="window txt" data-target-group="txtProjets" style="display: block;">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/txt.png" alt="">
+                        Projets
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="txt-window-body-head">
+                        <span>File</span>
+                        <span>Edit</span>
+                        <span>Format</span>
+                        <span>View</span>
+                        <span>Help</span>
+                    </div>
+                    <div class="txt-text-part">
+                        <pre>
+##############################################
+##                                          ##
+##   Liste non exhaustive des mes projets   ##
+##                                          ##
+##############################################
+
+
+
+Réalisé en cours :    ##
+########################
+
+
+- Developpement d'une application Web au format MVC 
+
+
+- Developpement d'une application en Java
+
+
+- Developpement d'une application en C#
+
+
+- Gestion de projet via Git
+
+
+- Maintenance corrective et évolutive d'applications existantes
+
+
+- Rédaction de la documentation technique d’un projet informatique
+
+
+
+Réalisé tout seul comme un grand (projets perso):    ##
+#######################################################
+
+
+- Developpement d'un site web (portfolio) pour un client (copain) - 1.
+
+    - Sur base d'un Template fourni (J'ai pas aimé, la base etait pas belle, classique, mais fonctionnelle).
+
+    - Non remunéré, suite à un échange de bon procédé.
+
+    - Site Hebergé en ligne, il paye son abonnement 👍.
+
+
+- Developpement d'un site web (portfolio) pour un client (copain) - 2.
+
+    - Sur base d'une passion (c'est un petit fan de metal 🎸).
+
+    - C'etait pendant mes debuts en web, pas fifou, mais ca fait le café.
+
+    - Rémunéré en bière, une cinquantaines d'apres les dires de ce malfrat, 4 on été payé à ce jour.
+
+    - Site non hebergé. (cette ligne sera mise a jour si il se decide a le mettre en ligne).
+
+
+- Developpement d'un copain (site web) pour un portfolio (cliente) - 3.
+
+    - Sur base de rien, elle voulait juste un site.
+
+    - Rapide, simple, efficace, fonctionnel, elegant, sensuel (très peu) et utile (j'espere).
+
+    - Rémunéré en écus, en pepettes, en louis d'or !
+
+    - Site non hebergé, il le sera sans doute jamais, dommage.
+
+
+- Developpement d'une application "To-do List" en Java - Pour Epreuve E6 - Client Lourd.
+
+
+- Developpement d'une application Web au format MVC - Pour Epreuvre E6 - CLient légé.
+
+
+- Developpement de petits programmes python en tout genre.
+
+    - Visualisation d'une sphère 3D par projection de points.
+
+    - Visualisation d’un cube 3D par projection de points.
+
+    - Résolution de problèmes LeetCode.
+
+
+- Assemblage d'une machine fixe de developpement et de divertissement.
+
+
+- Mise en place d'un environnement de travail ArchLinux (quel enfer) sur pc.
+
+
+- Regret profond suite au point précédent, ArchLinux ca casse vite.
+
+
+- Retour a windows a cause de l'utilisation d'outils Microsoft en cours.
+
+    - La titine etant trop peu puissante pour avoir une VM fluide.
+
+
+- Mise en place d'un serveur Nas et d'hebergement de Jeux.
+
+    - Debian 12 - Pas d'interface graphique - 💻🥸.
+
+    - CasaOs - Centralisation d'applications et services.
+
+
+- Developpement de ce site.
+
+    - 
+
+
+                        </pre>
+                    </div>
                 </div>
             </div>
 

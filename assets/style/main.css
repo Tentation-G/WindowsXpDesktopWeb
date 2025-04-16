@@ -46,6 +46,7 @@ main {
 }
 
 .param-rc {
+  display: none;
   position: absolute;
   top: 20%;
   left: 50%;
@@ -55,6 +56,10 @@ main {
 }
 .param-rc p {
   padding: 5px 80px 5px 25px;
+}
+.param-rc p:not(.locked):hover {
+  color: #ffffff;
+  background-color: rgb(0, 94, 255);
 }
 .param-rc .line {
   width: 100%;
@@ -400,6 +405,10 @@ footer .tools {
   overflow-y: scroll;
   padding: 5px 10px;
   background-color: #ffffff;
+}
+.txt .txt-text-part pre {
+  color: #000000;
+  background: transparent;
 }
 .txt .bin-text-part pre {
   background-color: #ffffff;

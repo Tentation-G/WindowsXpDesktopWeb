@@ -36,6 +36,25 @@ document.querySelectorAll(".iconlm").forEach((icon) => {
     });
 });
 
+/***************************************************
+ * OUVERTURE MENU CLICK DROIT
+ ***************************************************/
+
+const rightClickcMenu = document.getElementById("rightClickMenuId");
+
+document.addEventListener("contextmenu", (event) => {
+
+    event.preventDefault();
+
+    rightClickcMenu.style.display = "block";
+    rightClickcMenu.style.left = `${event.pageX}px`;
+    rightClickcMenu.style.top = `${event.pageY}px`;
+});
+
+document.addEventListener("click", () => {
+    rightClickcMenu.style.display = "none";
+});
+
 /**
  * Fonction d'ouverture normale du dossier.
  */
