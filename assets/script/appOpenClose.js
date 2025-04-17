@@ -37,6 +37,20 @@ document.querySelectorAll(".iconlm").forEach((icon) => {
 });
 
 /***************************************************
+ * OUVERTURE menu propriété écran
+ ***************************************************/
+document.querySelectorAll(".displayParam").forEach((icon) => {
+    icon.addEventListener("click", () => {
+        // Vérifie si l'icône est verrouillée
+        if (icon.classList.contains("lockedFolder") || icon.classList.contains("lockerFolder")) {
+            openLockForm(icon);
+        } else {
+            openFolder(icon);
+        }
+    });
+});
+
+/***************************************************
  * OUVERTURE MENU CLICK DROIT
  ***************************************************/
 

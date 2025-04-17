@@ -46,6 +46,7 @@
     <script type="module" src="assets/script/wdBtn.js" defer></script>
     <script type="module" src="assets/script/appOpenClose.js" defer></script>
     <script type="module" src="assets/script/introPage.js" defer></script>
+    <script type="module" src="assets/script/bgChanges.js" defer></script>
 
     <script src="assets/script/dragIcons.js" defer></script>
 
@@ -72,7 +73,7 @@
             e.preventDefault();
         });
     </script>
-    <div class="crt"></div>
+    <!-- <div class="crt"></div> -->
 </head>
 
 <body class="desktop-body">
@@ -287,8 +288,50 @@ R : Ya pas encore de questions
                 <div class="line"></div>
                 <p>Nouveau</p>
                 <div class="line"></div>
-                <p>propriétés</p>
-            </div>    
+                <p class="displayParam" data-target="displayParam">propriétés</p>
+            </div>
+        </div>
+
+        <!-- ##### Fenetre proprietes ##### -->
+        <div>
+            <div class="window param-windows" data-target-group="displayParam" style="display: none;">
+                <div class="title-bar">
+                    <div class="title-bar-text">propriétés de l'écran</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <menu role="tablist">
+                        <button aria-selected="true" aria-controls="param">Desktop</button>
+                    </menu>
+                    <article role="tabpanel" id="param">
+                        <section>
+                                <img src="Aassets/img/background-img/XpBackground-1920x1080.jpg" alt="">
+                        </section>
+                        <section>
+                            <p>Fond d'écran</p>
+                            <div>
+
+                                <item class="param-bg-item">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>MipMup</p>
+                                </item>
+                                
+                                <item class="param-bg-item">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>MipMup2</p>
+                                </item>
+
+                            </div>
+                        </section>
+                    </article>
+                    <section class="field-row" style="justify-content: flex-end">
+                        <button>OK</button>
+                        <button>Cancel</button>
+                    </section>
+                </div>
+            </div>
         </div>
 
         <!-- ##### Mdp form ##### -->
@@ -393,7 +436,7 @@ R : Ya pas encore de questions
                                 <img src="/assets/img/icones/down-arrow.png" alt="">
                             </div>
                         </div>
-                        
+
                         <div class="folder-text-part">
                             <div class="icon iconF" data-target="photoChaformaticien" style="position:relative">
                                 <img src="assets/img/icones/pics folder.png" alt="" class="icone">
@@ -420,27 +463,29 @@ R : Ya pas encore de questions
                         </div>
                         <div class="photo-btn">
                             <i>
-                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1"
-                                    id="mdi-magnify-plus" width="32" height="32" viewBox="0 0 32 32">
+                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
+                                    version="1.1" id="mdi-magnify-plus" width="32" height="32" viewBox="0 0 32 32">
                                     <path
                                         d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z" />
                                 </svg>
                             </i>
                             <i>
-                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1"
-                                    id="mdi-magnify-minus" width="32" height="32" viewBox="0 0 32 32">
+                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
+                                    version="1.1" id="mdi-magnify-minus" width="32" height="32" viewBox="0 0 32 32">
                                     <path
                                         d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M5,8V10H13V8H5Z" />
                                 </svg>
                             </i>
                             <i class="arrow">
-                                <svg id="Flat" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                                <svg id="Flat" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                    height="24">
                                     <path
                                         d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
                                 </svg>
                             </i>
                             <i class="arrow" style="transform: scaleX(-1);">
-                                <svg id="Flat2" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                                <svg id="Flat2" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                    height="24">
                                     <path
                                         d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
                                 </svg>
@@ -716,98 +761,99 @@ R : Ya pas encore de questions
             </div>
             <!-- (enfant) (enfant) Dossier Travail - pdf CV -->
             <div class="window" data-target-group="pdfCV" style="height: 80%; width: 60%;"">
-                <div class="title-bar">
-                    <div class="title-bar-text">
-                        <img src="assets/img/icones/pdfAdobe.png" alt="">
-                        Cv
-                    </div>
-                    <div class="title-bar-controls" style="cursor: pointer;">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
+                <div class=" title-bar">
+                <div class="title-bar-text">
+                    <img src="assets/img/icones/pdfAdobe.png" alt="">
+                    Cv
                 </div>
-                <div class="window-body">
-                    <iframe src="assets/img/CV_2025_FLavien.pdf#navpanes=0" width="100%" height="100%"></iframe>
+                <div class="title-bar-controls" style="cursor: pointer;">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
                 </div>
             </div>
-            <!-- (enfant) (enfant) Dossier Travail - Txt Mention Honorable -->
-            <div class="window txt" data-target-group="txtMH">
-                <div class="title-bar">
-                    <div class="title-bar-text">
-                        <img src="assets/img/icones/txt.png" alt="">
-                        Mention Honorable
-                    </div>
-                    <div class="title-bar-controls" style="cursor: pointer;">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
+            <div class="window-body">
+                <iframe src="assets/img/CV_2025_FLavien.pdf#navpanes=0" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+        <!-- (enfant) (enfant) Dossier Travail - Txt Mention Honorable -->
+        <div class="window txt" data-target-group="txtMH">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="assets/img/icones/txt.png" alt="">
+                    Mention Honorable
                 </div>
-                <div class="window-body">
-                    <div class="txt-window-body-head">
-                        <span>File</span>
-                        <span>Edit</span>
-                        <span>Format</span>
-                        <span>View</span>
-                        <span>Help</span>
-                    </div>
-                    <div class="txt-text-part">
-                        <br>
-                        <h3>Mention honorable à ceux qui m'ont aidé à developper ce site</h3><br>
-                        <p>- La<a href="https://devdocs.io/javascript/" target="_blank"> Documentation JavaScript</a> 👍
-                        </p><br>
-                        <p>- La <a href="https://web.archive.org/" target="_blank">Wayback Machine</a> 💻</p><br>
-                        <p>- L'eau du robinet (pour rester hydraté en toute situation) 🚰</p><br>
-                        <p>- La force de mes reves et de mes espoirs 🫠</p><br>
-                        <p><i>- Les <a href="https://fr.wikipedia.org/wiki/Pluie" target="_blank">larmes du ciel</a>
-                                tapotant doucement
-                                la vitre assoupie 🌧️</i></p>
-                    </div>
+                <div class="title-bar-controls" style="cursor: pointer;">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
                 </div>
             </div>
+            <div class="window-body">
+                <div class="txt-window-body-head">
+                    <span>File</span>
+                    <span>Edit</span>
+                    <span>Format</span>
+                    <span>View</span>
+                    <span>Help</span>
+                </div>
+                <div class="txt-text-part">
+                    <br>
+                    <h3>Mention honorable à ceux qui m'ont aidé à developper ce site</h3><br>
+                    <p>- La<a href="https://devdocs.io/javascript/" target="_blank"> Documentation JavaScript</a> 👍
+                    </p><br>
+                    <p>- La <a href="https://web.archive.org/" target="_blank">Wayback Machine</a> 💻</p><br>
+                    <p>- L'eau du robinet (pour rester hydraté en toute situation) 🚰</p><br>
+                    <p>- La force de mes reves et de mes espoirs 🫠</p><br>
+                    <p><i>- Les <a href="https://fr.wikipedia.org/wiki/Pluie" target="_blank">larmes du ciel</a>
+                            tapotant doucement
+                            la vitre assoupie 🌧️</i></p>
+                </div>
+            </div>
+        </div>
 
-            <!-- (enfant) (enfant) Dossier Travail - pdf Tableau de synthese -->
-            <div class="window" data-target-group="pdftds" style="height: 80%; width: 60%;">
-                <div class="title-bar">
-                    <div class="title-bar-text">
-                        <img src="assets/img/icones/pdfAdobe.png" alt="">
-                        Tableau de synthese
-                    </div>
-                    <div class="title-bar-controls" style="cursor: pointer;">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
+        <!-- (enfant) (enfant) Dossier Travail - pdf Tableau de synthese -->
+        <div class="window" data-target-group="pdftds" style="height: 80%; width: 60%;">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="assets/img/icones/pdfAdobe.png" alt="">
+                    Tableau de synthese
                 </div>
-                <div class="window-body">
-                    <iframe src="assets/img/BTS_SIO_2025_Flavien_E5_Tableau_de_synthese.pdf#navpanes=0" width="100%" height="100%"></iframe>
+                <div class="title-bar-controls" style="cursor: pointer;">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
                 </div>
             </div>
+            <div class="window-body">
+                <iframe src="assets/img/BTS_SIO_2025_Flavien_E5_Tableau_de_synthese.pdf#navpanes=0" width="100%"
+                    height="100%"></iframe>
+            </div>
+        </div>
 
-            <!-- (enfant) (enfant) Dossier Travail - Txt Mention Honorable -->
-            <div class="window txt" data-target-group="txtProjets" style="display: block;">
-                <div class="title-bar">
-                    <div class="title-bar-text">
-                        <img src="assets/img/icones/txt.png" alt="">
-                        Projets
-                    </div>
-                    <div class="title-bar-controls" style="cursor: pointer;">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
+        <!-- (enfant) (enfant) Dossier Travail - Txt Projet -->
+        <div class="window txt" data-target-group="txtProjets" style="height: 80%; width: 70%;">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="assets/img/icones/txt.png" alt="">
+                    Projets
                 </div>
-                <div class="window-body">
-                    <div class="txt-window-body-head">
-                        <span>File</span>
-                        <span>Edit</span>
-                        <span>Format</span>
-                        <span>View</span>
-                        <span>Help</span>
-                    </div>
-                    <div class="txt-text-part">
-                        <pre>
+                <div class="title-bar-controls" style="cursor: pointer;">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="txt-window-body-head">
+                    <span>File</span>
+                    <span>Edit</span>
+                    <span>Format</span>
+                    <span>View</span>
+                    <span>Help</span>
+                </div>
+                <div class="txt-text-part">
+                    <pre>
 ##############################################
 ##                                          ##
 ##   Liste non exhaustive des mes projets   ##
@@ -815,400 +861,438 @@ R : Ya pas encore de questions
 ##############################################
 
 
-
-Réalisé en cours :    ##
-########################
-
-
-- Developpement d'une application Web au format MVC 
+##########################
+##  Réalisé en cours :  ##
+##########################
 
 
-- Developpement d'une application en Java
+│ Developpement d'une application Web au format MVC
+│
+│   └── Site de Location de terrain de foot en ligne 
+└──
+
+│ Developpement d'une application en Java
+│
+│   └── App de gestion de comptes bancaires
+└──
 
 
-- Developpement d'une application en C#
+│ Developpement d'une application en CS
+│
+│   ├── FrameWork .net
+│   │
+│   └── App de gestion de materiel
+└──
 
 
-- Gestion de projet via Git
+│ Gestion de projet via Git
+└──
 
 
-- Maintenance corrective et évolutive d'applications existantes
+│ Maintenance corrective et évolutive d'applications existantes
+└──
 
 
-- Rédaction de la documentation technique d’un projet informatique
+│ Rédaction de la documentation technique d’un projet informatique
+└──
 
 
-
-Réalisé tout seul comme un grand (projets perso):    ##
-#######################################################
-
-
-- Developpement d'un site web (portfolio) pour un client (copain) - 1.
-
-    - Sur base d'un Template fourni (J'ai pas aimé, la base etait pas belle, classique, mais fonctionnelle).
-
-    - Non remunéré, suite à un échange de bon procédé.
-
-    - Site Hebergé en ligne, il paye son abonnement 👍.
+#########################################################
+##  Réalisé tout seul comme un grand (projets perso):  ##
+#########################################################
 
 
-- Developpement d'un site web (portfolio) pour un client (copain) - 2.
-
-    - Sur base d'une passion (c'est un petit fan de metal 🎸).
-
-    - C'etait pendant mes debuts en web, pas fifou, mais ca fait le café.
-
-    - Rémunéré en bière, une cinquantaines d'apres les dires de ce malfrat, 4 on été payé à ce jour.
-
-    - Site non hebergé. (cette ligne sera mise a jour si il se decide a le mettre en ligne).
-
-
-- Developpement d'un copain (site web) pour un portfolio (cliente) - 3.
-
-    - Sur base de rien, elle voulait juste un site.
-
-    - Rapide, simple, efficace, fonctionnel, elegant, sensuel (très peu) et utile (j'espere).
-
-    - Rémunéré en écus, en pepettes, en louis d'or !
-
-    - Site non hebergé, il le sera sans doute jamais, dommage.
+│ Developpement d'un site web (portfolio) pour un client (copain) - 1.
+│
+│   ├── Sur base d'un Template fourni (J'ai pas aimé, la base etait pas belle, classique, mais fonctionnelle).
+│   │
+│   ├── Non remunéré, suite à un échange de bon procédé.
+│   │
+│   └── Site Hebergé en ligne, il paye son abonnement 👍.
+└──
 
 
-- Developpement d'une application "To-do List" en Java - Pour Epreuve E6 - Client Lourd.
+│ Developpement d'un site web (portfolio) pour un client (copain) - 2.
+│
+│   ├── Sur base d'une passion (c'est un petit fan de metal 🎸).
+│   │
+│   ├── C'etait pendant mes debuts en web, pas fifou, mais ca fait le café.
+│   │
+│   ├── Rémunéré en bière, une cinquantaines d'apres les dires de ce malfrat, 4 on été payé à ce jour.
+│   │
+│   └── Site non hebergé. (cette ligne sera mise a jour si il se decide a le mettre en ligne).
+└──
 
 
-- Developpement d'une application Web au format MVC - Pour Epreuvre E6 - CLient légé.
+│ Developpement d'un copain (site web) pour un portfolio (cliente) - 3.
+│
+│   ├── Sur base de rien, elle voulait juste un site.
+│   │
+│   ├── Rapide, simple, efficace, fonctionnel, elegant, sensuel (très peu) et utile (j'espere).
+│   │
+│   ├── Rémunéré en écus, en pepettes, en louis d'or !
+│   │
+│   └── Site non hebergé, il le sera sans doute jamais, dommage.
+└──
 
 
-- Developpement de petits programmes python en tout genre.
-
-    - Visualisation d'une sphère 3D par projection de points.
-
-    - Visualisation d’un cube 3D par projection de points.
-
-    - Résolution de problèmes LeetCode.
+│ Developpement d'une application "To-do List" en Java - Pour Epreuve E6 - Client Lourd.
+└──
 
 
-- Assemblage d'une machine fixe de developpement et de divertissement.
+│ Developpement d'une application Web au format MVC - Pour Epreuvre E6 - CLient légé.
+└──
 
 
-- Mise en place d'un environnement de travail ArchLinux (quel enfer) sur pc.
+│ Developpement de petits programmes python en tout genre.
+│
+│   ├── Visualisation d'une sphère 3D par projection de points.
+│   │
+│   ├── Visualisation d’un cube 3D par projection de points.
+│   │
+│   └── Résolution de problèmes LeetCode.
+└──
 
 
-- Regret profond suite au point précédent, ArchLinux ca casse vite.
+│ Assemblage d'une machine fixe de developpement et de divertissement.
+└──
 
 
-- Retour a windows a cause de l'utilisation d'outils Microsoft en cours.
-
-    - La titine etant trop peu puissante pour avoir une VM fluide.
-
-
-- Mise en place d'un serveur Nas et d'hebergement de Jeux.
-
-    - Debian 12 - Pas d'interface graphique - 💻🥸.
-
-    - CasaOs - Centralisation d'applications et services.
+│ Mise en place d'un environnement de travail ArchLinux (quel enfer) sur pc.
+└──
 
 
-- Developpement de ce site.
+│ Regret profond suite au point précédent, ArchLinux ca casse vite.
+└──
 
-    - 
+
+│ Retour a windows a cause de l'utilisation d'outils Microsoft en cours.
+│
+│   └── La titine etant trop peu puissante pour avoir une VM fluide.
+└──
+
+
+│ Mise en place d'un serveur Nas et d'hebergement de Jeux.
+│
+│   ├── Debian 12 - Pas d'interface graphique - 💻🥸.
+│   │
+│   └── CasaOs - Centralisation d'applications et services.
+└──
+
+
+│ Developpement de ce site.
+│
+│   ├── C'est bien un site, pas une VM
+│   │
+│   ├── Fait sans frameWork
+│   │
+│   ├── HTML, CSS (j'ai mentis, c'est du SCSS), JavaScript, PAS plus !
+│   │
+│   └── Fait avec amour et passion.
+└──
+
 
 
                         </pre>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- (enfant) (enfant) Dossier Travail - Dossier Presentation -->
-            <div class="window" data-target-group="folderPres">
-                <div class="title-bar ">
-                    <div class="title-bar-text">
+        <!-- (enfant) (enfant) Dossier Travail - Dossier Presentation -->
+        <div class="window" data-target-group="folderPres">
+            <div class="title-bar ">
+                <div class="title-bar-text">
+                    <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt="">
+                    Presentation 🔐
+                </div>
+                <div class="title-bar-controls" style="cursor: pointer;">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="txt-window-body-head">
+                    <span>File</span>
+                    <span>View</span>
+                    <span>Favorites</span>
+                    <span>Tools</span>
+                    <span>Help</span>
+                </div>
+                <div class="folder-btn-body-head">
+                    <div class="pack pack-1">
+                        <div class="lil-pack">
+                            <img src="/assets/img/icones/arrow.png" alt="">
+                            <span>Back</span>
+                        </div>
+                        <div class="lil-pack">
+                            <img src="/assets/img/icones/arrow2.png" alt="">
+                        </div>
+                        <div class="lil-pack">
+                            <img src="/assets/img/icones/NetworkDocuments.png" alt="">
+                        </div>
+                    </div>
+                    <div class="pack pack-2">
+                        <div class="lil-pack">
+                            <img src="/assets/img/icones/loupe.png" alt="">
+                            <span>Search</span>
+                        </div>
+
+                        <div class="lil-pack">
+                            <img src="/assets/img/icones/MyDocuments.png" alt="">
+                            <span>Folders</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="txt-window-body-head-address">
+                    <span>Address</span>
+                    <div class="address-path">
                         <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt="">
-                        Presentation 🔐
-                    </div>
-                    <div class="title-bar-controls" style="cursor: pointer;">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
+                        <span>C:\Desktop\Travail\Presentation</span>
                     </div>
                 </div>
-                <div class="window-body">
-                    <div class="txt-window-body-head">
-                        <span>File</span>
-                        <span>View</span>
-                        <span>Favorites</span>
-                        <span>Tools</span>
-                        <span>Help</span>
-                    </div>
-                    <div class="folder-btn-body-head">
-                        <div class="pack pack-1">
-                            <div class="lil-pack">
-                                <img src="/assets/img/icones/arrow.png" alt="">
-                                <span>Back</span>
-                            </div>
-                            <div class="lil-pack">
-                                <img src="/assets/img/icones/arrow2.png" alt="">
-                            </div>
-                            <div class="lil-pack">
-                                <img src="/assets/img/icones/NetworkDocuments.png" alt="">
-                            </div>
+                <div class="folder-body-wrapper">
+                    <div class="folder-system-files-part">
+                        <div class="folder-system-files-items">
+                            <span>Sytem Tasks</span>
+                            <img src="/assets/img/icones/down-arrow.png" alt="">
                         </div>
-                        <div class="pack pack-2">
-                            <div class="lil-pack">
-                                <img src="/assets/img/icones/loupe.png" alt="">
-                                <span>Search</span>
-                            </div>
-        
-                            <div class="lil-pack">
-                                <img src="/assets/img/icones/MyDocuments.png" alt="">
-                                <span>Folders</span>
-                            </div>
+                        <div class="folder-system-files-items">
+                            <span>Other Places</span>
+                            <img src="/assets/img/icones/down-arrow.png" alt="">
+                        </div>
+                        <div class="folder-system-files-items">
+                            <span>File and Folder Tasks</span>
+                            <img src="/assets/img/icones/down-arrow.png" alt="">
                         </div>
                     </div>
-                    <div class="txt-window-body-head-address">
-                        <span>Address</span>
-                        <div class="address-path">
-                            <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt="">
-                            <span>C:\Desktop\Travail\Presentation</span>
+                    <!-- (parent) Icone Dossier Travail - Dossier Travail -->
+                    <div class="folder-text-part">
+                        <div class="icon iconF iconOpen" data-target="pptEntreprise" style="position:relative">
+                            <img src="assets/img/icones/ppLogo2005.png" alt="" class="icone">
+                            <span>Presentation Entreprise.ppt</span>
                         </div>
-                    </div>
-                    <div class="folder-body-wrapper">
-                        <div class="folder-system-files-part">
-                            <div class="folder-system-files-items">
-                                <span>Sytem Tasks</span>
-                                <img src="/assets/img/icones/down-arrow.png" alt="">
-                            </div>
-                            <div class="folder-system-files-items">
-                                <span>Other Places</span>
-                                <img src="/assets/img/icones/down-arrow.png" alt="">
-                            </div>
-                            <div class="folder-system-files-items">
-                                <span>File and Folder Tasks</span>
-                                <img src="/assets/img/icones/down-arrow.png" alt="">
-                            </div>
+                        <div class="icon iconF iconOpen" data-target="pptVeille" style="position:relative">
+                            <img src="assets/img/icones/ppLogo2005.png" alt="" class="icone">
+                            <span>Presentation Veille.ppt</span>
                         </div>
-                        <!-- (parent) Icone Dossier Travail - Dossier Travail -->
-                        <div class="folder-text-part">
-                            <div class="icon iconF iconOpen" data-target="pptEntreprise" style="position:relative">
-                                <img src="assets/img/icones/ppLogo2005.png" alt="" class="icone">
-                                <span>Presentation Entreprise.ppt</span>
-                            </div>
-                            <div class="icon iconF iconOpen" data-target="pptVeille" style="position:relative">
-                                <img src="assets/img/icones/ppLogo2005.png" alt="" class="icone">
-                                <span>Presentation Veille.ppt</span>
-                            </div>
 
-                            <div class="icon iconF iconOpen_folder-icon" data-target="folderE6"
-                                style="position:relative">
-                                <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt=""
-                                    class="icone">
-                                <span>Projet E6</span>
-                            </div>
+                        <div class="icon iconF iconOpen_folder-icon" data-target="folderE6" style="position:relative">
+                            <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt=""
+                                class="icone">
+                            <span>Projet E6</span>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - ppt Presentation Entreprise -->
-            <div class="window ppt" data-target-group="pptEntreprise" style="
+        <!-- (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - ppt Presentation Entreprise -->
+        <div class="window ppt" data-target-group="pptEntreprise" style="
                     height: 80%; 
                     width: 70%;
                     display: none">
-                <div class="title-bar">
-                    <div class="title-bar-text">
-                        <img src="assets/img/icones/ppLogo2005.png" alt="">
-                        Presentation Entreprise
-                    </div>
-                    <div class="title-bar-controls" style="cursor: pointer;">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="assets/img/icones/ppLogo2005.png" alt="">
+                    Presentation Entreprise
                 </div>
-                <div class="window-body">
-                    <div class="ppt-window-body-head">
-                        <span>Home</span>
-                        <span>Insert</span>
-                        <span>Design</span>
-                        <span>Animations</span>
-                        <span>Slide Show</span>
-                        <span>Review</span>
-                        <span>View</span>
+                <div class="title-bar-controls" style="cursor: pointer;">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="ppt-window-body-head">
+                    <span>Home</span>
+                    <span>Insert</span>
+                    <span>Design</span>
+                    <span>Animations</span>
+                    <span>Slide Show</span>
+                    <span>Review</span>
+                    <span>View</span>
+                </div>
+                <div class="ppt-body-wrapper">
+                    <div class="ppt-overview-part">
+                        <div class="ppt-item">
+                            <p>Titre</p>
+                        </div>
+                        <div class="ppt-item">
+                            <p>Sommaire</p>
+                        </div>
+                        <div class="ppt-item">
+                            <p>Presentation</p>
+                        </div>
+                        <div class="ppt-item">
+                            <p>Activité principale 1/2</p>
+                        </div>
+                        <div class="ppt-item">
+                            <p>Activité principale 2/2</p>
+                        </div>
+                        <div class="ppt-item">
+                            <p>Mes missions</p>
+                        </div>
+                        <div class="ppt-item">
+                            <p>Sources</p>
+                        </div>
+                        <div class="ppt-item">
+                            <p>Chat</p>
+                        </div>
                     </div>
-                    <div class="ppt-body-wrapper">
-                        <div class="ppt-overview-part">
-                            <div class="ppt-item">
-                                <p>Titre</p>
+                    <div class="ppt-text-part">
+                        <!-- Slide 1 | Titre -->
+                        <div class="ppt-item">
+                            <div class="img-line">
+                                <img src="assets/img/prodwarelogo.jpg" alt="">
                             </div>
-                            <div class="ppt-item">
-                                <p>Sommaire</p>
-                            </div>
-                            <div class="ppt-item">
-                                <p>Presentation</p>
-                            </div>
-                            <div class="ppt-item">
-                                <p>Activité principale 1/2</p>
-                            </div>
-                            <div class="ppt-item">
-                                <p>Activité principale 2/2</p>
-                            </div>
-                            <div class="ppt-item">
-                                <p>Mes missions</p>
-                            </div>
-                            <div class="ppt-item">
-                                <p>Sources</p>
-                            </div>
-                            <div class="ppt-item">
-                                <p>Chat</p>
+                            <div class="ppt-line">
+                                <h1>Mon alternance Chez Prodware</h1>
+                                <h3>Technicien Support Applicatif</h3>
                             </div>
                         </div>
-                        <div class="ppt-text-part">
-                            <!-- Slide 1 | Titre -->
-                            <div class="ppt-item">
-                                <div class="img-line">
-                                    <img src="assets/img/prodwarelogo.jpg" alt="">
-                                </div>
-                            <div class="ppt-line">
-                                    <h1>Mon alternance Chez Prodware</h1>
-                                    <h3>Technicien Support Applicatif</h3>
+                        <!-- Slide 2 | Sommaire -->
+                        <div class="ppt-item">
+                            <div class="img-line">
+                                <img src="assets/img/prodwarelogo.jpg" alt="">
                             </div>
-                            </div>
-                            <!-- Slide 2 | Sommaire -->
-                            <div class="ppt-item">
-                                <div class="img-line">
-                                    <img src="assets/img/prodwarelogo.jpg" alt="">
-                                </div>
-                                <div class="ppt-line ppt-sommaire">
-                                    <h1>Sommaire :</h1>
-                                    <div>
-                                        <ul>
-                                            <li>=> Présentation de l'entreprise</li>
-                                            <li>=> Activités principales</li>
-                                            <li>=> Mes missions</li>
-                                            <li>=> Sources</li>
-                                            <!-- Photo d'un chat qui n'a rien a voir avec tout ca, mais au moins, il a le merite d'etre la -->
-                                            <li>=> Chat</li>
-                                        </ul>
-                                    </div>
+                            <div class="ppt-line ppt-sommaire">
+                                <h1>Sommaire :</h1>
+                                <div>
+                                    <ul>
+                                        <li>=> Présentation de l'entreprise</li>
+                                        <li>=> Activités principales</li>
+                                        <li>=> Mes missions</li>
+                                        <li>=> Sources</li>
+                                        <!-- Photo d'un chat qui n'a rien a voir avec tout ca, mais au moins, il a le merite d'etre la -->
+                                        <li>=> Chat</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <!-- Slide 3 | Presentation de l'entreprise -->
-                            <div class="ppt-item">
-                                <div class="img-line img-line-text">
-                                    <h1>Présentation 1/2</h1>
-                                    <img src="assets/img/prodwarelogo.jpg" alt="">
-                                </div>
-                                <div class="ppt-line plip-ploup">
-                                    <h2>Nom :</h2>
-                                        <h3>=> Prodware SA</h3>
+                        </div>
+                        <!-- Slide 3 | Presentation de l'entreprise -->
+                        <div class="ppt-item">
+                            <div class="img-line img-line-text">
+                                <h1>Présentation 1/2</h1>
+                                <img src="assets/img/prodwarelogo.jpg" alt="">
+                            </div>
+                            <div class="ppt-line plip-ploup">
+                                <h2>Nom :</h2>
+                                <h3>=> Prodware SA</h3>
 
-                                    <h2>Date de création :</h2>
-                                        <h3>=> 1989</h3>
+                                <h2>Date de création :</h2>
+                                <h3>=> 1989</h3>
 
-                                    <h2>Type de société :</h2>
-                                        <h3>=> Société anonyme à conseil d'administration</h3>
-                                </div>
+                                <h2>Type de société :</h2>
+                                <h3>=> Société anonyme à conseil d'administration</h3>
                             </div>
-                            <!-- Slide 3 | Presentation de l'entreprise -->
-                            <div class="ppt-item">
-                                <div class="img-line img-line-text">
-                                    <h1>Présentation 2/2</h1>
-                                    <img src="assets/img/prodwarelogo.jpg" alt="">
-                                </div>
-                                <div class="ppt-line plip-ploup">
-                                    <h2>Secteur :</h2>
-                                        <h3>=> Solutions de gestion pour entreprises</h3>
-
-                                    <h2>Collaborateurs :</h2>
-                                        <h3>=> +~ 1 000 employés dans 12 pays</h3>
-
-                                    <h2>Chiffre d'affaires :</h2>
-                                        <h3>=> 668,7 millions d'euros en 2024</h3>
-                                </div>
+                        </div>
+                        <!-- Slide 3 | Presentation de l'entreprise -->
+                        <div class="ppt-item">
+                            <div class="img-line img-line-text">
+                                <h1>Présentation 2/2</h1>
+                                <img src="assets/img/prodwarelogo.jpg" alt="">
                             </div>
-                            <!-- Slide 4 | Act principale de l'entreprise 1/2 -->
-                            <div class="ppt-item">
-                                <div class="img-line img-line-text">
-                                    <h1>Activités principales 1/2</h1>
-                                    <img src="assets/img/prodwarelogo.jpg" alt="">
-                                </div>
-                                <div class="ppt-line plip-ploup">
-                                    <h2>Édition et développement de logiciels :</h2>
-                                        <h3>=> solutions ERP</h3>
-                                            <h4>=> Navision 6</h4>
-                                            <h4>=> Conquest</h4>
+                            <div class="ppt-line plip-ploup">
+                                <h2>Secteur :</h2>
+                                <h3>=> Solutions de gestion pour entreprises</h3>
 
-                                    <h2>Intégration et hébergement de solutions logicielles :</h2>
-                                        <h3>=> Azure Cloud</h3>
+                                <h2>Collaborateurs :</h2>
+                                <h3>=> +~ 1 000 employés dans 12 pays</h3>
 
-                                    <h2>Optimisation des processus métier :</h2>
-                                        <h3>=> analyse et automatisation des flux de travail internes</h3>
-                                            <h4>=> Dynamics 365</h4>
-                                </div>
+                                <h2>Chiffre d'affaires :</h2>
+                                <h3>=> 668,7 millions d'euros en 2024</h3>
                             </div>
-                            <!-- Slide 5 | Act principale de l'entreprise 2/2 -->
-                            <div class="ppt-item">
-                                <div class="img-line img-line-text">
-                                    <h1>Activités principales 2/2</h1>
-                                    <img src="assets/img/prodwarelogo.jpg" alt="">
-                                </div>
-                                <div class="ppt-line plip-ploup">
-                                    <h2>Gestion de la relation client (CRM) :</h2>
-                                        <h3>=> Microsoft Dynamics CRM</h3>
+                        </div>
+                        <!-- Slide 4 | Act principale de l'entreprise 1/2 -->
+                        <div class="ppt-item">
+                            <div class="img-line img-line-text">
+                                <h1>Activités principales 1/2</h1>
+                                <img src="assets/img/prodwarelogo.jpg" alt="">
+                            </div>
+                            <div class="ppt-line plip-ploup">
+                                <h2>Édition et développement de logiciels :</h2>
+                                <h3>=> solutions ERP</h3>
+                                <h4>=> Navision 6</h4>
+                                <h4>=> Conquest</h4>
 
-                                    <h2>Gestion financière : </h2>
-                                        <h3>=> implémentation et intégration de logiciels financiers </h3>
-                                            <h4>=> Sage</h4>
+                                <h2>Intégration et hébergement de solutions logicielles :</h2>
+                                <h3>=> Azure Cloud</h3>
 
-                                    <h2>Vente et conseil : </h2>
-                                        <h3>=> Accompagnement des entreprises</h3>
-                                        <h3>=> Vente de licences logicielles</h3>
-                                </div>
+                                <h2>Optimisation des processus métier :</h2>
+                                <h3>=> analyse et automatisation des flux de travail internes</h3>
+                                <h4>=> Dynamics 365</h4>
                             </div>
-                            <!-- Slide 6 | Mes missions -->
-                            <div class="ppt-item">
-                                <div class="img-line img-line-text">
-                                    <h1>Mes missions</h1>
-                                    <img src="assets/img/prodwarelogo.jpg" alt="">
-                                </div>
-                                <div class="ppt-line plip-ploup">
-                                    <h2>=> Développer, tester et mettre en place des solutions.</h2>
-                                    <h2>=> Création de documentations techniques.</h2>
-                                    <h2>=> Création de formulaires utilisateurs.</h2>
-                                    <h2>=> Compréhension du flux de vente.</h2>
-                                    <h2>=> Assistance utilisateurs.</h2>
-                                    <h2>=> Maintenance technique.</h2>
-                                    <h2>=> Résolution de bugs</h2>
-                                </div>
+                        </div>
+                        <!-- Slide 5 | Act principale de l'entreprise 2/2 -->
+                        <div class="ppt-item">
+                            <div class="img-line img-line-text">
+                                <h1>Activités principales 2/2</h1>
+                                <img src="assets/img/prodwarelogo.jpg" alt="">
                             </div>
-                            <!-- Slide 7 | Sources -->
-                            <div class="ppt-item">
-                                <div class="img-line img-line-text">
-                                    <h1>Sources</h1>
-                                    <img src="assets/img/prodwarelogo.jpg" alt="">
-                                </div>
-                                <div class="ppt-line plip-ploup">
-                                    <h2><a href="https://infonet.fr/entreprises/35233596200044-prodware-sa/">infonet.fr</a></h2>
-                                    <h2><a href="https://www.prodwaregroup.com/fr-fr/le-groupe-prodware/">prodwaregroup.com</a></h2>
-                                    <h2><a href="https://entreprises.lefigaro.fr/prodware-sa-75/entreprise-352335962">lefigaro.fr</a></h2>
-                                    <h2><a href="https://www.infinance.fr/actualites/actualites-prodware/actualite-prodware-croissance-exceptionnelle-en-2024-et-perspectives-prometteuses-pour-2025-14521.htm">infinance.fr</a></h2>
-                                </div>
+                            <div class="ppt-line plip-ploup">
+                                <h2>Gestion de la relation client (CRM) :</h2>
+                                <h3>=> Microsoft Dynamics CRM</h3>
+
+                                <h2>Gestion financière : </h2>
+                                <h3>=> implémentation et intégration de logiciels financiers </h3>
+                                <h4>=> Sage</h4>
+
+                                <h2>Vente et conseil : </h2>
+                                <h3>=> Accompagnement des entreprises</h3>
+                                <h3>=> Vente de licences logicielles</h3>
                             </div>
-                            <!-- Slide 8 | Chat méritant -->
-                            <div class="ppt-item">
-                                <div class="img-line img-line-text">
-                                    <h1>Chat méritant</h1>
-                                    <img src="assets/img/prodwarelogo.jpg" alt="">
-                                </div>
-                                <div class="ppt-line plip-ploup plip-img">
-                                    <img src="assets/img/chat_meritant.jpg" alt="Chat">
-                                </div>
+                        </div>
+                        <!-- Slide 6 | Mes missions -->
+                        <div class="ppt-item">
+                            <div class="img-line img-line-text">
+                                <h1>Mes missions</h1>
+                                <img src="assets/img/prodwarelogo.jpg" alt="">
+                            </div>
+                            <div class="ppt-line plip-ploup">
+                                <h2>=> Développer, tester et mettre en place des solutions.</h2>
+                                <h2>=> Création de documentations techniques.</h2>
+                                <h2>=> Création de formulaires utilisateurs.</h2>
+                                <h2>=> Compréhension du flux de vente.</h2>
+                                <h2>=> Assistance utilisateurs.</h2>
+                                <h2>=> Maintenance technique.</h2>
+                                <h2>=> Résolution de bugs</h2>
+                            </div>
+                        </div>
+                        <!-- Slide 7 | Sources -->
+                        <div class="ppt-item">
+                            <div class="img-line img-line-text">
+                                <h1>Sources</h1>
+                                <img src="assets/img/prodwarelogo.jpg" alt="">
+                            </div>
+                            <div class="ppt-line plip-ploup">
+                                <h2><a href="https://infonet.fr/entreprises/35233596200044-prodware-sa/">infonet.fr</a>
+                                </h2>
+                                <h2><a
+                                        href="https://www.prodwaregroup.com/fr-fr/le-groupe-prodware/">prodwaregroup.com</a>
+                                </h2>
+                                <h2><a
+                                        href="https://entreprises.lefigaro.fr/prodware-sa-75/entreprise-352335962">lefigaro.fr</a>
+                                </h2>
+                                <h2><a
+                                        href="https://www.infinance.fr/actualites/actualites-prodware/actualite-prodware-croissance-exceptionnelle-en-2024-et-perspectives-prometteuses-pour-2025-14521.htm">infinance.fr</a>
+                                </h2>
+                            </div>
+                        </div>
+                        <!-- Slide 8 | Chat méritant -->
+                        <div class="ppt-item">
+                            <div class="img-line img-line-text">
+                                <h1>Chat méritant</h1>
+                                <img src="assets/img/prodwarelogo.jpg" alt="">
+                            </div>
+                            <div class="ppt-line plip-ploup plip-img">
+                                <img src="assets/img/chat_meritant.jpg" alt="Chat">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
 
 
@@ -2014,27 +2098,29 @@ Réalisé tout seul comme un grand (projets perso):    ##
                         </div>
                         <div class="photo-btn">
                             <i>
-                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1"
-                                    id="mdi-magnify-plus" width="32" height="32" viewBox="0 0 32 32">
+                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
+                                    version="1.1" id="mdi-magnify-plus" width="32" height="32" viewBox="0 0 32 32">
                                     <path
                                         d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z" />
                                 </svg>
                             </i>
                             <i>
-                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1"
-                                    id="mdi-magnify-minus" width="32" height="32" viewBox="0 0 32 32">
+                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
+                                    version="1.1" id="mdi-magnify-minus" width="32" height="32" viewBox="0 0 32 32">
                                     <path
                                         d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M5,8V10H13V8H5Z" />
                                 </svg>
                             </i>
                             <i class="arrow">
-                                <svg id="Flat" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                                <svg id="Flat" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                    height="24">
                                     <path
                                         d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
                                 </svg>
                             </i>
                             <i class="arrow" style="transform: scaleX(-1);">
-                                <svg id="Flat2" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
+                                <svg id="Flat2" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24"
+                                    height="24">
                                     <path
                                         d="M208,48V208a7.99984,7.99984,0,0,1-13.65674,5.65674L128,147.31348V208a7.99984,7.99984,0,0,1-13.65674,5.65674l-80-80a7.99915,7.99915,0,0,1,0-11.31348l80-80A7.99981,7.99981,0,0,1,128,48v60.68652l66.34326-66.34326A7.99981,7.99981,0,0,1,208,48Z" />
                                 </svg>
@@ -2187,7 +2273,8 @@ Réalisé tout seul comme un grand (projets perso):    ##
                     </div>
                 </div>
                 <div class="window-body">
-                    <iframe src="https://moustaches-club.fr/blog-actus-moustaches-club/" frameborder="0" width="100%" height="100%"></iframe>
+                    <iframe src="https://moustaches-club.fr/blog-actus-moustaches-club/" frameborder="0" width="100%"
+                        height="100%"></iframe>
                 </div>
             </div>
         </div>
@@ -2217,16 +2304,16 @@ Réalisé tout seul comme un grand (projets perso):    ##
                 <!-- Le dragon qui dance ihih -->
             </div>
 
-                <!-- ##### CriEtCourt ##### -->
-                <div>
-                    <!-- (parent) -->
-                    <div class="icon iconDrag iconExe" data-exe="exeCET" style="top: 5%; right: calc(2% + 240px);">
-                        <img src="assets/img/kittyCatCat.png" alt="" class="icone">
-                        <span>NoName.exe</span>
-                    </div>
-                    <!-- (enfant) -->
-                    <!-- Le dragon qui dance ihih -->
+            <!-- ##### CriEtCourt ##### -->
+            <div>
+                <!-- (parent) -->
+                <div class="icon iconDrag iconExe" data-exe="exeCET" style="top: 5%; right: calc(2% + 240px);">
+                    <img src="assets/img/kittyCatCat.png" alt="" class="icone">
+                    <span>NoName.exe</span>
                 </div>
+                <!-- (enfant) -->
+                <!-- Le dragon qui dance ihih -->
+            </div>
 
 
 
@@ -2299,7 +2386,7 @@ Réalisé tout seul comme un grand (projets perso):    ##
                             <div></div>
                         </div>
 
-                        
+
                         <div class="lm-main-item">
                             <img src="assets/img/icones/Closed_folder.png" alt="">
                             <span>document</span>
