@@ -19,8 +19,8 @@ html {
 }
 
 .desktop-body {
-  background-image: url("/assets/img/background-img/XpBackground-1920x1080.jpg");
-  background-size: cover;
+  background-image: url("/assets/img/background-img/bliss.jpg");
+  background-size: 100% 100% !important;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ffffff;
@@ -563,11 +563,11 @@ footer .tools {
 .param-windows {
   min-width: 350px !important;
   width: 400px !important;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
+  min-height: 650px;
   height: 90%;
-  max-height: 800px;
+  max-height: 650px;
   font-family: "Tahoma" !important;
+  resize: none;
 }
 .param-windows .window-body {
   padding: 15px 10px 10px 10px;
@@ -575,33 +575,57 @@ footer .tools {
 .param-windows .window-body article {
   font-size: 18px;
   height: 100%;
+  overflow: hidden;
 }
 .param-windows .window-body article section {
   height: 50%;
   display: flex;
   flex-direction: column;
 }
-.param-windows .window-body article section div {
+.param-windows .window-body article section .bg-visualisation {
+  width: 90%;
+  max-width: 90%;
+  height: 90%;
+  max-height: 90%;
+  overflow: hidden !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.param-windows .window-body article section .bg-visualisation img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.param-windows .window-body article section .bg-selection {
   border: solid 1px;
   flex-grow: 1;
   padding: 5px;
   overflow-y: scroll;
 }
-.param-windows .window-body article section div .param-bg-item {
+.param-windows .window-body article section .bg-selection .param-bg-item {
   display: flex;
 }
-.param-windows .window-body article section div .param-bg-item img {
+.param-windows .window-body article section .bg-selection .param-bg-item img {
   width: 18px;
   height: 18px;
 }
-.param-windows .window-body article section div .param-bg-item p {
+.param-windows .window-body article section .bg-selection .param-bg-item p {
   font-family: "Tahoma" !important;
   margin-left: 5px;
   padding: 2px 4px;
 }
-.param-windows .window-body article section img {
-  -o-object-fit: fill !important;
-     object-fit: fill !important;
+.param-windows .window-body article .param-sec-un {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+.param-windows .window-body article .param-sec-deux {
+  overflow: hidden;
 }
 
 .param-bg-item p.selected {

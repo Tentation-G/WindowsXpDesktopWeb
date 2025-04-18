@@ -58,7 +58,7 @@ const rightClickcMenu = document.getElementById("rightClickMenuId");
 
 document.addEventListener("contextmenu", (event) => {
 
-    event.preventDefault();
+    //event.preventDefault();
 
     rightClickcMenu.style.display = "block";
     rightClickcMenu.style.left = `${event.pageX}px`;
@@ -94,20 +94,26 @@ function openFolder(icon) {
         }
 
         win.style.display = "flex";
-        switch (POSITION_MODE) {
-            case "cascade":
-                positionWindowCascade(win);
-                break;
-            case "random":
-                positionWindowRandom(win);
-                break;
-            case "center":
-            default:
-                positionWindowCenter(win);
-                break;
-        }
-        if (typeof bringWindowToFront === "function") {
-            bringWindowToFront(win);
+
+        if (win.classList.contains("param-windows")) {
+            // on centre toujours
+            positionWindowCenter(win);
+        } else {
+            switch (POSITION_MODE) {
+                case "cascade":
+                    positionWindowCascade(win);
+                    break;
+                case "random":
+                    positionWindowRandom(win);
+                    break;
+                case "center":
+                default:
+                    positionWindowCenter(win);
+                    break;
+            }
+            if (typeof bringWindowToFront === "function") {
+                bringWindowToFront(win);
+            }
         }
     });
 
@@ -124,10 +130,10 @@ function openFolder(icon) {
 }
 
 /**
- * Affiche le formulaire de code en utilisant la div déjà présente dans le HTML.
+ * Affiche le formulaire de code
  */
 function openLockForm(icon) {
-    currentLockedIcon = icon; // Mémorise l'icône verrouillée sollicitée
+    currentLockedIcon = icon;
     const lockDiv = document.getElementById("lockForm");
     if (!lockDiv) return;
     lockDiv.style.display = "block";

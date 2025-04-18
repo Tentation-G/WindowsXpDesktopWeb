@@ -281,12 +281,12 @@ R : Ya pas encore de questions
         <!-- ##### Param RC ##### -->
         <div>
             <div class="param-rc" id="rightClickMenuId">
-                <p>Rafraichir</p> <!-- Degainer un verre d'eau (drole) -->
+                <p class="locked">Rafraichir</p> <!-- Degainer un verre d'eau (drole) -->
                 <div class="line"></div>
                 <p class="locked">Copier</p>
                 <p class="locked">Coller</p>
                 <div class="line"></div>
-                <p>Nouveau</p>
+                <p class="locked">Nouveau</p>
                 <div class="line"></div>
                 <p class="displayParam" data-target="displayParam">propriétés</p>
             </div>
@@ -306,29 +306,87 @@ R : Ya pas encore de questions
                         <button aria-selected="true" aria-controls="param">Desktop</button>
                     </menu>
                     <article role="tabpanel" id="param">
-                        <section>
-                                <img src="Aassets/img/background-img/XpBackground-1920x1080.jpg" alt="">
+                        <section class="param-sec-un">
+                            <div class="bg-visualisation">
+                                <img id="current-bg" src="assets/img/background-img/bliss.jpg"
+                                    alt="Fond sélectionné">
+                            </div>
                         </section>
-                        <section>
+                        <section class="param-sec-deux">
                             <p>Fond d'écran</p>
-                            <div>
-
-                                <item class="param-bg-item">
+                            <div class="bg-selection">
+                                <!-- Bliss -->
+                                <div class="param-bg-item" data-filename="bliss.jpg">
                                     <img src="assets/img/icones/jpgXp.png" alt="">
-                                    <p>MipMup</p>
-                                </item>
-                                
-                                <item class="param-bg-item">
+                                    <p>Bliss</p>
+                                </div>
+                                <!-- Ascent -->
+                                <div class="param-bg-item" data-filename="ascent.jpg">
                                     <img src="assets/img/icones/jpgXp.png" alt="">
-                                    <p>MipMup2</p>
-                                </item>
+                                    <p>Ascent</p>
+                                </div>
+                                <!-- Crystal -->
+                                <div class="param-bg-item" data-filename="crystal.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Crystal</p>
+                                </div>
+                                <!-- Peace -->
+                                <div class="param-bg-item" data-filename="peace.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Peace</p>
+                                </div>
+                                <!-- Vortec Space -->
+                                <div class="param-bg-item" data-filename="vortec-space.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Vortec space</p>
+                                </div>
+                                <!-- Windows Xp -->
+                                <div class="param-bg-item" data-filename="windows-xp.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Windows xp</p>
+                                </div>
+                                <!-- Rodrigo -->
+                                <div class="param-bg-item" data-filename="chatgni.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Rodrigo</p>
+                                </div>
+                                <!-- Follow -->
+                                <div class="param-bg-item" data-filename="follow.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Follow</p>
+                                </div>
+                                <!-- Moon Flower -->
+                                <div class="param-bg-item" data-filename="moon-flower.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Moon flower</p>
+                                </div>
+                                <!-- Red Moon Desert -->
+                                <div class="param-bg-item" data-filename="red-moon-desert.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Red moon desert</p>
+                                </div>
+                                <!-- Ripple -->
+                                <div class="param-bg-item" data-filename="ripple.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Ripple</p>
+                                </div>
+                                <!-- Tulips -->
+                                <div class="param-bg-item" data-filename="tulips.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Tulips</p>
+                                </div>
+                                <!-- Wind -->
+                                <div class="param-bg-item" data-filename="wind.jpg">
+                                    <img src="assets/img/icones/jpgXp.png" alt="">
+                                    <p>Wind</p>
+                                </div>
 
                             </div>
                         </section>
                     </article>
                     <section class="field-row" style="justify-content: flex-end">
-                        <button>OK</button>
-                        <button>Cancel</button>
+                        <button id="ok-btn">OK</button>
+                        <button aria-label="Close">Cancel</button>
                     </section>
                 </div>
             </div>

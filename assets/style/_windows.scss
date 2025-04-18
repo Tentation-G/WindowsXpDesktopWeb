@@ -260,23 +260,41 @@
 .param-windows {
     min-width: 350px !important; 
     width: 400px !important; 
-    min-height: fit-content;
+    min-height: 650px;
     height: 90%;
-    max-height: 800px;
+    max-height: 650px;
     font-family: $font-tahoma !important;
+    resize: none;
     
     .window-body {
         padding: 15px 10px 10px 10px;
         article {
             font-size: 18px;
             height: 100%;
+            overflow: hidden;
             section {
                 height: 50%;
                 display: flex;
                 flex-direction: column;
                 //border: solid 1px red;
-
-                div {
+                .bg-visualisation {
+                    width: 90%;
+                    max-width: 90%;
+                    height: 90%;
+                    max-height: 90%;
+                    overflow: hidden !important;
+                    display: flex;             
+                    justify-content: center;
+                    align-items: center;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+                .bg-selection {
                     border: solid 1px;
                     flex-grow: 1;
                     padding: 5px;
@@ -295,9 +313,18 @@
                         }
                     }
                 }
-                img {
-                    object-fit: fill !important;  
-                }
+                // img {
+                //     object-fit: fill !important;  
+                // }
+            }
+            .param-sec-un {
+                display: flex;
+                justify-content: center;   // centre horizontalement
+                align-items: center;
+                height: 250px;
+            }
+            .param-sec-deux {
+                overflow: hidden;
             }
         }
     }
