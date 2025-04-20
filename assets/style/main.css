@@ -563,11 +563,12 @@ footer .tools {
 .param-windows {
   min-width: 350px !important;
   width: 400px !important;
-  min-height: 650px;
+  min-height: 90%;
   height: 90%;
   max-height: 650px;
   font-family: "Tahoma" !important;
   resize: none;
+  z-index: 10;
 }
 .param-windows .window-body {
   padding: 15px 10px 10px 10px;

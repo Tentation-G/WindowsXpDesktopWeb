@@ -73,7 +73,7 @@
             e.preventDefault();
         });
     </script>
-    <!-- <div class="crt"></div> -->
+    <div class="crt" id="crt"></div>
 </head>
 
 <body class="desktop-body">
@@ -81,7 +81,7 @@
 
     <main id="mainContainer">
         <!-- ##### Intro Page ##### -->
-        <div class="intro-page" id="intro-scroll" style="display: none;">
+        <div class="intro-page" id="intro-scroll" style="display: block;">
             <pre class="blockByPass hidden">
                 <span class="choice" data-answer="yes">Rapide</span>
             </pre>
@@ -303,8 +303,10 @@ R : Ya pas encore de questions
                 </div>
                 <div class="window-body">
                     <menu role="tablist">
-                        <button aria-selected="true" aria-controls="param">Desktop</button>
+                        <button class="param-panel-btn-select" aria-selected="true" aria-controls="param">Desktop</button>
+                        <button class="param-panel-btn-select" aria-selected="false" aria-controls="param2">Visuel</button>
                     </menu>
+
                     <article role="tabpanel" id="param">
                         <section class="param-sec-un">
                             <div class="bg-visualisation">
@@ -384,6 +386,26 @@ R : Ya pas encore de questions
                             </div>
                         </section>
                     </article>
+
+                    <article role="tabpanel" id="param2">
+                        <section>
+                            <p>Effet visuel</p>
+                            <div>
+                                <input type="checkbox" id="crtEffect" name="crtEffect" value="crtEffect" checked="true" title="ca donne des infos ca">
+                                <label for="crtEffect">Ecran a l'ancienne</label><br>
+
+                                <input type="checkbox" id="Effect0" name="Effect0" value="Effect0">
+                                <label for="Effect0"> Cette checkbox ne sert a rien </label><br>
+
+                                <input type="checkbox" id="Effect1" name="Effect1" value="Effect1">
+                                <label for="Effect1"> Celle ci non plus </label><br>
+
+                                <input type="checkbox" id="Effect2" name="Effect2" value="Effect2">
+                                <label for="Effect2"> Celle la encore moins </label><br>
+                            </div>
+                        </section>
+                    </article>
+
                     <section class="field-row" style="justify-content: flex-end">
                         <button id="ok-btn">OK</button>
                         <button aria-label="Close">Cancel</button>
@@ -914,7 +936,7 @@ R : Ya pas encore de questions
                     <pre>
 ##############################################
 ##                                          ##
-##   Liste non exhaustive des mes projets   ##
+##   Liste non exhaustive de mes projets   ##
 ##                                          ##
 ##############################################
 
@@ -924,22 +946,22 @@ R : Ya pas encore de questions
 ##########################
 
 
-│ Developpement d'une application Web au format MVC
+│ Développement d'une application Web au format MVC
 │
 │   └── Site de Location de terrain de foot en ligne 
 └──
 
-│ Developpement d'une application en Java
+│ Développement d'une application en Java
 │
 │   └── App de gestion de comptes bancaires
 └──
 
 
-│ Developpement d'une application en CS
+│ Développement d'une application en C#
 │
-│   ├── FrameWork .net
+│   ├── FrameWork .NET
 │   │
-│   └── App de gestion de materiel
+│   └── App de gestion de matériel
 └──
 
 
@@ -960,49 +982,49 @@ R : Ya pas encore de questions
 #########################################################
 
 
-│ Developpement d'un site web (portfolio) pour un client (copain) - 1.
+│ Développement d'un site web (portfolio) pour un client (copain) - 1.
 │
 │   ├── Sur base d'un Template fourni (J'ai pas aimé, la base etait pas belle, classique, mais fonctionnelle).
 │   │
 │   ├── Non remunéré, suite à un échange de bon procédé.
 │   │
-│   └── Site Hebergé en ligne, il paye son abonnement 👍.
+│   └── Site Hébergé en ligne, il paye son abonnement 👍.
 └──
 
 
-│ Developpement d'un site web (portfolio) pour un client (copain) - 2.
+│ Développement d'un site web (portfolio) pour un client (copain) - 2.
 │
 │   ├── Sur base d'une passion (c'est un petit fan de metal 🎸).
 │   │
-│   ├── C'etait pendant mes debuts en web, pas fifou, mais ca fait le café.
+│   ├── C'etait pendant mes débuts en web, pas fifou, mais ça fait le café.
 │   │
-│   ├── Rémunéré en bière, une cinquantaines d'apres les dires de ce malfrat, 4 on été payé à ce jour.
+│   ├── Rémunéré en bière, une cinquantaine d'apres les dires de ce malfrat, 4 on été payé à ce jour.
 │   │
-│   └── Site non hebergé. (cette ligne sera mise a jour si il se decide a le mettre en ligne).
+│   └── Site non hébergé. (cette ligne sera mise à jour si il se decide a le mettre en ligne).
 └──
 
 
-│ Developpement d'un copain (site web) pour un portfolio (cliente) - 3.
+│ Développement d'un copain (site web) pour un portfolio (cliente) - 3.
 │
 │   ├── Sur base de rien, elle voulait juste un site.
 │   │
 │   ├── Rapide, simple, efficace, fonctionnel, elegant, sensuel (très peu) et utile (j'espere).
 │   │
-│   ├── Rémunéré en écus, en pepettes, en louis d'or !
+│   ├── Rémunéré en écus, en pépettes, en louis d'or !
 │   │
-│   └── Site non hebergé, il le sera sans doute jamais, dommage.
+│   └── Site non hébergé, il le sera sans doute jamais, dommage.
 └──
 
 
-│ Developpement d'une application "To-do List" en Java - Pour Epreuve E6 - Client Lourd.
+│ Développement d'une application "To-do List" en Java - Pour Epreuve E6 - Client Lourd.
 └──
 
 
-│ Developpement d'une application Web au format MVC - Pour Epreuvre E6 - CLient légé.
+│ Développement d'une application Web au format MVC - Pour Epreuvre E6 - CLient légé.
 └──
 
 
-│ Developpement de petits programmes python en tout genre.
+│ Développement de petits programmes python en tout genre.
 │
 │   ├── Visualisation d'une sphère 3D par projection de points.
 │   │
@@ -1020,13 +1042,13 @@ R : Ya pas encore de questions
 └──
 
 
-│ Regret profond suite au point précédent, ArchLinux ca casse vite.
+│ Regret profond suite au point précédent, ArchLinux ça casse vite.
 └──
 
 
 │ Retour a windows a cause de l'utilisation d'outils Microsoft en cours.
 │
-│   └── La titine etant trop peu puissante pour avoir une VM fluide.
+│   └── La titine étant trop peu puissante pour avoir une VM fluide.
 └──
 
 
@@ -1038,7 +1060,7 @@ R : Ya pas encore de questions
 └──
 
 
-│ Developpement de ce site.
+│ Développement de ce site.
 │
 │   ├── C'est bien un site, pas une VM
 │   │
@@ -1051,7 +1073,7 @@ R : Ya pas encore de questions
 
 
 
-                        </pre>
+                    </pre>
                 </div>
             </div>
         </div>

@@ -52,3 +52,62 @@ okBtn.addEventListener("click", () => {
 
     console.log("Fond appliqué :", desktop.style.backgroundImage);
 });
+
+/***************************************************
+ * Changement de page de fenetre de param
+ ***************************************************/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.param-panel-btn-select');
+    const panels = document.querySelectorAll('[role="tabpanel"]');
+
+    // Initi
+    const initTab = document.querySelector('.param-panel-btn-select[aria-selected="true"]');
+    if (initTab) {
+        const initId = initTab.getAttribute('aria-controls');
+        panels.forEach(panel => panel.style.display = 'none');
+        const initPanel = document.getElementById(initId);
+        if (initPanel) initPanel.style.display = 'block';
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // reset selection item
+            tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+
+            // select du bon
+            tab.setAttribute('aria-selected', 'true');
+
+            // tous les deselectionner
+            panels.forEach(panel => panel.style.display = 'none');
+
+            // recup le bon pour l'afficher
+            const targetId = tab.getAttribute('aria-controls');
+            const targetPanel = document.getElementById(targetId);
+
+            // L’afficher
+            if (targetPanel) {
+                targetPanel.style.display = 'block';
+            }
+        });
+    });
+});
+
+/***************************************************
+ * Changement effet visuel
+ ***************************************************/
+
+//const crtDiv = document.getElementsByClassName("crt");
+const crtDiv = document.getElementById("crt");
+
+document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+
+        const val = this.value
+        const checked = this.checked
+
+        if (val === "crtEffect") {
+            crtDiv.style.display = checked ? "block" : "none";
+        }
+    });
+});
