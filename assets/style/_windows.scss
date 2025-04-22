@@ -262,10 +262,11 @@
     width: 400px !important; 
     min-height: 90%;
     height: 90%;
-    max-height: 650px;
+    max-height: 650px !important;
+    height: 650px;
     font-family: $font-tahoma !important;
     resize: none;
-    z-index: $z-index-windows-default;
+    z-index: $z-index-param-menu;
     
     .window-body {
         padding: 15px 10px 10px 10px;
