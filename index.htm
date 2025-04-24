@@ -68,6 +68,7 @@
         ]
     }
     </script>
+    <!-- desactivation click droit du navigateur -->
     <script>
         document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
@@ -81,7 +82,7 @@
 
     <main id="mainContainer">
         <!-- ##### Intro Page ##### -->
-        <div class="intro-page" id="intro-scroll" style="display: none;">
+        <div class="intro-page" id="intro-scroll" style="display: block;">
             <pre class="blockByPass hidden">
                 <span class="choice" data-answer="yes">Rapide</span>
             </pre>
@@ -1558,7 +1559,7 @@ R : Ya pas encore de questions
                             </div>
                             <div class="icon iconF" data-target="photogentilCat" style="position:relative">
                                 <img src="assets/img/icones/pics folder.png" alt="" class="icone">
-                                <span>patoche</span>
+                                <span>Patoche</span>
                             </div>
                             <div class="icon iconF" data-target="photoGcart" style="position:relative">
                                 <img src="assets/img/icones/pics folder.png" alt="" class="icone">
@@ -2325,7 +2326,7 @@ R : Ya pas encore de questions
                 <div class="title-bar">
                     <div class="title-bar-text">
                         <img src="assets/img/icones/XpDesktop.png" alt="">
-                        Litteralement l'ordinateur
+                        Litteralement l'ordinateur (Fonctionnel de temps en temps)
                     </div>
                     <div class="title-bar-controls">
                         <button aria-label="Minimize"></button>
@@ -2495,23 +2496,23 @@ R : Ya pas encore de questions
                             <div></div>
                         </div>
 
-                        <div class="lm-main-item"> <!-- Faire qlq chose pour changer le fond d'ecran -->
-                            <img src="assets/img/icones/Closed_folder.png" alt="">
-                            <span>documents</span>
+                        <div class="lm-main-item iconlm" data-target="pdfcv">
+                            <img src="assets/img/icones/pdfAdobe.png" alt="">
+                            <span>CV</span>
                         </div>
 
-                        <div class="lm-main-item">
-                            <img src="assets/img/icones/Closed_folder.png" alt="">
-                            <span>documents</span>
+                        <div class="lm-main-item iconlm" data-target="pdftds">
+                            <img src="assets/img/icones/pdfAdobe.png" alt="">
+                            <span>Tableau de synthese</span>
                         </div>
 
                         <div class="sep-line">
                             <div></div>
                         </div>
 
-                        <div class="lm-main-item">
-                            <img src="assets/img/icones/Closed_folder.png" alt="">
-                            <span>documents</span>
+                        <div class="lm-main-item iconlm" data-target="displayParam">
+                            <img src="assets/img/icones/XpDesktop.png" alt="">
+                            <span>Propriétés</span>
                         </div>
 
                     </div>
@@ -2547,6 +2548,16 @@ R : Ya pas encore de questions
                     <p>Pas tres utile</p>
                 </div>
 
+                <!-- Menu démarrer -->
+                <div class="taskbar-item" data-target="internetMoustache" data-target-group="internetMoustache">
+                    <img src="assets/img/icones/txt.png" alt="">
+                    <p>L'internet</p>
+                </div>
+                <div class="taskbar-item" data-target="LeSite" data-target-group="LeSite">
+                    <img src="assets/img/icones/txt.png" alt="">
+                    <p>SiteCeption</p>
+                </div>
+
 
                 <!-- dossier Travail et enfant -->
                 <div class="taskbar-item" data-target="folderTravail" data-target-group="folderTravail">
@@ -2559,7 +2570,7 @@ R : Ya pas encore de questions
                     <img src="assets/img/icones/ppLogo2005.png" alt="">
                     <p>Presentation Entreprise.ppt</p>
                 </div>
-                <div class="taskbar-item" data-target="pptPresVeille" data-target-group="pptPresVeille">
+                <div class="taskbar-item" data-target="pptVeille" data-target-group="pptVeille">
                     <img src="assets/img/icones/ppLogo2005.png" alt="">
                     <p>Presentation Veille.ppt</p>
                 </div>
@@ -2601,22 +2612,46 @@ R : Ya pas encore de questions
                     <p>Des choses que j'aime</p>
                 </div>
                             <!-- enfant -->
-                    <!-- dossier Des Choses que j'aime et enfant -->
+                                <!-- photo -->
+                <div class="taskbar-item" data-target="photoChaChauve" data-target-group="photoChaChauve">
+                    <img src="assets/img/icones/pics folder.png" alt="">
+                    <p>Assia</p>
+                </div>
+                <div class="taskbar-item" data-target="photoCiment" data-target-group="photoCiment">
+                    <img src="assets/img/icones/pics folder.png" alt="">
+                    <p>Sak</p>
+                </div>
+                <div class="taskbar-item" data-target="photoDominique" data-target-group="photoDominique">
+                    <img src="assets/img/icones/pics folder.png" alt="">
+                    <p>Dominique</p>
+                </div>
+                <div class="taskbar-item" data-target="photogentilCat" data-target-group="photogentilCat">
+                    <img src="assets/img/icones/pics folder.png" alt="">
+                    <p>Patoche</p>
+                </div>
+                <div class="taskbar-item" data-target="photoGcart" data-target-group="photoGcart">
+                    <img src="assets/img/icones/pics folder.png" alt="">
+                    <p>Brouette de Jardin</p>
+                </div>
+                <div class="taskbar-item" data-target="photoJoseph" data-target-group="photoJoseph">
+                    <img src="assets/img/icones/pics folder.png" alt="">
+                    <p>Joseph</p>
+                </div>
+
+                    <!-- dossier Photos de Famille et enfant -->
                 <div class="taskbar-item" data-target="folderPhotoDeFamille" data-target-group="folderPhotoDeFamille">
                     <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt="">
                     <p>Photos de famille</p>
                 </div>
+                    <!-- enfant -->
 
-
-
-
-
-
-                <!-- poubelle -->
+                <!-- dossier poubelle et enfant -->
                 <div class="taskbar-item" data-target="folderPoubelle" data-target-group="folderPoubelle">
                     <img src="assets/img/icones/WdXpBin.png" alt="">
                     <p>Le trashbin</p>
                 </div>
+                    <!-- enfant -->
+                        <!-- txt -->
                 <div class="taskbar-item" data-target="txtReves" data-target-group="txtReves">
                     <img src="assets/img/icones/txt.png" alt="">
                     <p>Rêves.txt</p>
@@ -2625,7 +2660,11 @@ R : Ya pas encore de questions
                     <img src="assets/img/icones/txt.png" alt="">
                     <p>Espoirs.txt</p>
                 </div>
-
+                        <!-- photo -->
+                <div class="taskbar-item" data-target="photoFillip" data-target-group="photoFillip">
+                    <img src="assets/img/icones/pics folder.png" alt="">
+                    <p>Fillip</p>
+                </div>
 
             </div>
         </div>
