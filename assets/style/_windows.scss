@@ -4,6 +4,18 @@
 
 @import 'variables';
 
+// temp dev visu
+//temp-view-intro-page
+.tvip {
+    display: block;
+    //display: none !important;
+}
+//temp-view-presentation-window
+.tvpw {
+    //display: block !important;
+    display: none;
+}
+
 .window {
     display: none;
     position: absolute !important;
@@ -15,6 +27,21 @@
 
     resize: both;
     overflow: hidden;
+}
+
+.photo-wd {
+    //display: block;
+
+    max-width: 90%;
+    width: 30%;
+
+    max-height: 90%;
+    height: 70%;
+}
+
+.photo-wd-r1 {
+    width: 50%;
+    height: 50%;
 }
 
 .title-bar-text {

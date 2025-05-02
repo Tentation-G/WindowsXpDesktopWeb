@@ -352,6 +352,14 @@ footer .tools {
   font-family: Tahoma;
   src: url(tahoma.ttf);
 }
+.tvip {
+  display: block;
+}
+
+.tvpw {
+  display: none;
+}
+
 .window {
   display: none;
   position: absolute !important;
@@ -362,6 +370,18 @@ footer .tools {
   height: 400px;
   resize: both;
   overflow: hidden;
+}
+
+.photo-wd {
+  max-width: 90%;
+  width: 30%;
+  max-height: 90%;
+  height: 70%;
+}
+
+.photo-wd-r1 {
+  width: 50%;
+  height: 50%;
 }
 
 .title-bar-text {
