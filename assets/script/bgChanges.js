@@ -29,7 +29,7 @@ items.forEach(item => {
             displayImg.alt = p ? p.textContent : "Fond sélectionné";
         }
 
-        console.log("Preview :", displayImg.src);
+        //console.log("Preview :", displayImg.src);
     });
 });
 
@@ -50,7 +50,7 @@ okBtn.addEventListener("click", () => {
     desktop.style.backgroundSize = "cover";
     desktop.style.backgroundPosition = "center";
 
-    console.log("Fond appliqué :", desktop.style.backgroundImage);
+    //console.log("Fond appliqué :", desktop.style.backgroundImage);
 });
 
 /***************************************************
