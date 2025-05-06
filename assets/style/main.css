@@ -353,7 +353,7 @@ footer .tools {
   src: url(tahoma.ttf);
 }
 .tvip {
-  display: none !important;
+  display: block;
 }
 
 .tvpw {
