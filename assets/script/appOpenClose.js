@@ -8,6 +8,7 @@ const POSITION_MODE = "random";
 let cascadeCount = 0;
 let currentLockedIcon = null; // Pour mémoriser l'icône verrouillée en attente
 
+
 /***************************************************
  * OUVERTURE (double-clic sur l'icône .icon)
  ***************************************************/
@@ -21,6 +22,7 @@ document.querySelectorAll(".icon").forEach((icon) => {
         }
     });
 });
+
 
 /***************************************************
  * OUVERTURE (click simple sur l'icône .iconlm => ouverture des app du launch menu)

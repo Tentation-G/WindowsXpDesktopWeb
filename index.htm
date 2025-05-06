@@ -39,6 +39,8 @@
     <!-- <link rel="preload" as="image" href="https://www.flavien-campeaux.ovh/assets/img/background-img/XpBackground-1920x1080.jpg"> -->
 
     <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
     <script type="module" src="assets/script/clock.js" defer></script>
 
     <script type="module" src="assets/script/commonZindex.js" defer></script>
@@ -47,6 +49,7 @@
     <script type="module" src="assets/script/appOpenClose.js" defer></script>
     <script type="module" src="assets/script/introPage.js" defer></script>
     <script type="module" src="assets/script/bgChanges.js" defer></script>
+    <script type="module" src="assets/script/emailSender.js" defer></script>
 
     <script src="assets/script/dragIcons.js" defer></script>
 
@@ -840,7 +843,8 @@ R : C'est personnel, ca te regarde pas.
                                 <span>Mention Honorable.txt</span>
                             </div>
                             <!-- verrouilé par un code -->
-                            <div class="icon iconF iconOpen_folder-icon lockerFolder" data-target="folderPres"
+                            <div class="icon iconF iconOpen_folder-icon lockerFolder " 
+                                data-target="folderPres"
                                 style="position:relative">
                                 <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt=""
                                     class="icone">
@@ -1857,6 +1861,157 @@ R : C'est personnel, ca te regarde pas.
                     </div>
                 </div>
             </div>
+            <!-- (enfant) (enfant) (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - leger - Dossier Doc presentation - txt Cachier des Charges -->
+            <div class="window txt" data-target-group="txtCdC">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/txt.png" alt="">
+                        Cachier des Charges - Client leger
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="txt-window-body-head">
+                        <span>File</span>
+                        <span>Edit</span>
+                        <span>Format</span>
+                        <span>View</span>
+                        <span>Help</span>
+                    </div>
+                    <div class="txt-text-part">
+                        <pre>
+==========================================
+            CAHIER DES CHARGES
+        Projet : Nature & Involture
+==========================================
+
+Client :
+    Nature & Involture — entreprise artisanale écologique
+
+Objectif :
+    Développer un site e-commerce permettant la vente en ligne de :
+    - Fleurs
+    - Tables en bois recyclé
+    - Vélos écologiques
+
+Fonctionnalités principales :
+    - Catalogue produit trié par catégories
+    - Espace client : inscription, connexion
+    - Interface d’administration : gestion des produits, utilisateurs
+    - Livraison du projet en 4 à 8 semaines
+
+Contraintes techniques :
+    - Langages : PHP, HTML, CSS
+    - Base de données : MySQL
+    - Éditeur : Visual Studio Code
+    - Versioning : Git/GitHub
+    - Ressources : Canva (graphisme), navigateur (Chrome, Firefox, Edge...)
+
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <!-- (enfant) (enfant) (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - leger - Dossier Doc presentation - txt Doc User -->
+            <div class="window txt" data-target-group="txtDU">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/txt.png" alt="">
+                        Documentation utilisateur - Client leger
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="txt-window-body-head">
+                        <span>File</span>
+                        <span>Edit</span>
+                        <span>Format</span>
+                        <span>View</span>
+                        <span>Help</span>
+                    </div>
+                    <div class="txt-text-part">
+                        <pre>
+------------------------------------------------------
+
+            DOCUMENTATION UTILISATEUR
+------------------------------------------------------
+
+> Accueil :
+    Interface claire, ergonomique avec accès rapide au catalogue.
+    Tri par catégorie (Fleurs / Tables / Vélos).
+
+> Espace Client :
+    - Inscription / Connexion
+    - Accès au profil
+
+> Panier :
+    - Ajouter / Retirer des produits
+    - Valider et passer commande
+
+> Back-Office (Administrateur) :
+    - Ajouter, modifier, supprimer des produits / client 
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <!-- (enfant) (enfant) (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - leger - Dossier Doc presentation - txt Doc Tech -->
+            <div class="window txt" data-target-group="txtDT">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        <img src="assets/img/icones/txt.png" alt="">
+                        Documentation technique - CLient leger
+                    </div>
+                    <div class="title-bar-controls" style="cursor: pointer;">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="txt-window-body-head">
+                        <span>File</span>
+                        <span>Edit</span>
+                        <span>Format</span>
+                        <span>View</span>
+                        <span>Help</span>
+                    </div>
+                    <div class="txt-text-part">
+                        <pre>
+------------------------------------------------------
+
+            DOCUMENTATION TECHNIQUE
+------------------------------------------------------
+
+> Langages utilisés :
+    - HTML / CSS (frontend)
+    - PHP (backend)
+    - SQL (base de données)
+
+> Architecture :
+    - MVC
+
+> Connexion à la base de données :
+    - Via PDO (PHP Data Objects)
+    - Paramétrage dans fichier config
+
+> Sécurité :
+    - Mots de passe hashés (algorithme sécurisé)
+
+> Environnement de développement :
+    - WAMP en local
+    - Tests multi-navigateurs
+    - Vscode
+                        </pre>
+                    </div>
+                </div>
+            </div>
 
             <!-- (enfant)x4 Dossier Travail - Dossier presentation - Dossier Projet E6 - Client lourd -->
             <div class="window" data-target-group="folderClientHeavy">
@@ -2012,15 +2167,15 @@ R : C'est personnel, ca te regarde pas.
                         </div>
                         <!-- (parent) Icone Dossier Travail - Dossier Travail -->
                         <div class="folder-text-part">
-                            <div class="icon iconF iconOpen" data-target="txtCdC" style="position:relative">
+                            <div class="icon iconF iconOpen" data-target="txtCdCLD" style="position:relative">
                                 <img src="assets/img/icones/txt.png" alt="" class="icone">
                                 <span>Cahier des charges CLD.txt</span>
                             </div>
-                            <div class="icon iconF iconOpen" data-target="txtDU" style="position:relative">
+                            <div class="icon iconF iconOpen" data-target="txtDULD" style="position:relative">
                                 <img src="assets/img/icones/txt.png" alt="" class="icone">
                                 <span>Documentation utilisateur CLD.txt</span>
                             </div>
-                            <div class="icon iconF iconOpen" data-target="txtDT" style="position:relative">
+                            <div class="icon iconF iconOpen" data-target="txtDTLD" style="position:relative">
                                 <img src="assets/img/icones/txt.png" alt="" class="icone">
                                 <span>Documentation technique CLD.txt</span>
                             </div>
@@ -2042,7 +2197,7 @@ R : C'est personnel, ca te regarde pas.
                 <!-- Devis Client lourd -->
                 <div class="window photo-wd" data-target-group="photoDevisCLD">
                     <div class="title-bar">
-                        <div class="title-bar-text">Devis Client leger.png</div>
+                        <div class="title-bar-text">Devis Client lourd.png</div>
                         <div class="title-bar-controls" style="cursor: pointer;">
                             <button aria-label="Minimize"></button>
                             <button aria-label="Maximize"></button>
@@ -2094,7 +2249,7 @@ R : C'est personnel, ca te regarde pas.
                 <!-- Gantt Client lourd -->
                 <div class="window photo-wd photo-wd-r1" data-target-group="photoGanttCLD">
                     <div class="title-bar">
-                        <div class="title-bar-text">Gantt Client leger.png</div>
+                        <div class="title-bar-text">Gantt Client lourd.png</div>
                         <div class="title-bar-controls" style="cursor: pointer;">
                             <button aria-label="Minimize"></button>
                             <button aria-label="Maximize"></button>
@@ -2143,13 +2298,12 @@ R : C'est personnel, ca te regarde pas.
                     </div>
                 </div>
             </div>
-
-            <!-- (enfant) (enfant) (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - Dossier Doc presentation - txt Cachier des Charges -->
-            <div class="window txt" data-target-group="txtCdC">
+            <!-- (enfant) (enfant) (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - lourd - Dossier Doc presentation - txt Cachier des Charges -->
+            <div class="window txt" data-target-group="txtCdCLD">
                 <div class="title-bar">
                     <div class="title-bar-text">
                         <img src="assets/img/icones/txt.png" alt="">
-                        Cachier des Charges
+                        Cachier des Charges - Client lourd
                     </div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
@@ -2166,17 +2320,45 @@ R : C'est personnel, ca te regarde pas.
                         <span>Help</span>
                     </div>
                     <div class="txt-text-part">
-                        
+                        <pre>
+==========================================
+            CAHIER DES CHARGES
+        Projet : ZenTask Solutions
+==========================================
+
+Client :
+    ZenTask Solutions — éditeur d’outils de productivité légère (to-do lists personnalisées)
+
+Objectif :
+    Développer une application bureautique permettant à l’utilisateur :
+    - D’ajouter des tâches avec un titre, une description et une date d’échéance
+    - De marquer une tâche comme terminée
+    - De modifier/supprimer les tâches
+    - De bénéficier d’une interface graphique fluide et intuitive (JavaFX)
+
+Fonctionnalités principales :
+    - Ajout de tâche avec titre, description, échéance
+    - Affichage de la liste des tâches avec état
+    - Mise à jour de l’état (terminé / non terminé)
+    - Suppression d’une tâche
+    - Rafraîchissement automatique de la liste
+
+Contraintes techniques :
+    - Application Java avec JavaFX
+    - Compatible Windows
+    - IDE : IntelliJ IDEA
+    - Version Java : 21
+    - Git/GitHub pour le versioning
+                        </pre>
                     </div>
                 </div>
             </div>
-
-            <!-- (enfant) (enfant) (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - Dossier Doc presentation - txt Doc User -->
-            <div class="window txt" data-target-group="txtDU">
+            <!-- (enfant) (enfant) (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - lourd - Dossier Doc presentation - txt Doc User -->
+            <div class="window txt" data-target-group="txtDULD">
                 <div class="title-bar">
                     <div class="title-bar-text">
                         <img src="assets/img/icones/txt.png" alt="">
-                        Documentation utilisateur
+                        Documentation utilisateur - Client lourd
                     </div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
@@ -2193,17 +2375,41 @@ R : C'est personnel, ca te regarde pas.
                         <span>Help</span>
                     </div>
                     <div class="txt-text-part">
-                        
+                        <pre>
+------------------------------------------------------
+
+            DOCUMENTATION UTILISATEUR
+------------------------------------------------------
+
+> Écran principal :
+    - Liste des tâches enregistrées
+    - Affichage du statut (fait / à faire)
+    - Tri ou filtrage par date ou statut (éventuel)
+
+> Ajouter une tâche :
+    - Bouton “Ajouter”
+    - Formulaire avec champ titre, description et date
+    - Bouton “Valider” pour sauvegarder
+
+> Modifier / Supprimer :
+    - Sélection d’une tâche
+    - Bouton “Supprimer”
+    - Mise à jour de la base de données en temps réel
+
+> Marquer comme terminée :
+    - Case à cocher ou bouton associé à chaque tâche
+    - Mise à jour de l’affichage + statut BDD
+
+                        </pre>
                     </div>
                 </div>
             </div>
-
-            <!-- (enfant) (enfant) (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - Dossier Doc presentation - txt Doc Tech -->
-            <div class="window txt" data-target-group="txtDT">
+            <!-- (enfant) (enfant) (enfant) (enfant) (enfant) Dossier Travail - Dossier presentation - lourd - Dossier Doc presentation - txt Doc Tech -->
+            <div class="window txt" data-target-group="txtDTLD">
                 <div class="title-bar">
                     <div class="title-bar-text">
                         <img src="assets/img/icones/txt.png" alt="">
-                        Documentation technique
+                        Documentation technique - Client lourd
                     </div>
                     <div class="title-bar-controls" style="cursor: pointer;">
                         <button aria-label="Minimize"></button>
@@ -2220,7 +2426,28 @@ R : C'est personnel, ca te regarde pas.
                         <span>Help</span>
                     </div>
                     <div class="txt-text-part">
-                        
+                        <pre>
+------------------------------------------------------
+
+         DOCUMENTATION TECHNIQUE
+------------------------------------------------------
+
+> Langages utilisés :
+    - Java 21
+    - SQL
+
+> Interface graphique :
+    - JavaFX
+
+> Architecture de l’application :
+    - Séparation claire entre interface (FXML) et logique (contrôleurs)
+    - Application client lourd, mono-utilisateur
+
+> Ressources utilisées :
+    - IntelliJ IDEA Community
+    - Git + GitHub
+    - Tests sous Windows
+                        </pre>
                     </div>
                 </div>
             </div>
