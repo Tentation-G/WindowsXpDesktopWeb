@@ -1,0 +1,97 @@
+@import "variables.scss";
+
+.form-add-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-add-wrapper {
+        align-items: center;
+        width: 33%;
+
+        .product-box {
+            display: flex;
+            flex-direction: column;
+            margin: 40px 0;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    h1 {
+        font-size: 2em;
+        margin: 50px 0;
+    }
+    h3 {
+        margin: 100px 0 50px 0;
+    }
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        gap: 20px;
+        &.sectionBo1 {
+            &:last-child {
+                min-width: fit-content;
+            }
+        }
+        &.sectionBo3 {
+            :first-child {
+                width: 50%;
+            }
+            :last-child {
+                width: 50%;
+            }
+            .log-chart {
+                height: 500px;
+                color: $white-color;
+            
+                border-radius: 10px;
+                padding: 10px; 
+            
+                background: #1a1a1a;
+            }
+        }
+    }
+}
+
+.alert-message {
+    position: absolute;
+    padding: 10px;
+    background-color: #4CAF50; /* Couleur du message */
+    color: white;
+    margin: 0 0 10px 30px;
+    border-radius: 5px;
+    max-width: 300px;
+    transition: opacity 0.5s ease;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    margin-top: 10px;
+    border-radius: 5px;
+    overflow: hidden; /* Pour que la barre soit parfaitement dans son cadre */
+}
+
+/* La barre de progression proprement dite */
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #28a745; /* Change cette couleur selon ton style */
+    transition: width 0.3s ease-out; /* Rend l'animation plus fluide */
+}
+

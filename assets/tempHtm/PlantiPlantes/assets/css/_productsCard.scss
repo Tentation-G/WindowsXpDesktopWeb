@@ -1,0 +1,16 @@
+
+
+.cards-containerBis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    width: 60%;
+
+    margin: auto;
+
+    .product-card {
+        flex: 33%;
+        width: fit-content;
+    }
+}

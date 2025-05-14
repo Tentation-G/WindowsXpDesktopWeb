@@ -1,0 +1,7 @@
+
+/* Fait en sorte que le Main prennent toute la place dispo Pour avoir le footer en bas de la page anyway */
+
+
+#main {
+    flex-grow: 1;
+}

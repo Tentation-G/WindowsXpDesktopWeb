@@ -1,0 +1,82 @@
+@import 'variables.scss';
+
+.table-container {
+    display: flex;
+    width: 100%;
+    //margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    //box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+    max-height: 500px;
+    overflow: auto;
+}
+
+h3 {
+    color: #fff;
+    text-align: center;
+}
+
+table {
+    width: 100% !important;
+    border-collapse: collapse;
+    margin-top: 20px;
+    position: relative;
+}
+
+thead {
+    background-color: #333;
+}
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    color: #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a; 
+}
+
+tr:hover {
+    background-color: #444;
+}
+
+.col-description {
+    max-width: 400px; /* Ajustez cette valeur selon vos besoins */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.btn-action {
+    display: inline-block;
+    padding: 5px 10px;
+    //margin: 0 5px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.btn-mod {
+    background-color: $secondary-color;
+}
+.btn-supp {
+    background-color: red;
+}
+
+.connexion-color {
+    color: $secondary-color;
+}
+.deconnexion-color {
+    color: red;
+}
+
+
+.btn-action:hover {
+    color: #FFF;
+    filter: brightness(0.8);
+}

@@ -1,0 +1,13 @@
+@import 'variables.scss';
+
+#userStatusChart {
+    width: 35%;
+    height: 500px;
+    color: $white-color;
+
+    border-radius: 10px;
+    padding: 10px; 
+
+    background: #1a1a1a;
+}
+

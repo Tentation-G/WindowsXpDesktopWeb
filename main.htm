@@ -1644,9 +1644,9 @@ R : C'est personnel, ca te regarde pas.
                         <!-- (parent) Icone Dossier Travail - Dossier Travail -->
                         <div class="folder-text-part">
                             <div class="icon iconF iconOpen_folder-icon" data-target="folder" style="position:relative">
-                                <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt=""
+                                <img src="assets/img/icones/Internet_Explorer_logo.png" alt=""
                                     class="icone">
-                                <a href="assets\tempHtm\PlantiPlantes\index.php" target="_blank"><span>Fichers client leger</span></a>
+                                <a href="assets\tempHtm\PlantiPlantes\index.php" target="_blank"><span>Client leger</span></a>
                             </div>
                             <div class="icon iconF iconOpen_folder-icon" data-target="folderDocPresCL" style="position:relative">
                                 <img src="https://www.flavien-campeaux.ovh/assets/img/icones/Closed_folder.png" alt=""
@@ -1950,10 +1950,17 @@ Contraintes techniques :
 
 > Panier :
     - Ajouter / Retirer des produits
-    - Valider et passer commande
 
 > Back-Office (Administrateur) :
     - Ajouter, modifier, supprimer des produits / client 
+
+> Login :
+    - Administrateur :
+        mail : F/adm@email.com
+        mdp  : 123
+    - User :
+        mail : juju@email.com
+        mdp  : 123
                         </pre>
                     </div>
                 </div>
@@ -2005,6 +2012,33 @@ Contraintes techniques :
     - WAMP en local
     - Tests multi-navigateurs
     - Vscode
+
+
+------------------------------------------------------
+
+            DOCUMENTATION D'INSTALLATION
+------------------------------------------------------
+
+> Télécharger le ficher contenant le projet
+
+> Installer Wamp et le démarrer
+
+> Créer une nouvelle base de donnée dans PhpMyAdmin nommé "plantiplantes"
+> Importer dans PhpMyAdmin le fichier sql present dans le ficher du projet
+
+> Deplacer le ficher projet dans le repertoire associé au serveur local Php
+    - exemple : C:\wamp64\www
+
+> Changer au besoin les acces a la base de donnée dans :
+    - C:\wamp64\www\PlantiPlantes\models\dbModels.php
+
+> Si le projet n'est pas directement dans le dossier www mais dans un sous dossier :
+    - dans PlantiPlantes\core\config.php :
+        - changer :
+            "define('URL_ASSETS','http://localhost/PlantiPlantes/assets/');" par "define('URL_ASSETS','http://localhost/votre-chemin/PlantiPlantes/assets/');"
+        et
+            "define('URL','http://localhost/PlantiPlantes/');" par "define('URL','http://localhost/votre-cheminPlantiPlantes/');"
+
                         </pre>
                     </div>
                 </div>
@@ -2381,14 +2415,13 @@ Contraintes techniques :
 > Écran principal :
     - Liste des tâches enregistrées
     - Affichage du statut (fait / à faire)
-    - Tri ou filtrage par date ou statut (éventuel)
 
 > Ajouter une tâche :
     - Bouton “Ajouter”
     - Formulaire avec champ titre, description et date
     - Bouton “Valider” pour sauvegarder
 
-> Modifier / Supprimer :
+> Supprimer :
     - Sélection d’une tâche
     - Bouton “Supprimer”
     - Mise à jour de la base de données en temps réel
@@ -2426,24 +2459,37 @@ Contraintes techniques :
                         <pre>
 ------------------------------------------------------
 
-         DOCUMENTATION TECHNIQUE
+            DOCUMENTATION TECHNIQUE
 ------------------------------------------------------
 
 > Langages utilisés :
     - Java 21
     - SQL
+    - FXML
 
 > Interface graphique :
     - JavaFX
 
 > Architecture de l’application :
     - Séparation claire entre interface (FXML) et logique (contrôleurs)
-    - Application client lourd, mono-utilisateur
 
 > Ressources utilisées :
     - IntelliJ IDEA Community
     - Git + GitHub
     - Tests sous Windows
+
+------------------------------------------------------
+
+            DOCUMENTATION D'INSTALLATION
+------------------------------------------------------
+
+> Télécharger le ficher contenant le projet
+
+> Installer les dépendances => JavaFX
+> Si ouvert avec IntelliJ Idea, JavaFX devrait y etre par defaut.
+
+> Se rendre dans le fichier Main (Todo-List_Java\src\main\java\com.td.todo\Main) et l'executer
+
                         </pre>
                     </div>
                 </div>

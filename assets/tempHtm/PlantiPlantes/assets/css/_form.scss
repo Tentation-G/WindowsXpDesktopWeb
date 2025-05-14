@@ -1,0 +1,99 @@
+@import 'variables.scss';
+
+
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-grow:1 ;
+
+    .form-wrapper {
+        align-items: center;
+        width: 33%;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: 40px 0;
+        }
+    }
+}
+
+.form-btn {
+    background-color: transparent;
+    color: $white-color;
+    border: solid 2px $white-color;
+    border-radius: 20px;
+
+    width: fit-content;
+    padding: 10px;
+
+    transition: color 0.3s ease;
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.user-box {
+    position: relative;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: $white-color;
+    border: none;
+    border-bottom: 1px solid $white-color;
+    outline: none;
+    background: transparent;
+}
+
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: $white-color;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.user-box input:focus~label,
+.user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: $secondary-color;
+    font-size: 12px;
+}
+
+//reset style du navigateur si remplissage auto
+.user-box input:-webkit-autofill,
+.user-box input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px $black-color;
+    box-shadow: 0 0 0px 1000px $black-color inset;
+    -webkit-text-fill-color: $white-color;
+}
+
+.product-box {
+    margin: 0 !important;
+    .radio-group {
+        margin: 0 !important;
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-around;
+        .radio-item {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+            &:checked + label{
+                color: $secondary-color;
+            }
+        }
+    }
+
+}
