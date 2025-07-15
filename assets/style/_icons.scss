@@ -6,6 +6,8 @@
 
 .icon,
 .iconF {
+    z-index: $z-index-icon;
+
     position: absolute;
     width: $icon-size;
     min-height: $icon-size;

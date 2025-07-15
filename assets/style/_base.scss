@@ -126,6 +126,7 @@ main {
 }
 
 footer {
+    z-index: $z-index-footer;
 
     width: 100%;
     max-width: 100vw;

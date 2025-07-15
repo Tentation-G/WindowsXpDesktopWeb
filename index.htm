@@ -108,7 +108,7 @@
 
     <main id="mainContainer">
         <!-- ##### Intro Page ##### -->
-        <div class="intro-page tvip" id="intro-scroll" style="display: block;">
+        <div class="intro-page tvip" id="intro-scroll" style="display: none;">
             <pre class="blockByPass hidden">
                 <span class="choice" data-answer="yes">Rapide</span>
             </pre>
@@ -330,6 +330,41 @@ R : C'est personnel, ca te regarde pas.
                 <p class="locked">Nouveau</p>
                 <div class="line"></div>
                 <p class="displayParam" data-target="displayParam">propriétés</p>
+            </div>
+        </div>
+
+        <!-- ##### Porte secrete bip boop reparation ##### -->
+        <div>
+            <div class="icon iconDrag iconExe" data-exe="exePanel" 
+                style="top: calc(5% + 240px); right: 2%;">
+                <img src="assets/img/icones/display.png" alt="" class="icone">
+                <span>Bip_Boop.exe</span>
+            </div>
+
+            <div id="panelWrapper" class="wrapper-center">
+                <div class="scene">
+                    <div class="little-scene">
+                        <!-- ca c'est celui qui s'ouvre comme une porte -->
+                        <div id="cube-rotation" class="cube cube-rotation">
+                            <div class="face front"></div>
+                            <div class="face back"></div>
+                            <div class="face right"></div>
+                            <div class="face left"></div>
+                            <div class="face top"></div>
+                            <div class="face bottom"></div>
+                        </div>
+
+                        <!-- ca c'est pour la perspective -->
+                        <div class="cube perspective-cube">
+                            <div class="face front"></div>
+                            <div class="face back"></div>
+                            <div class="face right"></div>
+                            <div class="face left"></div>
+                            <div class="face top"></div>
+                            <div class="face bottom"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -878,7 +913,7 @@ R : C'est personnel, ca te regarde pas.
                                 <img src="assets/img/icones/txt.png" alt="" class="icone">
                                 <span>Projets.txt</span>
                             </div>
-
+                            
                         </div>
                     </div>
                 </div>
@@ -2731,6 +2766,7 @@ Contraintes techniques :
                     </div>
                 </div>
             </div>
+        </div>
 
             <!-- ##### DOSSIER Trucs perso ##### -->
             <div>

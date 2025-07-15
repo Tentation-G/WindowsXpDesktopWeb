@@ -1,0 +1,196 @@
+@import 'variables.scss';
+
+// _pave3d.scss
+
+// Dimensions du pavé
+$hauteur: 400px;
+$largeur: 400px;
+$profondeur: 40px;
+
+$border-size: 1px;
+$border: $border-size solid #fff;
+
+
+// Couleurs des background
+$color-body: rgba(255, 255, 255, 0);
+$color-scene: rgba(255, 228, 196, 0);
+$color-little-scene: aquamarine;
+
+// Couleurs des faces
+$color-front: rgb(0, 0, 0);
+$color-back: rgb(0, 0, 0);
+$color-right: rgb(0, 0, 0);
+$color-left: rgb(0, 0, 0);
+$color-top: rgb(0, 0, 0);
+$color-bottom: rgb(0, 0, 0);
+
+$border-front-face: border;
+
+// Styles globaux
+
+.wrapper-center {
+    display: none;
+    opacity: 0;
+
+    //display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+
+    .scene {
+        z-index: $z-index-screen-panel;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: ($largeur + 100px);
+        height: ($hauteur + 100px);
+        background-color: $color-scene;
+        perspective: 800px;
+
+        .little-scene {
+            //background-image: url('/assets/img/background-img/motherboard.jpg');
+            background-image: url('/assets/img/background-img/37534.gif');
+            background-repeat: no-repeat;
+            //background-position: right center;
+            background-position: center;
+
+            background-color: chartreuse;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: $largeur;
+            height: $hauteur;
+            perspective: 1000px;
+
+            .cube {
+                position: absolute;
+                width: $largeur;
+                height: $hauteur;
+
+                // transform-style: preserve-3d;
+                // transform-origin: 0% 50%;
+                // transform: rotateY(0deg);
+                // transition: transform 1s ease;
+
+                .face {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 1;
+                    border: $border;
+                }
+
+                // Face avant et arrière
+                .front,
+                .back {
+                    width: $largeur;
+                    height: $hauteur;
+                }
+
+                .front {
+                    background: $color-front;
+                    border: $border-front-face;
+                    transform: translateZ($profondeur / 2);
+                }
+
+                .back {
+                    background: $color-back;
+                    transform: rotateY(180deg) translateZ($profondeur / 2);
+                }
+
+                // Faces droite et gauche
+                .right,
+                .left {
+                    width: $profondeur;
+                    height: $hauteur;
+                }
+
+                .right {
+                    background: $color-right;
+                    transform: rotateY(90deg) translateZ($largeur - ($profondeur / 2));
+                    border: none;
+                }
+
+                .left {
+                    background: $color-left;
+                    transform: rotateY(-90deg) translateZ($profondeur / 2);
+                }
+
+                // Faces dessus et dessous
+                .top,
+                .bottom {
+                    width: $largeur;
+                    height: $profondeur;
+                    border: none;
+                }
+
+                .top {
+                    background: $color-top;
+                    transform: rotateX(90deg) translateZ(($profondeur / 2) - $border-size);
+                }
+
+                .bottom {
+                    background: $color-bottom;
+                    //transform: rotateX(-90deg) translateZ($largeur - ($profondeur / 2));
+                    transform: rotateX(-90deg) translateZ(($hauteur - $profondeur / 2) + $border-size);
+                }
+            }
+
+            .perspective-cube {
+                z-index: $z-index-cube-perspective;
+                //border: $border;
+                perspective: 900px;
+
+                .face {
+                    border: $border;
+                }
+
+                .front {
+                    background: transparent !important;
+                }
+
+                .back {
+                    background: transparent !important;
+                }
+            }
+
+            .cube-rotation {
+                z-index: $z-index-cube-rota;
+
+                border: $border-front-face;
+
+                transform-style: preserve-3d;
+                transform-origin: 0% 50%;
+
+                // transform: rotateY(0deg);
+                // transition: transform 1s ease;
+            }
+
+            .cube-animation-rotation {
+                animation: openPanel 5s ease-in-out forwards;
+            }
+        }
+
+        // Rotation on hover - placed after cube styles so it overrides transform
+        // &:hover .little-scene .cube-rotation {
+        //     transform: rotateY(-130deg);
+        // }
+    }
+}
+
+@keyframes openPanel {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-130deg);
+    }
+}

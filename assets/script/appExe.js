@@ -13,6 +13,7 @@ const exeLogic = {
     exeLeDragonNoir: toogleToothLessExe,
     exeDanceParty: startDanceParty,
     exeMiroir: toogleMiroitionExe,
+    exePanel: tooglePanelExe,
 };
 
 /*********************************************************
@@ -29,6 +30,99 @@ document.querySelectorAll(".iconExe").forEach((exeIcon) => {
         }
     });
 });
+
+/*********************************************************
+ * Logic Panel.exe
+ *********************************************************/
+
+const waitBeforeOpeningDuration = 1000; // 2 secondes
+const panelContainerDiv = document.getElementById("panelWrapper");
+const cuboidRotationDiv = document.getElementById("cube-rotation");
+var isPanelAlreadyOpen = 0;
+
+/**
+ * Pause en ms
+ * @param {number} ms
+ */
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Fait clignoter #panelWrapper en alternant opacity 0/1.
+ * @param {number} blinkDuration  Durée totale du clignotement (en ms)
+ * @param {number} blinkInterval  Intervalle entre chaque switch d’opacité (en ms)
+ * @returns {Promise<void>}
+ */
+function clignotement(blinkDuration, blinkInterval) {
+    return new Promise(resolve => {
+        if (!panelContainerDiv) {
+            resolve();
+            return;
+        }
+
+        let elapsed = 0;
+        let visible = false;
+        panelContainerDiv.style.display = 'flex';
+        panelContainerDiv.style.opacity = '0';
+
+        const iv = setInterval(() => {
+            visible = !visible;
+            panelContainerDiv.style.opacity = visible ? '1' : '0';
+
+            elapsed += blinkInterval;
+            if (elapsed >= blinkDuration) {
+                clearInterval(iv);
+                panelContainerDiv.style.opacity = '1';
+                resolve();
+            }
+        }, blinkInterval);
+    });
+}
+
+/**
+ * Affiche le panel, enchaîne plusieurs phases de clignotement,
+ * puis déclenche l’animation 3D.
+ */
+async function tooglePanelExe() {
+    if(isPanelAlreadyOpen == 0) {
+        // 1) Affiche immédiatement (mais opacité à 0)
+        panelContainerDiv.style.display = 'flex';
+        panelContainerDiv.style.opacity = '0';
+        isPanelAlreadyOpen = 1;
+
+        // 2) Petite pause avant de démarrer le glitch
+        await sleep(waitBeforeOpeningDuration);
+
+        // crée un tableau de paires [durée, intervalle] aléatoires
+        const patterns = Array.from({length: 6}, () => {
+            const d = 100 + Math.random()*400;   // 100–500 ms de glitch
+            const i = 20 + Math.random()*180;    // intervalle 20–200 ms
+            return [d, i];
+        });
+
+        // applique-les les uns après les autres
+        for (const [d,i] of patterns) {
+            await clignotement(d, i);
+        }
+
+        // extinctions par petits sursauts
+        await clignotement(300, 100);
+
+        await sleep(waitBeforeOpeningDuration * 2);
+
+        // animation d'ouverture
+        // reset
+        cuboidRotationDiv.classList.remove('cube-animation-rotation');
+        // force reflow (je sais pas ce que c'est, mais ca fonctionne, donc on touche pas)
+        void cuboidRotationDiv.offsetWidth;
+        // animation
+        cuboidRotationDiv.classList.add('cube-animation-rotation');
+    }
+}
+
+
+
 
 /*********************************************************
  * Logic Le Cat.exe
